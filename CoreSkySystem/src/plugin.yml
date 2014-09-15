@@ -1,0 +1,48 @@
+name: CoreSkySystem
+author: TGM_Nick
+version: 1.7.1.0
+main: com.CoreSkySystem.Main.Main
+
+commands:
+   ts:
+     description: Zeigt unsere Team Speak 3 IP an
+   skype:
+     description: Zeigt die Skype namen an
+   epic:
+     description: Epic
+   premium:
+     description: premium
+   spenden:
+     description: SPenden
+   regeln:
+     description: Regeln
+   hilfe:
+     description: Hilfe
+   ja:
+     description: Hilfe
+   nein:
+     description: Hilfe
+   umfrage:
+     description: Hilfe
+   copyright:
+     description: Hilfe
+   ultimate:
+     description: Hilfe
+   setmotd:
+     description: Set the motd of the server.
+     usage: /setmotd (motd)
+     alias: sm
+   report:
+     description: Report a player
+     usage: /report (player) (reason)
+   team:
+     description: zeigt dir das Team
+   warn:
+     description: Verwarne andere Spieler
+     usage: /warn (Player) (reason)
+     alias: wa
+   clearwarn:
+     description: Loesche alle Verwarnungen eines Spielers
+     usage: /clearwarn (Player)
+   cc:
+     description: Leert den Chat!

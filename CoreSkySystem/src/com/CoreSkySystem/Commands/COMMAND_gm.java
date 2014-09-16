@@ -32,6 +32,8 @@ public class COMMAND_gm implements CommandExecutor {
 				} catch(NullPointerException exception) {
 					sender.sendMessage(Main.normal_name + args[0] + " ist nicht online");
 				}
+			} else {
+				ccs.sendMessage(Main.name + "§8/gm (player)");
 			}
 		}
 		

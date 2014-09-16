@@ -8,6 +8,7 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
+import com.CoreSkySystem.Commands.COMMAND_gm;
 import com.CoreSkySystem.Commands.ChatClear;
 import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_setmotd;
@@ -59,6 +60,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("warn").setExecutor(new COMMAND_Warn());
 		this.getCommand("clearwarn").setExecutor(new COMMAND_clearwarn());
 		this.getCommand("cc").setExecutor(new ChatClear(this));
+		this.getCommand("gamemode").setExecutor(new COMMAND_gm());
 		
 		
 		pm.registerEvents(new KostenlosSign(), this);

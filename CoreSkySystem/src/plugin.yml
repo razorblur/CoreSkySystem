@@ -31,7 +31,7 @@ commands:
    setmotd:
      description: Set the motd of the server.
      usage: /setmotd (motd)
-     alias: sm
+     aliases: sm
    report:
      description: Report a player
      usage: /report (player) (reason)
@@ -40,9 +40,14 @@ commands:
    warn:
      description: Verwarne andere Spieler
      usage: /warn (Player) (reason)
-     alias: wa
+     aliases: wa
    clearwarn:
      description: Loesche alle Verwarnungen eines Spielers
      usage: /clearwarn (Player)
    cc:
      description: Leert den Chat!
+   gamemode:
+     description: Changes your Gamemode
+     usage: /gm (player)
+     aliases: gm
+     

@@ -22,12 +22,11 @@ public class COMMAND_gm implements CommandExecutor {
 				Player target = Bukkit.getServer().getPlayer(args[0]);
 				try {
 					if(target.getGameMode() == GameMode.CREATIVE) {
-						target.setGameMode(GameMode.SURVIVAL);
-						target.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cSurvival");
-						ccs.sendMessage(args[0] + "'§6's GameMode ist nun auf Survivial");
+						switchGameMode(target);
+						ccs.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cSurvivial");
 					} else if(target.getGameMode() == GameMode.SURVIVAL) {
-						target.setGameMode(GameMode.CREATIVE);
-						target.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
+						switchGameMode(target);
+						ccs.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cCreative");
 					}
 				} catch(NullPointerException exception) {
 					sender.sendMessage(Main.normal_name + args[0] + " §6ist nicht online");
@@ -35,10 +34,33 @@ public class COMMAND_gm implements CommandExecutor {
 			} else {
 				ccs.sendMessage(Main.name + " §6/gm (player)");
 			}
-
+		} else {
+			Player player = (Player) sender;
+			if(args.length == 0) {
+				switchGameMode(player);
+			} else if(args.length == 1) {
+				Player target = Bukkit.getPlayer(args[0]);
+				if(target.getGameMode() == GameMode.CREATIVE) {
+					switchGameMode(target);
+					if(!(player.getName() == target.getName()))player.sendMessage(Main.name + "§c"+args[0] + "'s§6 GameMode ist nun auf §cSurvivial");
+				} else if(target.getGameMode() == GameMode.SURVIVAL) {
+					switchGameMode(target);
+					if(!(player.getName() == target.getName())) player.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cCreative");
+				}
+			}
 		}
 		
 		return true;
+	}
+	
+	private void switchGameMode(Player player) {
+		if(player.getGameMode() == GameMode.CREATIVE) {
+			player.setGameMode(GameMode.SURVIVAL);
+			player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cSurvival");
+		} else if(player.getGameMode() == GameMode.SURVIVAL) {
+			player.setGameMode(GameMode.CREATIVE);
+			player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
+		}
 	}
 
 }

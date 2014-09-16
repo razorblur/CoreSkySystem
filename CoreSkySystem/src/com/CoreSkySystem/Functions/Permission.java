@@ -2,12 +2,15 @@ package com.CoreSkySystem.Functions;
 
 public class Permission {
 	
-	public static String report_show_list = "coresky.report";
-	public static String warn_player = "coresky.warn.player";
-	public static String report_admin_alert = "coresky.report.show";
-	public static String ignore_report = "coresky.report.ignore";
-	public static String create_delayed_sign = "coresky.sign.delayed.create";
-	public static String clearwarn = "coresky.clearwarn";
-	public static String chat = "coresky.chat";
+	public static String chat_clear = "skyfight.chat.clear";
+	public static String report_show_list = "skyfight.report";
+	public static String warn_player = "skyfight.warn.player";
+	public static String report_admin_alert = "skyfight.report.show";
+	public static String ignore_report = "skyfight.report.ignore";
+	public static String create_delayed_sign = "skyfight.sign.delayed.create";
+	public static String clearwarn = "skyfight.clearwarn";
+	public static String chat = "skyfight.chat";
+	public static String start_umfrage = "skyfight.umfrage.start";
+	public static String kostenlos_create = "skyfight.kostenlos.create";
 
 }

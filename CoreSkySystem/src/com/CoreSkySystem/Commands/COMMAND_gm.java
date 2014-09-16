@@ -23,17 +23,17 @@ public class COMMAND_gm implements CommandExecutor {
 				try {
 					if(target.getGameMode() == GameMode.CREATIVE) {
 						target.setGameMode(GameMode.SURVIVAL);
-						target.sendMessage(Main.name + "§6Dein GameMode ist nun auf §cSurvival");
-						ccs.sendMessage(args[0] + "'s GameMode ist nun auf Survivial");
+						target.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cSurvival");
+						ccs.sendMessage(args[0] + "'§6's GameMode ist nun auf Survivial");
 					} else if(target.getGameMode() == GameMode.SURVIVAL) {
 						target.setGameMode(GameMode.CREATIVE);
-						target.sendMessage(Main.name + "§6Dein GameMode ist nun auf §cCreative");
+						target.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
 					}
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.normal_name + args[0] + " ist nicht online");
+					sender.sendMessage(Main.normal_name + args[0] + " §6ist nicht online");
 				}
 			} else {
-				ccs.sendMessage(Main.name + "§8/gm (player)");
+				ccs.sendMessage(Main.name + " §6/gm (player)");
 			}
 
 		}

@@ -12,6 +12,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import com.CoreSkySystem.Functions.Permission;
+import com.CoreSkySystem.Main.Main;
+
 public class CoreSkySign implements Listener  {
 	
 	// [CoreSky]    - Anfang 
@@ -21,18 +24,18 @@ public class CoreSkySign implements Listener  {
 	@EventHandler
 	public void onSignCreate(SignChangeEvent evt)  {
 		Player p = evt.getPlayer();
-		if(evt.getLine(0).equalsIgnoreCase("[DelayedItem]"))  {
-			if(!p.hasPermission("coresky.sign.delayed.create"))  {
-				p.sendMessage("§8§l[§6§lCS§8§l] §7Du kannst kein §6DelayedItem §7Schild erstellen!");
+		if(evt.getLine(0).equalsIgnoreCase("[SkyFight]"))  {
+			if(!p.hasPermission(Permission.create_delayed_sign))  {
+				p.sendMessage(Main.name +" §6Du kannst kein §cCoreSky-Schild §6erstellen!");
 				evt.getBlock().setType(Material.AIR);
 				return;
 			}
 			if(evt.getLine(1).equals(""))  {
-				p.sendMessage("§8§l[§6§lCS§8§l] §7Ungültiges Schild!");
+				p.sendMessage(Main.name +" §cUngültiges Schild!");
 				evt.getBlock().setType(Material.AIR);
 				return;
 			}
-			evt.setLine(0, "[§6DelayedItem]");
+			evt.setLine(0, "§8[§6SkyFight§8]");
 			Sign s = (Sign) evt.getBlock().getState();
 			s.update(true);
 		}
@@ -62,7 +65,7 @@ public class CoreSkySign implements Listener  {
 							
 					} catch (NumberFormatException exception) {
 						s.setLine(0, "&cÜngültig...");
-						evt.getPlayer().sendMessage("§8§l[§6§lCS§8§l] §7Ungültiges Schild");
+						evt.getPlayer().sendMessage(Main.name +" §7Ungültiges Schild");
 					}
 					
 					

@@ -14,7 +14,7 @@ public class Commands implements CommandExecutor {
 			
 			} else if (cmd.getName().equalsIgnoreCase("copyright"))  {
 				   cs.sendMessage("§7[]-------------[§6Copyright§7]-------------[]");
-				   cs.sendMessage("§8» §cCopyright §7by §cCoreSky.De§7!");
+				   cs.sendMessage("§8» §cCopyright §7by §cSkyFight.ch§7!");
 				   cs.sendMessage("§8» §7Verstöße werden je nach Art §cbestraft");
 			       cs.sendMessage("§7[]-------------[§6Copyright§7]-------------[]");
 			
@@ -109,13 +109,13 @@ public class Commands implements CommandExecutor {
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 				cs.sendMessage("§4§lOwner:");
-				cs.sendMessage("§7byBambus, DerDickeEins");
+				cs.sendMessage("§abyBambus, DerDickeEins");
 				cs.sendMessage("");
 				cs.sendMessage("§c§lAdmin's:");
-				cs.sendMessage("§7TGM_Nick, Killerahz, Darrek2503");
+				cs.sendMessage("§aTGM_Nick, Killerahz, Darrek2503");
 				cs.sendMessage("");
 				cs.sendMessage("§a§lDeveloper:");
-				cs.sendMessage("§7razorblur, (TGM_Nick)");
+				cs.sendMessage("§arazorblur, (TGM_Nick)");
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 			}
 

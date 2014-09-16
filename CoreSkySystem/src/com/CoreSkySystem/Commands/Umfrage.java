@@ -7,6 +7,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 
+import com.CoreSkySystem.Functions.Permission;
 import com.CoreSkySystem.Main.Main;
 
 public class Umfrage implements CommandExecutor {
@@ -29,34 +30,34 @@ public class Umfrage implements CommandExecutor {
 	  {
 	    if (cmd.getName().equalsIgnoreCase("ja")) {
 	      if (uspieler.contains(p.getName())) {
-	        p.sendMessage("§cDu hast bereits abgestimmt!");
+	        p.sendMessage(Main.name +" §cDu hast bereits abgestimmt!");
 	      } else if (umfragestart) {
 	        ja += 1;
 	        uspieler.add(p.getName());
-	        p.sendMessage("§8§l[§6§lCS§8§l] §6Deine Stimme wurde gezählt!");
-	        Bukkit.broadcastMessage("§8§l[§6§lCS§8§l] §c" + p.getName() + " §6hat für §aja §6gestimmt!");
+	        p.sendMessage(Main.name +" §6Deine Stimme wurde gezählt!");
+	        Bukkit.broadcastMessage(Main.name +" §c" + p.getName() + " §6hat für §aja §6gestimmt!");
 	      } else {
-	        p.sendMessage("§8§l[§6§lCS§8§l] §cDerzeit läuft keine Umfrage!");
+	        p.sendMessage(Main.name +" §cDerzeit läuft keine Umfrage!");
 	      }
 	      return true;
 	    }
 
 	    if (cmd.getName().equalsIgnoreCase("nein")) {
 	      if (uspieler.contains(p.getName())) {
-	        p.sendMessage("§8§l[§6§lCS§8§l] §cDu hast bereits abgestimmt!");
+	        p.sendMessage(Main.name +" §cDu hast bereits abgestimmt!");
 	      } else if (umfragestart) {
 	        nein += 1;
 	        uspieler.add(p.getName());
-	        p.sendMessage("§8§l[§6§lCS§8§l] §6Deine Stimme wurde gezählt!");
-	        Bukkit.broadcastMessage("§8§l[§6§lCS§8§l] §c" + p.getName() + " §6hat für §4nein §6gestimmt!");
+	        p.sendMessage(Main.name +" §6Deine Stimme wurde gezählt!");
+	        Bukkit.broadcastMessage(Main.name +" §c" + p.getName() + " §6hat für §4nein §6gestimmt!");
 	      } else {
-	        p.sendMessage("§8§l[§6§lCS§8§l] §cDerzeit läuft keine Umfrage!");
+	        p.sendMessage(Main.name +" §cDerzeit läuft keine Umfrage!");
 	      }
 	      return true;
 	    }
 
 	    if (cmd.getName().equalsIgnoreCase("umfrage")) {
-	      if (p.hasPermission("coresky.commands.umfrage")) {
+	      if (p.hasPermission(Permission.start_umfrage)) {
 	        if (args.length == 0) {
 	          p.sendMessage("§cVerwende: /umfrage <frage>");
 	          return true;
@@ -65,10 +66,10 @@ public class Umfrage implements CommandExecutor {
 	          if (args[0].equalsIgnoreCase("stop")) {
 	            if (umfragestart) {
 	              umfragestart = false;
-	              Bukkit.broadcastMessage("§7§l[]-----------------[§6§lCoreSky§7§l]-----------------[]");
+	              Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
 	              Bukkit.broadcastMessage("§6Die Umfrage ist zuende!");
 	              Bukkit.broadcastMessage("§6Frage: §c§o" + umfrage);
-	              Bukkit.broadcastMessage("§7§l[]-----------------[§6§lCoreSky§7§l]-----------------[]");
+	              Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
 	              if (ja > nein) {
 	                Bukkit.broadcastMessage("§6Gewinner: §a§lJA §6mit §c" + ja + " §6- §c" + nein + " §6Stimmen!");
 	              }
@@ -80,7 +81,7 @@ public class Umfrage implements CommandExecutor {
 	              }
 	              return true;
 	            }
-	            p.sendMessage("§8§l[§6§lCS§8§l] §cDerzeit läuft keine Umfrage!");
+	            p.sendMessage(Main.name +" §cDerzeit läuft keine Umfrage!");
 	            return true;
 	          }
 
@@ -92,16 +93,16 @@ public class Umfrage implements CommandExecutor {
 	          nein = 0;
 	          ja = 0;
 	          uspieler.clear();
-	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lCoreSky§7§l]-----------------[]");
+	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
 	          Bukkit.broadcastMessage("§6Eine Umfrage wurde von §c§o" + p.getName() +  " §6gestartet!");
 	          Bukkit.broadcastMessage("§6Frage: §c§o" + umfrage);
 	          Bukkit.broadcastMessage("§6Stimme mit §c/ja §6oder §c/nein §6ab.");
-	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lCoreSky§7§l]-----------------[]");
+	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
 	          return true;
 	        }
 	      }
 	      else {
-	        p.sendMessage("§8§l[§6§lCS§8§l] §4Du hast keine Berechtigung für diesen Command!");
+	        p.sendMessage(Main.name +" §4Du hast keine Berechtigung für diesen Command!");
 	        return true;
 	      }
 	    }

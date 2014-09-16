@@ -12,6 +12,9 @@ import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 
+import com.CoreSkySystem.Functions.Permission;
+import com.CoreSkySystem.Main.Main;
+
 public class KostenlosSign implements Listener  {
 	
 	// [Kostenlos]  
@@ -21,13 +24,13 @@ public class KostenlosSign implements Listener  {
 	public void onSignCreate(SignChangeEvent evt)  {
 		Player p = evt.getPlayer();
 		if(evt.getLine(0).equalsIgnoreCase("[Kostenlos]"))  {
-			if(!p.hasPermission("kostenlos.create"))  {
-				p.sendMessage("§8§l[§6§lCS§8§l] §7Du kannst kein §2[Kostenlos] §7Schild erstellen!");
+			if(!p.hasPermission(Permission.kostenlos_create))  {
+				p.sendMessage(Main.name +" §6Du kannst kein §2[Kostenlos] §6Schild erstellen!");
 				evt.getBlock().setType(Material.AIR);
 				return;
 			}
 			if(evt.getLine(1).equals(""))  {
-				p.sendMessage("§8§l[§6§lCS§8§l] §7Ungültiges Schild!");
+				p.sendMessage(Main.name +" §cUngültiges Schild!");
 				evt.getBlock().setType(Material.AIR);
 				return;
 			}
@@ -61,7 +64,7 @@ public class KostenlosSign implements Listener  {
 							
 					} catch (NumberFormatException exception) {
 						s.setLine(0, "§c[Kostenlos]");
-						evt.getPlayer().sendMessage("§8§l[§6§lCS§8§l] §7Ungültiges Schild");
+						evt.getPlayer().sendMessage(Main.name +" §7Ungültiges Schild");
 					}
 					
 					

@@ -6,6 +6,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
+import com.CoreSkySystem.Functions.Permission;
 import com.CoreSkySystem.Main.Main;
 
 public class ChatClear implements CommandExecutor {
@@ -26,7 +27,7 @@ public class ChatClear implements CommandExecutor {
 		
 		if(cs instanceof Player) {
 			Player p = (Player) cs;
-			if(!p.hasPermission("coresky.chatclear")){
+			if(!p.hasPermission(Permission.chat_clear)){
 			p.sendMessage("§8§l[§6§lCS§8§l] §4keine Berechtigung!");
 			return true;
 		}

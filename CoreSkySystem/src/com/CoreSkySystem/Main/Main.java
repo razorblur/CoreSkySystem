@@ -22,8 +22,8 @@ import com.CoreSkySystem.Listeners.MOTDListener;
 
 public class Main extends JavaPlugin {
 	
-	public static String name = "§8§l[§6§lCS§8§l]"; //§8§l[§6§lCS§8§l]
-	public static String normal_name = "[CoreSky]";
+	public static String name = "§8§l[§6§lSF§8§l]"; //§8§l[§6§lCS§8§l]
+	public static String normal_name = "[SkyFight]";
 	
 
 	@Override
@@ -72,7 +72,7 @@ public class Main extends JavaPlugin {
 	private void info() {
 	    System.out.println("<======================================================>");
 	    System.out.println("|                                                     |");
-	    System.out.println("| CoreSkySystem 1.1 (c)2014 by TGM_Nick and razorblur |");
+	    System.out.println("|SkyFightSystem 2.0 (c)2014 by TGM_Nick and razorblur |");
 	    System.out.println("|                                                     |");
 	    System.out.println("|        This program is not free software!           |");
 	    System.out.println("|    You are not allowed to use, modify or spread     |");
@@ -86,7 +86,7 @@ public class Main extends JavaPlugin {
 	private void loadConfig() {
 		FileConfiguration cfg = this.getConfig();
 		
-		cfg.addDefault("server.motd", "§6Setzt das MOTD mit: §c/setmotd (motd)");
+		cfg.addDefault("server.motd", " §6Setzt das MOTD mit: §c/setmotd (motd)");
 		
 		cfg.options().copyDefaults();
 	}

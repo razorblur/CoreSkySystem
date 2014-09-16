@@ -41,7 +41,7 @@ public class COMMAND_Warn implements CommandExecutor  {
 				reason = reason.substring(0, reason.length()-1);
 				// Spieler verwarnen
 				warnPlayer(sender, target, reason);
-				Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §8wurde verwarnt Grund: §a" + reason);
+				Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §6wurde verwarnt Grund: §a" + reason);
 			} catch(NullPointerException exception) {
 				sender.sendMessage(Main.name + ChatColor.DARK_RED + "Dieser Spieler ist nicht Online");
 			}
@@ -66,12 +66,12 @@ public class COMMAND_Warn implements CommandExecutor  {
 					reason = reason.substring(0, reason.length()-1);
 					// Spieler verwarnen
 					warnPlayer(player, target, reason);
-					Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §8wurde verwarnt Grund: §a" + reason);
+					Bukkit.broadcastMessage(Main.name + " §e"+target.getName() + " §6wurde verwarnt Grund: §a" + reason);
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + ChatColor.DARK_RED + "Dieser Spieler ist nicht Online");
+					player.sendMessage(Main.name + ChatColor.DARK_RED + " Dieser Spieler ist nicht Online");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/warn (player) (reason)");
+				player.sendMessage(Main.name + " §6/warn (player) (reason)");
 			}
 		}
 		return true;

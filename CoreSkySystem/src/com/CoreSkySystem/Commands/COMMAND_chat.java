@@ -9,6 +9,7 @@ import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
 import com.CoreSkySystem.Functions.Permission;
+import com.CoreSkySystem.Main.Main;
 
 public class COMMAND_chat implements CommandExecutor {
 	String msg = "";
@@ -23,7 +24,7 @@ public class COMMAND_chat implements CommandExecutor {
 			Player p = (Player) sender;
 			
 			if(!(p.hasPermission(Permission.chat))) {
-				p.sendMessage("§8§l[§6§lCS§8§l] §cDu darfst das nicht!");
+				p.sendMessage(Main.name +" §cDu darfst das nicht!");
 				return true;
 			}
 			
@@ -35,10 +36,10 @@ public class COMMAND_chat implements CommandExecutor {
 					}
 					z.chat(msg);
 				} catch (NullPointerException ex) {
-					p.sendMessage("§8§l[§6§lCS§8§l] §c"+args[0] + " §6ist nicht online");
+					p.sendMessage(Main.name +" §c"+args[0] + " §6ist nicht online");
 				}
 			} else {
-				p.sendMessage("§8§l[§6§lCS§8§l] §c/chat (Spieler) (Message)");
+				p.sendMessage(Main.name +" §c/chat (Spieler) (Message)");
 			}
 		}
 		msg = "";

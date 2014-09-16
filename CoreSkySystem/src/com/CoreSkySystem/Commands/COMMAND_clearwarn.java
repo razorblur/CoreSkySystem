@@ -11,7 +11,6 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
 import org.bukkit.entity.Player;
-import org.bukkit.plugin.PluginManager;
 
 import com.CoreSkySystem.Functions.Permission;
 import com.CoreSkySystem.Main.Main;
@@ -35,20 +34,20 @@ public class COMMAND_clearwarn implements CommandExecutor {
 					sender.sendMessage(Main.normal_name);
 				}
 			} else {
-				sender.sendMessage(Main.normal_name + "/clearwarn (player)");
+				sender.sendMessage(Main.normal_name + " §6/clearwarn (player)");
 			}
 		} else {
 			Player player = (Player) sender;
 			if(!player.hasPermission(Permission.clearwarn)){
-				player.sendMessage(Main.name + "§4Du hast keine Permission");
+				player.sendMessage(Main.name + " §4Du hast keine Permission");
 				return true;
 			}
 			if(args.length == 1) {
 				Player target = (Player) Bukkit.getOfflinePlayer(args[0]);
 				clearWarns(target.getName());
-				sender.sendMessage(Main.name + "Du hast alle Warnungen für " + args[0] + " gelöscht");
+				sender.sendMessage(Main.name + " §6Du hast alle Warnungen für " + args[0] + " gelöscht");
 			} else {
-				sender.sendMessage(Main.name + "/clearwarn (player)");
+				sender.sendMessage(Main.name + " §6/clearwarn (player)");
 			}
 		}
 		

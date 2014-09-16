@@ -19,7 +19,21 @@ public class COMMAND_chat implements CommandExecutor {
 			String[] args) {
 		
 		if(sender instanceof ConsoleCommandSender) {
+			ConsoleCommandSender ccs = (ConsoleCommandSender) sender;
 			
+			if(args.length >= 2) {
+				try {
+					Player z = Bukkit.getPlayer(args[0]);
+					for(int i = 1; i < args.length; i++) {
+						msg = msg + args[i] + " ";
+					}
+					z.chat(msg);
+				} catch (NullPointerException ex) {
+					ccs.sendMessage(Main.name +" §c"+args[0] + " §6ist nicht online");
+				}
+			} else {
+				ccs.sendMessage(Main.name +" §c/chat (Spieler) (Message)");
+			}
 		} else {
 			Player p = (Player) sender;
 			
@@ -30,7 +44,7 @@ public class COMMAND_chat implements CommandExecutor {
 			
 			if(args.length >= 2) {
 				try {
-					Player z = this.getPlayerbyName(args[0]);
+					Player z = Bukkit.getPlayer(args[0]);
 					for(int i = 1; i < args.length; i++) {
 						msg = msg + args[i] + " ";
 					}
@@ -46,15 +60,5 @@ public class COMMAND_chat implements CommandExecutor {
 		return true;
 	}
 	
-	public Player getPlayerbyName(String playername) {
-		Player[] players = Bukkit.getOnlinePlayers();
-		for(int i = 0; i < players.length; i++) {
-			Player z = players[i];
-			if(z.getName().equals(playername)) {
-				return z;
-			}
-		}
-		return null;
-	}
 
 }

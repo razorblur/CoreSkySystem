@@ -9,8 +9,10 @@ public class Permission {
 	public static String ignore_report = "skyfight.report.ignore";
 	public static String create_delayed_sign = "skyfight.sign.delayed.create";
 	public static String clearwarn = "skyfight.clearwarn";
-	public static String chat = "skyfight.chat";
 	public static String start_umfrage = "skyfight.umfrage.start";
 	public static String kostenlos_create = "skyfight.kostenlos.create";
-
+	// CommandKit Commands 
+	public static String chat = "ck.chat";
+	public static String giveall = "ck.giveall";
+	
 }

@@ -50,4 +50,12 @@ commands:
      description: Changes your Gamemode
      usage: /gm (player)
      aliases: gm
+   chat:
+     description: Chatte im Namen eines anderen Spielers
+     usage: /chat (player) (message)
+     aliases: ch
+   giveall:
+     description: Gib allen Online - Spielern ein bestimmtes Item
+     usage: /giveall (itemid) (anzahl)
+     aliases: ga
      

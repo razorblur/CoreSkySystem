@@ -34,7 +34,8 @@ public class COMMAND_gm implements CommandExecutor {
 				}
 			} else {
 				ccs.sendMessage(Main.name + "§8/gm (player)");
-			}
+			} 
+			// Hallo
 		}
 		
 		return true;

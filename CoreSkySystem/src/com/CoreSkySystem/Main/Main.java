@@ -13,7 +13,10 @@ import com.CoreSkySystem.Commands.COMMAND_clearwarn;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
 import com.CoreSkySystem.Commands.COMMAND_globalmute;
 import com.CoreSkySystem.Commands.COMMAND_gm;
+import com.CoreSkySystem.Commands.COMMAND_hban;
+import com.CoreSkySystem.Commands.COMMAND_hkick;
 import com.CoreSkySystem.Commands.COMMAND_noarmor;
+import com.CoreSkySystem.Commands.COMMAND_rename;
 import com.CoreSkySystem.Commands.ChatClear;
 import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_setmotd;
@@ -74,6 +77,9 @@ public class Main extends JavaPlugin {
 		this.getCommand("noarmor").setExecutor(new COMMAND_noarmor());
 		this.getCommand("cenchant").setExecutor(new COMMAND_cenchant());
 		this.getCommand("globalmute").setExecutor(new COMMAND_globalmute());
+		this.getCommand("rename").setExecutor(new COMMAND_rename());
+		this.getCommand("hkick").setExecutor(new COMMAND_hkick());
+		this.getCommand("hban").setExecutor(new COMMAND_hban());
 		
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);

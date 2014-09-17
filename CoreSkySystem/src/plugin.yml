@@ -72,3 +72,15 @@ commands:
      description: Lass niemanden mehr chatten
      usage: /globalmute
      aliases: /gm
+   rename:
+     description: Benenne dein Item um
+     usage: /rename (name)
+     aliases: ren
+   hkick:
+     description: Kicke einen Spieler ausnahmslos
+     usage: /hkick (player)
+     aliases: hk
+   hban:
+     description: Banne einen Spieler ausnahmslos
+     usage: /hban (player)
+     aliases: hb

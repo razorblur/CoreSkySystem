@@ -11,6 +11,7 @@ import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
+import com.CoreSkySystem.Commands.COMMAND_globalmute;
 import com.CoreSkySystem.Commands.COMMAND_gm;
 import com.CoreSkySystem.Commands.COMMAND_noarmor;
 import com.CoreSkySystem.Commands.ChatClear;
@@ -24,6 +25,7 @@ import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.MOTDListener;
+import com.CoreSkySystem.Listeners.PlayerListeners;
 
 public class Main extends JavaPlugin {
 	
@@ -71,12 +73,14 @@ public class Main extends JavaPlugin {
 		this.getCommand("giveall").setExecutor(new COMMAND_giveall());
 		this.getCommand("noarmor").setExecutor(new COMMAND_noarmor());
 		this.getCommand("cenchant").setExecutor(new COMMAND_cenchant());
+		this.getCommand("globalmute").setExecutor(new COMMAND_globalmute());
 		
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);
 		pm.registerEvents(new MOTDListener(), this);
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new CoreSkySign(), this);
+		pm.registerEvents(new PlayerListeners(), this);
 		
 	}
 	

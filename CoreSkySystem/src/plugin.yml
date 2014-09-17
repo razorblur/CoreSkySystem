@@ -68,3 +68,7 @@ commands:
      description: Enchante das Item in deiner Hand
      usage: /cenchant (enchantment) (level)
      aliases: ce
+   globalmute:
+     description: Lass niemanden mehr chatten
+     usage: /globalmute
+     aliases: /gm

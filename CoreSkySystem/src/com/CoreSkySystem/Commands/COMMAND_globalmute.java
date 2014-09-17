@@ -26,9 +26,11 @@ public class COMMAND_globalmute implements CommandExecutor {
 			}
 			
 			if(globalmute) {
+				ChatClear.ChatClearPlayers(100, "");
 				Bukkit.getServer().broadcastMessage(Main.name + "§6GlobalMute wurde §4Deaktiviert");
 				globalmute = false;
 			} else {
+				ChatClear.ChatClearPlayers(100, "");
 				Bukkit.getServer().broadcastMessage(Main.name + "§6GlobalMute wurde §4Aktiviert");
 				globalmute = true;
 			}

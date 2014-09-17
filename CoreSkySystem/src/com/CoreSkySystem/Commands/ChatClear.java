@@ -1,5 +1,6 @@
 package com.CoreSkySystem.Commands;
 
+import org.bukkit.Bukkit;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -38,14 +39,17 @@ public class ChatClear implements CommandExecutor {
 		return false;
 	}
 	
+	/* Clears i lines of the server. If the "name" equals ""
+	 * Then there wont be a clear message*/
 	
-	public void ChatClearPlayers(int zeilen, String name)  {
+	public static void ChatClearPlayers(int zeilen, String name)  {
 		
 		for(int i = 0; i<=zeilen; i++){
-			plugin.getServer().broadcastMessage("");
+			Bukkit.getServer().broadcastMessage("");
 			
 		}
-		plugin.getServer().broadcastMessage("§7Der Chat wurde von §b"+ name +" §7geelert");
+		if(name == "") return; 
+		Bukkit.getServer().broadcastMessage("§7Der Chat wurde von §b"+ name +" §7geelert");
 	}
 
 }

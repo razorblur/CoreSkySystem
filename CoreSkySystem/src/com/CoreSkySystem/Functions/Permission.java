@@ -14,5 +14,6 @@ public class Permission {
 	// CommandKit Commands 
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";
+	public static String noarmor = "ck.noarmor";
 	
 }

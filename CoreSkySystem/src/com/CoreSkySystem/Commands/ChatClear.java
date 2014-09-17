@@ -36,7 +36,7 @@ public class ChatClear implements CommandExecutor {
 	}	
 		
 		
-		return false;
+		return true;
 	}
 	
 	/* Clears i lines of the server. If the "name" equals ""

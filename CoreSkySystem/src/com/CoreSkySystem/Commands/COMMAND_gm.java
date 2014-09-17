@@ -8,6 +8,7 @@ import org.bukkit.command.CommandSender;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.entity.Player;
 
+import com.CoreSkySystem.Functions.Permission;
 import com.CoreSkySystem.Main.Main;
 
 public class COMMAND_gm implements CommandExecutor {
@@ -36,6 +37,9 @@ public class COMMAND_gm implements CommandExecutor {
 			}
 		} else {
 			Player player = (Player) sender;
+			if(!player.hasPermission(Permission.gamemode)) {
+				player.sendMessage(Main.name + "§4Keine Permission " + Permission.gamemode);
+			}
 			if(args.length == 0) {
 				switchGameMode(player);
 			} else if(args.length == 1) {

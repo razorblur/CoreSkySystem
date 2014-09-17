@@ -23,4 +23,5 @@ public class Permission {
 	public static String hban = "ck.hban";
 	public static String cvanish = "ck.cvanish";
 	public static String armor = "ck.armor";
+	public static String gamemode = "ck.gm";
 }

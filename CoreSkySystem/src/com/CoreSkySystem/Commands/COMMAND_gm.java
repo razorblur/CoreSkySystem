@@ -39,13 +39,28 @@ public class COMMAND_gm implements CommandExecutor {
 			if(args.length == 0) {
 				switchGameMode(player);
 			} else if(args.length == 1) {
-				Player target = Bukkit.getPlayer(args[0]);
-				if(target.getGameMode() == GameMode.CREATIVE) {
-					switchGameMode(target);
-					if(!(player.getName() == target.getName()))player.sendMessage(Main.name + "§c"+args[0] + "'s§6 GameMode ist nun auf §cSurvivial");
-				} else if(target.getGameMode() == GameMode.SURVIVAL) {
-					switchGameMode(target);
-					if(!(player.getName() == target.getName())) player.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cCreative");
+				// If the player wants to change the gamemode to 0 or to 1
+				if(args[0].equals("1")) {
+					player.setGameMode(GameMode.CREATIVE);
+					player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
+					return true;
+				} else if(args[0].equals("0")) {
+					player.setGameMode(GameMode.SURVIVAL);
+					player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cSurvival");
+					return true;
+				}
+				// Check now if there is a player with the name of args[0]
+				try {
+					Player target = Bukkit.getPlayer(args[0]);
+					if(target.getGameMode() == GameMode.CREATIVE) {
+						switchGameMode(target);
+						if(!(player.getName() == target.getName()))player.sendMessage(Main.name + "§c"+args[0] + "'s§6 GameMode ist nun auf §cSurvivial");
+					} else if(target.getGameMode() == GameMode.SURVIVAL) {
+						switchGameMode(target);
+						if(!(player.getName() == target.getName())) player.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cCreative");
+					}
+				} catch (NullPointerException exception) {
+					sender.sendMessage(Main.name + "§c" + args[0] + " §6ist nicht online");
 				}
 			}
 		}
@@ -62,5 +77,6 @@ public class COMMAND_gm implements CommandExecutor {
 			player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
 		}
 	}
+	
 
 }

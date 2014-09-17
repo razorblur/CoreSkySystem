@@ -76,6 +76,7 @@ public class COMMAND_Report implements CommandExecutor {
 				try {
 					// Spieler vom Server bekommen
 					Player target = Bukkit.getPlayer(args[0]);
+					if(!target.isOnline()) return true;
 					/* Message zusammen bauen */
 					message = "";
 					for(int i = 1; i < args.length; i++) message = message + args[i] + " ";

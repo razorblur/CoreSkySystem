@@ -7,10 +7,12 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
 import com.CoreSkySystem.Commands.COMMAND_gm;
+import com.CoreSkySystem.Commands.COMMAND_noarmor;
 import com.CoreSkySystem.Commands.ChatClear;
 import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_setmotd;
@@ -61,10 +63,14 @@ public class Main extends JavaPlugin {
 		this.getCommand("team").setExecutor(new Commands());
 		this.getCommand("warn").setExecutor(new COMMAND_Warn());
 		this.getCommand("clearwarn").setExecutor(new COMMAND_clearwarn());
-		this.getCommand("cc").setExecutor(new ChatClear(this));
+
+		// Command Kit COmmands
+		this.getCommand("clearchat").setExecutor(new ChatClear(this));
 		this.getCommand("gamemode").setExecutor(new COMMAND_gm());
 		this.getCommand("chat").setExecutor(new COMMAND_chat());
 		this.getCommand("giveall").setExecutor(new COMMAND_giveall());
+		this.getCommand("noarmor").setExecutor(new COMMAND_noarmor());
+		this.getCommand("cenchant").setExecutor(new COMMAND_cenchant());
 		
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);

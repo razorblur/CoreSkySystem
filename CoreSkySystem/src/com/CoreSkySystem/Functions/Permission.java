@@ -15,5 +15,7 @@ public class Permission {
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";
 	public static String noarmor = "ck.noarmor";
+	public static String cenchant = "ck.cenchant";
+	public static String globalmute = "ck.globalmute";
 	
 }

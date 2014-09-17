@@ -44,8 +44,10 @@ commands:
    clearwarn:
      description: Loesche alle Verwarnungen eines Spielers
      usage: /clearwarn (Player)
-   cc:
+   clearchat:
      description: Leert den Chat!
+     usage: /cc
+     aliases: cc
    gamemode:
      description: Changes your Gamemode
      usage: /gm (player)
@@ -58,4 +60,11 @@ commands:
      description: Gib allen Online - Spielern ein bestimmtes Item
      usage: /giveall (itemid) (anzahl)
      aliases: ga
-     
+   noarmor:
+     description: Entferne einem Spieler seine Ruestung
+     usage: /noarmor (player)
+     aliases: na
+   cenchant:
+     description: Enchante das Item in deiner Hand
+     usage: /cenchant (enchantment) (level)
+     aliases: ce

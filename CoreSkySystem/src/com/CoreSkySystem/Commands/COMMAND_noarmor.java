@@ -26,7 +26,7 @@ public class COMMAND_noarmor implements CommandExecutor {
 			} else {
 				try {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
-					deleteArmor(target);
+					deleteArmor(target, "der Konsole");
 					sender.sendMessage(Main.name + "§6Du hast die Rüstung von §c" + args[0] + " §6gelöscht");
 				} catch(NullPointerException exception) {
 					sender.sendMessage(Main.name + "§4Spieler wurde nicht gefunden");
@@ -35,29 +35,35 @@ public class COMMAND_noarmor implements CommandExecutor {
 		} else { // Spieler 
 			Player player = (Player) sender;
 			
-			if(!player.hasPermission(Permission.noarmor)) {
-				player.sendMessage(Main.name + "§4Du hast nicht die Permission " + Permission.noarmor);
-				return true;
-			}
 			if(args.length == 0) {
-				deleteArmor(player);
+				if(!player.hasPermission(Permission.noarmor+".self")) {
+					player.sendMessage(Main.name + "§4Du hast nicht die Permission " + Permission.noarmor+".self");
+					return true;
+				}
+				deleteArmor(player, "dir");
 			} else if(args.length == 1){
+				if(!player.hasPermission(Permission.noarmor+".others")) {
+					player.sendMessage(Main.name + "§4Du hast nicht die Permission " + Permission.noarmor+".others");
+					return true;
+				}
 				try {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
-					deleteArmor(target);
+					deleteArmor(target, "einem Admin");
 					sender.sendMessage(Main.name + "§6Du hast die Rüstung von §c" + args[0] + " §6gelöscht");
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.name + "§4Spieler wurde nicht gefunden");
+					sender.sendMessage(Main.name + "§c"+args[0] + " §4wurde nicht gefunden");
 				}
+			} else {
+				player.sendMessage(Main.name + "§8/noarmor (player)");
 			}
 		}
 		
 		return true;
 	}
 
-	private void deleteArmor(Player player) {
+	private void deleteArmor(Player player, String name) {
 		player.getInventory().setArmorContents(null);
-		player.sendMessage(Main.name + "§6Deine Rüstung wurde von einem Admin entfernt");
+		player.sendMessage(Main.name + "§6Deine Rüstung wurde von §c" + name + " §6entfernt");
 	}
 	
 }

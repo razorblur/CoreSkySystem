@@ -7,9 +7,11 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.CoreSkySystem.Commands.COMMAND_armor;
 import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
+import com.CoreSkySystem.Commands.COMMAND_cvanish;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
 import com.CoreSkySystem.Commands.COMMAND_globalmute;
 import com.CoreSkySystem.Commands.COMMAND_gm;
@@ -80,6 +82,8 @@ public class Main extends JavaPlugin {
 		this.getCommand("rename").setExecutor(new COMMAND_rename());
 		this.getCommand("hkick").setExecutor(new COMMAND_hkick());
 		this.getCommand("hban").setExecutor(new COMMAND_hban());
+		this.getCommand("cvanish").setExecutor(new COMMAND_cvanish());
+		this.getCommand("armor").setExecutor(new COMMAND_armor());
 		
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);

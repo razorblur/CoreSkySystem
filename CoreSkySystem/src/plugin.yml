@@ -84,3 +84,10 @@ commands:
      description: Banne einen Spieler ausnahmslos
      usage: /hban (player)
      aliases: hb
+   cvanish:
+     description: Verstecke dich vor allen Spielern auf dem Server
+     usage: /cvanish
+     aliases: cv
+   armor:
+     description: Gib einem Spieler eine Ruestung aus einem Material deiner Wahl
+     usage: /armor (player) (material)

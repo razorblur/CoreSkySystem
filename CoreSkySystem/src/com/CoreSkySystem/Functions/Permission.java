@@ -21,4 +21,6 @@ public class Permission {
 	public static String rename = "ck.rename";
 	public static String hkick = "ck.hkick";
 	public static String hban = "ck.hban";
+	public static String cvanish = "ck.cvanish";
+	public static String armor = "ck.armor";
 }

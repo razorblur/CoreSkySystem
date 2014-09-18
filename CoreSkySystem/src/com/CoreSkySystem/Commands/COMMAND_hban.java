@@ -21,7 +21,7 @@ public class COMMAND_hban implements CommandExecutor {
 			Player player = (Player) sender;
 			
 			if(!player.hasPermission(Permission.hban)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission §c" + Permission.hban);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission.");
 				return true;
 			}
 			
@@ -31,12 +31,12 @@ public class COMMAND_hban implements CommandExecutor {
 					Player target = Bukkit.getPlayer(args[0]);
 					target.kickPlayer(Main.name + msg);
 					target.setBanned(true);
-					player.sendMessage(Main.name + "§6Du hast §c" + target.getName() + " §6gebannt");
+					player.sendMessage(Main.name + " §7Du hast §c" + target.getName() + " §7gebannt");
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + "§c" +args[0] + " §4ist nicht online");
+					player.sendMessage(Main.name + " §c" +args[0] + " §7ist nicht online");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/hban (player)");
+				player.sendMessage(Main.name + " §7/hban (player)");
 			}
 			
 		} else {
@@ -45,12 +45,12 @@ public class COMMAND_hban implements CommandExecutor {
 				try {
 					Player target = Bukkit.getPlayer(args[0]);
 					target.kickPlayer(Main.name + msg);
-					sender.sendMessage(Main.name + "§6Du hast §c" + target.getName() + " §6gekickt");
+					sender.sendMessage(Main.name + " §7Du hast §c" + target.getName() + " §7gekickt");
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.name + "§c" +args[0] + " §4ist nicht online");
+					sender.sendMessage(Main.name + " §c" +args[0] + " §4ist nicht online");
 				}
 			} else {
-				sender.sendMessage(Main.name + "§8/hban (player)");
+				sender.sendMessage(Main.name + " §7/hban (player)");
 			}
 		}
 		msg = "";

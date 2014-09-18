@@ -30,14 +30,14 @@ public class COMMAND_setmotd implements CommandExecutor {
 			String[] args) {
 		
 		if(args.length == 0) {
-			sender.sendMessage(Main.name + " §6/setmotd (motd)");
+			sender.sendMessage(Main.name + " §7/setmotd (motd)");
 		}
 		motd = "";
 		for(int i = 0; i < args.length; i++) {
 			motd = motd + args[i] + " ";
 		}
 		motd = ColorFormatter.getColoredString(motd);
-		sender.sendMessage(Main.name + " §6Du hast das MOTD zu §c'"+ motd+"§c'§6 geändert.");
+		sender.sendMessage(Main.name + " §7Du hast das MOTD zu §c'"+ motd+"§c'§7 geändert.");
 		
 		cfg.set("server.motd", motd);
 		try {

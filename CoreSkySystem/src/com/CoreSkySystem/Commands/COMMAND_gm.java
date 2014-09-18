@@ -24,13 +24,13 @@ public class COMMAND_gm implements CommandExecutor {
 				try {
 					if(target.getGameMode() == GameMode.CREATIVE) {
 						switchGameMode(target);
-						ccs.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cSurvivial");
+						ccs.sendMessage(Main.name + "§c"+args[0] + "'s §7GameMode ist nun auf §cSurvivial");
 					} else if(target.getGameMode() == GameMode.SURVIVAL) {
 						switchGameMode(target);
-						ccs.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cCreative");
+						ccs.sendMessage(Main.name + "§c"+args[0] + "'s §7GameMode ist nun auf §cCreative");
 					}
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.normal_name + args[0] + " §6ist nicht online");
+					sender.sendMessage(Main.normal_name + args[0] + " §7ist nicht online");
 				}
 			} else {
 				ccs.sendMessage(Main.name + " §6/gm (player)");
@@ -38,7 +38,7 @@ public class COMMAND_gm implements CommandExecutor {
 		} else {
 			Player player = (Player) sender;
 			if(!player.hasPermission(Permission.gamemode)) {
-				player.sendMessage(Main.name + "§4Keine Permission " + Permission.gamemode);
+				player.sendMessage(Main.name + " §4Keine Permission " + Permission.gamemode);
 			}
 			if(args.length == 0) {
 				switchGameMode(player);
@@ -46,11 +46,11 @@ public class COMMAND_gm implements CommandExecutor {
 				// If the player wants to change the gamemode to 0 or to 1
 				if(args[0].equals("1")) {
 					player.setGameMode(GameMode.CREATIVE);
-					player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
+					player.sendMessage(Main.name + " §7Dein GameMode ist nun auf §cCreative");
 					return true;
 				} else if(args[0].equals("0")) {
 					player.setGameMode(GameMode.SURVIVAL);
-					player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cSurvival");
+					player.sendMessage(Main.name + " §7Dein GameMode ist nun auf §cSurvival");
 					return true;
 				}
 				// Check now if there is a player with the name of args[0]
@@ -64,7 +64,7 @@ public class COMMAND_gm implements CommandExecutor {
 						if(!(player.getName() == target.getName())) player.sendMessage(Main.name + "§c"+args[0] + "'s §6GameMode ist nun auf §cCreative");
 					}
 				} catch (NullPointerException exception) {
-					sender.sendMessage(Main.name + "§c" + args[0] + " §6ist nicht online");
+					sender.sendMessage(Main.name + "§c" + args[0] + " §7ist nicht online");
 				}
 			}
 		}
@@ -75,10 +75,10 @@ public class COMMAND_gm implements CommandExecutor {
 	private void switchGameMode(Player player) {
 		if(player.getGameMode() == GameMode.CREATIVE) {
 			player.setGameMode(GameMode.SURVIVAL);
-			player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cSurvival");
+			player.sendMessage(Main.name + " §7Dein GameMode ist nun auf §cSurvival");
 		} else if(player.getGameMode() == GameMode.SURVIVAL) {
 			player.setGameMode(GameMode.CREATIVE);
-			player.sendMessage(Main.name + " §6Dein GameMode ist nun auf §cCreative");
+			player.sendMessage(Main.name + " §7Dein GameMode ist nun auf §cCreative");
 		}
 	}
 	

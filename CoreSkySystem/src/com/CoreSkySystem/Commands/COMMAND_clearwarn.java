@@ -34,7 +34,7 @@ public class COMMAND_clearwarn implements CommandExecutor {
 					sender.sendMessage(Main.normal_name);
 				}
 			} else {
-				sender.sendMessage(Main.normal_name + " §6/clearwarn (player)");
+				sender.sendMessage(Main.normal_name + " §7/clearwarn (player)");
 			}
 		} else {
 			Player player = (Player) sender;
@@ -45,9 +45,9 @@ public class COMMAND_clearwarn implements CommandExecutor {
 			if(args.length == 1) {
 				Player target = (Player) Bukkit.getOfflinePlayer(args[0]);
 				clearWarns(target.getName());
-				sender.sendMessage(Main.name + " §6Du hast alle Warnungen für " + args[0] + " gelöscht");
+				sender.sendMessage(Main.name + " §7Du hast alle Warnungen für " + args[0] + " §7gelöscht");
 			} else {
-				sender.sendMessage(Main.name + " §6/clearwarn (player)");
+				sender.sendMessage(Main.name + " §7/clearwarn (player)");
 			}
 		}
 		

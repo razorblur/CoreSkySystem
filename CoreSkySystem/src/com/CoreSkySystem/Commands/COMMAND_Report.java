@@ -34,14 +34,14 @@ public class COMMAND_Report implements CommandExecutor {
 			String[] args) {
 		
 		if(sender instanceof ConsoleCommandSender) {
-			System.out.println(Main.name + " §6Du kannst keine Spieler reported aber du kannst sie verwarnen mit /warn (player) (reason)");
+			System.out.println(Main.name + " §7Du kannst keine Spieler reported aber du kannst sie verwarnen mit §c/warn (player) (reason)");
 		} else {
 			Player player = (Player) sender;
 			if(args.length == 0) {
 				if(player.hasPermission(Permission.report_show_list)) {
-					player.sendMessage(Main.name + " §6/report list (nr)");
+					player.sendMessage(Main.name + " §7/report list (nr)");
 				}
-				player.sendMessage(Main.name + " §6/report (player) (reason)");
+				player.sendMessage(Main.name + " §7/report (player) (reason)");
 			} else if(args.length == 2 && args[0].equalsIgnoreCase("list") && player.hasPermission(Permission.report_show_list)) {
 				try {
 					int page = Integer.parseInt(args[1]);
@@ -53,7 +53,7 @@ public class COMMAND_Report implements CommandExecutor {
 							String player_name = report_player.get(i);
 							String reason = report_reason.get(i);
 							/* Send the message*/
-							player.sendMessage(Main.name + " §c" + player_name + " §6wurde gemeldet. Grund: §b" + reason);
+							player.sendMessage(Main.name + " §c" + player_name + " §7wurde gemeldet. Grund: §b" + reason);
 						} catch(IndexOutOfBoundsException exception) {
 							break;
 						}
@@ -62,7 +62,7 @@ public class COMMAND_Report implements CommandExecutor {
 
 					
 				} catch(NumberFormatException exception) {
-					player.sendMessage(Main.name + " §6/report list (nr)");
+					player.sendMessage(Main.name + " §7/report list (nr)");
 				}
 			} else if(args.length > 1){
 					/* Prüfen ob der CoolDown des CommandSenders noch aktiv ist*/
@@ -70,7 +70,7 @@ public class COMMAND_Report implements CommandExecutor {
 					DateFormat df = new SimpleDateFormat("mm:ss");
 					Date date = new Date(cooldown.get(player.getName()) + COOLDOWN - System.currentTimeMillis());
 					String formatted = df.format(date);
-					player.sendMessage(Main.name + " §6Du kannst diesen Command erst in §c" + formatted + " §6 Minuten verwenden");
+					player.sendMessage(Main.name + " §7Du kannst diesen Command erst in §c" + formatted + " §7 Minuten verwenden");
 					return true;
 				}
 				try {
@@ -88,21 +88,21 @@ public class COMMAND_Report implements CommandExecutor {
 					cooldown.put(player.getName(), System.currentTimeMillis());
 					/* Messages senden*/
 					target.sendMessage(Main.name + " §4Du wurdest von einem Spieler gemeldet");
-					player.sendMessage(Main.name + " §6Du hast §c" + target.getName() + "§6 gemeldet");
-					Functions.sendMessageAllPlayerWithPermission(Permission.report_admin_alert, Main.name + "§c" + target.getName() + " §6wurde von §c" + player.getName() + " §6gemeldet, Grund: §b" + message);
+					player.sendMessage(Main.name + " §7Du hast §c" + target.getName() + "§7 gemeldet");
+					Functions.sendMessageAllPlayerWithPermission(Permission.report_admin_alert, Main.name + "§c" + target.getName() + " §7wurde von §c" + player.getName() + " §7gemeldet, Grund: §b" + message);
 				} catch(NullPointerException exception) {
 					player.sendMessage(Main.name + " §c" + args[0] + "§4 ist nicht online");
 				}
 			} else if(args.length == 1 && args[0].equalsIgnoreCase("ignore") && player.hasPermission(Permission.ignore_report)) {
 				if(ignore_message.contains(player.getName())) {
-					player.sendMessage(Main.name + " §6Du erhältst nun wieder Meldungen von Spielern");
+					player.sendMessage(Main.name + " §7Du erhältst nun wieder Meldungen von Spielern");
 					ignore_message.remove(player.getName());
 				} else {
-					player.sendMessage(Main.name + " §6Du erhältst nun keine Meldungen von Spielern mehr");
+					player.sendMessage(Main.name + " §7Du erhältst nun keine Meldungen von Spielern mehr");
 					ignore_message.add(player.getName());
 				}
 			} else {
-				player.sendMessage(Main.name + " §6/report (player) (reason)");
+				player.sendMessage(Main.name + " §7/report (player) (reason)");
 			}
 		}
 		

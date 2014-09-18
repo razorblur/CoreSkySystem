@@ -29,10 +29,10 @@ public class COMMAND_chat implements CommandExecutor {
 					}
 					z.chat(msg);
 				} catch (NullPointerException ex) {
-					ccs.sendMessage(Main.name +" §c"+args[0] + " §6ist nicht online");
+					ccs.sendMessage(Main.name +" §c"+args[0] + " §7ist nicht online");
 				}
 			} else {
-				ccs.sendMessage(Main.name +" §c/chat (Spieler) (Message)");
+				ccs.sendMessage(Main.name +" §7/chat (Spieler) (Message)");
 			}
 		} else {
 			Player p = (Player) sender;
@@ -50,7 +50,7 @@ public class COMMAND_chat implements CommandExecutor {
 					}
 					z.chat(msg);
 				} catch (NullPointerException ex) {
-					p.sendMessage(Main.name +" §c"+args[0] + " §6ist nicht online");
+					p.sendMessage(Main.name +" §c"+args[0] + " §7ist nicht online");
 				}
 			} else {
 				p.sendMessage(Main.name +" §c/chat (Spieler) (Message)");

@@ -22,14 +22,14 @@ public class COMMAND_noarmor implements CommandExecutor {
 		if(sender instanceof ConsoleCommandSender) {
 			
 			if(args.length != 1) {
-				sender.sendMessage(Main.name + "§8/noarmor (player)");
+				sender.sendMessage(Main.name + " §7/noarmor (player)");
 			} else {
 				try {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
 					deleteArmor(target, "der Konsole");
-					sender.sendMessage(Main.name + "§6Du hast die Rüstung von §c" + args[0] + " §6gelöscht");
+					sender.sendMessage(Main.name + " §7Du hast die Rüstung von §c" + args[0] + " §7gelöscht");
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.name + "§4Spieler wurde nicht gefunden");
+					sender.sendMessage(Main.name + " §4Spieler wurde nicht gefunden");
 				}
 			}
 		} else { // Spieler 
@@ -37,24 +37,24 @@ public class COMMAND_noarmor implements CommandExecutor {
 			
 			if(args.length == 0) {
 				if(!player.hasPermission(Permission.noarmor+".self")) {
-					player.sendMessage(Main.name + "§4Du hast nicht die Permission " + Permission.noarmor+".self");
+					player.sendMessage(Main.name + " §4Du hast nicht die Permission.");
 					return true;
 				}
 				deleteArmor(player, "dir");
 			} else if(args.length == 1){
 				if(!player.hasPermission(Permission.noarmor+".others")) {
-					player.sendMessage(Main.name + "§4Du hast nicht die Permission " + Permission.noarmor+".others");
+					player.sendMessage(Main.name + " §4Du hast nicht die Permission.");
 					return true;
 				}
 				try {
 					Player target = Bukkit.getServer().getPlayer(args[0]);
 					deleteArmor(target, "einem Admin");
-					sender.sendMessage(Main.name + "§6Du hast die Rüstung von §c" + args[0] + " §6gelöscht");
+					sender.sendMessage(Main.name + " §7Du hast die Rüstung von §c" + args[0] + " §7gelöscht");
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.name + "§c"+args[0] + " §4wurde nicht gefunden");
+					sender.sendMessage(Main.name + "§c"+args[0] + " §7wurde nicht gefunden");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/noarmor (player)");
+				player.sendMessage(Main.name + " §7/noarmor (player)");
 			}
 		}
 		
@@ -63,7 +63,7 @@ public class COMMAND_noarmor implements CommandExecutor {
 
 	private void deleteArmor(Player player, String name) {
 		player.getInventory().setArmorContents(null);
-		player.sendMessage(Main.name + "§6Deine Rüstung wurde von §c" + name + " §6entfernt");
+		player.sendMessage(Main.name + " §7Deine Rüstung wurde von §c" + name + " §7entfernt");
 	}
 	
 }

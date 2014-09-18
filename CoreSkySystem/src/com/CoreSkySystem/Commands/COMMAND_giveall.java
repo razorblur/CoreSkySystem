@@ -22,13 +22,13 @@ public class COMMAND_giveall implements CommandExecutor {
 			Player player = (Player) sender;
 
 			if(!player.hasPermission(Permission.giveall)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission " + Permission.giveall);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission.");
 				return true;
 			}
 			if(args.length == 2) {
 				giveAllItems(player, args[0], args[1]);
 			} else {
-				player.sendMessage(Main.name + "§8/giveall (itemid) (anzahl)");
+				player.sendMessage(Main.name + " §7/giveall (itemid) (anzahl)");
 			}
 		} else {
 			ConsoleCommandSender ccs = (ConsoleCommandSender) sender;
@@ -36,7 +36,7 @@ public class COMMAND_giveall implements CommandExecutor {
 			if(args.length == 2) {
 				giveAllItems(ccs, args[0], args[1]);
 			} else {
-				ccs.sendMessage(Main.name + "§8/giveall (itemid) (anzahl)");
+				ccs.sendMessage(Main.name + " §7/giveall (itemid) (anzahl)");
 			}
 		}
 		
@@ -56,12 +56,12 @@ public class COMMAND_giveall implements CommandExecutor {
 				Player target = players[i];
 				target.getInventory().addItem(new ItemStack(itemid, anz, (short) item_sho));
 				target.updateInventory();
-				target.sendMessage(Main.name + "§6Du hast §c" + anz + " §6Mal das Item §c" + Material.getMaterial(itemid).name() + " §6erhalten");
+				target.sendMessage(Main.name + " §7Du hast §c" + anz + " §7Mal das Item §c" + Material.getMaterial(itemid).name() + " §7erhalten");
 			}
 			if(executor instanceof ConsoleCommandSender) executor.sendMessage(Main.name + "§6Du hast §c" + anz + " §6Mal das Item §c" + Material.getMaterial(itemid).name() + " §6allen Spieler "
 					+ "gegeben");
 		} catch(NumberFormatException exception) {
-			executor.sendMessage(Main.name + "§4Fehler: §cFalscher Format");
+			executor.sendMessage(Main.name + " §4Fehler: §cFalsches Format");
 		}
 	}
 

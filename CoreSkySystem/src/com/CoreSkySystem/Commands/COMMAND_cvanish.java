@@ -22,7 +22,7 @@ public class COMMAND_cvanish implements CommandExecutor {
 			Player player = (Player) sender;
 			
 			if(!player.hasPermission(Permission.cvanish)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission " + Permission.cvanish);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission.");
 				return true;
 			}
 			
@@ -33,10 +33,10 @@ public class COMMAND_cvanish implements CommandExecutor {
 					Player target = Bukkit.getPlayer(args[0]);
 					changeVanishStatus(target);
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + "§c"+args[0] + " §6ist nicht online");
+					player.sendMessage(Main.name + " §c"+args[0] + " §7ist nicht online");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/cvanish");
+				player.sendMessage(Main.name + " §7/cvanish");
 			}
 		} else {
 			if(args.length == 1) {
@@ -44,10 +44,10 @@ public class COMMAND_cvanish implements CommandExecutor {
 					Player target = Bukkit.getPlayer(args[0]);
 					changeVanishStatus(target);
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.name + "§c"+args[0] + " §6ist nicht online");
+					sender.sendMessage(Main.name + " §c"+args[0] + " §7ist nicht online");
 				}
 			} else {
-				sender.sendMessage(Main.name + "§8/cvanish (player)");
+				sender.sendMessage(Main.name + " §7/cvanish (player)");
 			}
 		}
 		return true;
@@ -57,11 +57,11 @@ public class COMMAND_cvanish implements CommandExecutor {
 		if(vanished.contains(player.getUniqueId())) {
 			showPlayerOfServer(player);
 			vanished.remove(player.getName());
-			player.sendMessage(Main.name + "§6Du bist nun für alle §4Sichtbar");
+			player.sendMessage(Main.name + " §7Du bist nun für alle §4Sichtbar");
 		} else {
 			vanished.add(player.getName());
 			hidePlayerOfServer(player);
-			player.sendMessage(Main.name + "§6Du bist nun für alle §4Unsichtbar");
+			player.sendMessage(Main.name + " §7Du bist nun für alle §4Unsichtbar");
 		}
 	}
 	

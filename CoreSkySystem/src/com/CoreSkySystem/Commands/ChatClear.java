@@ -29,7 +29,7 @@ public class ChatClear implements CommandExecutor {
 		if(cs instanceof Player) {
 			Player p = (Player) cs;
 			if(!p.hasPermission(Permission.chat_clear)){
-			p.sendMessage("§8§l[§6§lCS§8§l] §4keine Berechtigung!");
+			p.sendMessage(Main.name +" §4keine Berechtigung!");
 			return true;
 		}
 			ChatClearPlayers(200, p.getName());

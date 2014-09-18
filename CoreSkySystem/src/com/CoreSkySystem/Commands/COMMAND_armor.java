@@ -29,18 +29,18 @@ public class COMMAND_armor implements CommandExecutor {
 				try {
 					ItemStack[] armor = getArmorByString(args[0]);
 					player.getInventory().setArmorContents(armor);
-					player.sendMessage(Main.name + "§6Du hast eine §c" + args[0] + " §6Ruestung erhalten.");
+					player.sendMessage(Main.name + " §7Du hast eine §c" + args[0] + " §7Ruestung erhalten.");
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + "§c" + args[0] + " §4ist nicht online");
+					player.sendMessage(Main.name + " §c" + args[0] + " §4ist nicht online");
 				}
 			} else if(args.length == 2) {
 				try {
 					Player target = Bukkit.getPlayer(args[0]);
 					ItemStack[] armor = getArmorByString(args[1]);
 					target.getInventory().setArmorContents(armor);
-					target.sendMessage(Main.name + "§6Du hast eine §c" + args[1] + " §6Ruestung erhalten.");
+					target.sendMessage(Main.name + " §7Du hast eine §c" + args[1] + " §7Ruestung erhalten.");
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + "§c" + args[0] + " §4ist nicht online");
+					player.sendMessage(Main.name + " §c" + args[0] + " §4ist nicht online");
 				}
 			}
 			

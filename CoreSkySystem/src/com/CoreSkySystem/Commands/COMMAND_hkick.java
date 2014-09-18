@@ -20,7 +20,7 @@ public class COMMAND_hkick implements CommandExecutor {
 			Player player = (Player) sender;
 			
 			if(!player.hasPermission(Permission.hkick)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission §c" + Permission.hkick);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission.");
 				return true;
 			}
 			
@@ -29,12 +29,12 @@ public class COMMAND_hkick implements CommandExecutor {
 				try {
 					Player target = Bukkit.getPlayer(args[0]);
 					target.kickPlayer(Main.name + msg);
-					player.sendMessage(Main.name + "§6Du hast §c" + target.getName() + " §6gekickt");
+					player.sendMessage(Main.name + " §7Du hast §c" + target.getName() + " §7gekickt");
 				} catch(NullPointerException exception) {
 					player.sendMessage(Main.name + "§c" +args[0] + " §4ist nicht online");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/hkick (player)");
+				player.sendMessage(Main.name + " §7/hkick (player)");
 			}
 			
 		} else {
@@ -45,10 +45,10 @@ public class COMMAND_hkick implements CommandExecutor {
 					target.kickPlayer(Main.name + msg);
 					sender.sendMessage(Main.name + "§6Du hast §c" + target.getName() + " §6gekickt");
 				} catch(NullPointerException exception) {
-					sender.sendMessage(Main.name + "§c" +args[0] + " §4ist nicht online");
+					sender.sendMessage(Main.name + " §c" +args[0] + " §4ist nicht online");
 				}
 			} else {
-				sender.sendMessage(Main.name + "§8/hkick (player)");
+				sender.sendMessage(Main.name + " §7/hkick (player)");
 			}
 		}
 		msg = "";

@@ -21,17 +21,17 @@ public class COMMAND_globalmute implements CommandExecutor {
 			Player player = (Player) sender;
 			// Check Permission
 			if(!player.hasPermission(Permission.globalmute)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission §c" + Permission.globalmute);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission.");
 				return true;
 			}
 			
 			if(globalmute) {
 				ChatClear.ChatClearPlayers(100, "");
-				Bukkit.getServer().broadcastMessage(Main.name + "§6GlobalMute wurde §4Deaktiviert");
+				Bukkit.getServer().broadcastMessage(Main.name + " §7GlobalMute wurde §bDeaktiviert");
 				globalmute = false;
 			} else {
 				ChatClear.ChatClearPlayers(100, "");
-				Bukkit.getServer().broadcastMessage(Main.name + "§6GlobalMute wurde §4Aktiviert");
+				Bukkit.getServer().broadcastMessage(Main.name + " §7GlobalMute wurde §bAktiviert");
 				globalmute = true;
 			}
 			

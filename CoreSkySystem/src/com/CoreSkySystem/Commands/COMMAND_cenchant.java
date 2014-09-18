@@ -21,7 +21,7 @@ public class COMMAND_cenchant implements CommandExecutor {
 			Player player = (Player) sender;
 			
 			if(!player.hasPermission(Permission.cenchant)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission §c" + Permission.cenchant);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission §c" + Permission.cenchant);
 				return true;
 			}
 			
@@ -34,22 +34,22 @@ public class COMMAND_cenchant implements CommandExecutor {
 					
 					// Check if the enchantment is null
 					if(enchantment == null) {
-						player.sendMessage(Main.name + "§6Enchantment §c" + args[0] + " §6wurde nicht gefunden");
+						player.sendMessage(Main.name + " §7Enchantment §c" + args[0] + " §7wurde nicht gefunden");
 						return true;
 					}
 					
 					// Add the Enchantment
 					item.addUnsafeEnchantment(enchantment, level);
-					player.sendMessage(Main.name + "§6Du hast das Item mit §c" + enchantment.getName() + " §b" + level + " §6verzaubert");
+					player.sendMessage(Main.name + " §7Du hast das Item mit §c" + enchantment.getName() + " §b" + level + " §7verzaubert");
 				}  catch(NumberFormatException exception) {
-					player.sendMessage(Main.name + "§4Format Fehler: §8/cenchant (enchantment) (level)");
+					player.sendMessage(Main.name + " §4Format Fehler: §c/cenchant (enchantment) (level)");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/cenchant (enchantment) (level)");
+				player.sendMessage(Main.name + " §7/cenchant (enchantment) (level)");
 			}
 		} else {
 			// Console
-			System.out.println(Main.name + "§6Du hast kein Inventar!");
+			System.out.println(Main.name + " §7Du hast kein Inventar!");
 		}
 		
 		return true;

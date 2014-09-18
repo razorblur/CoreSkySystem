@@ -19,7 +19,7 @@ public class COMMAND_rename implements CommandExecutor {
 			Player player = (Player) sender;
 			
 			if(!player.hasPermission(Permission.rename)) {
-				player.sendMessage(Main.name + "§4Dir fehlt die Permission " + Permission.rename);
+				player.sendMessage(Main.name + " §4Dir fehlt die Permission.");
 				return true;
 			}
 			
@@ -30,13 +30,13 @@ public class COMMAND_rename implements CommandExecutor {
 				ItemMeta meta = item.getItemMeta();
 				meta.setDisplayName(name);
 				item.setItemMeta(meta);
-				player.sendMessage(Main.name + "§6Du hast dein Item erfolgreich umbenannt: " + "§c'" + name + "§c'");
+				player.sendMessage(Main.name + " §7Du hast dein Item erfolgreich umbenannt: " + "§c'" + name + "§c'");
 			} else {
-				player.sendMessage(Main.name + "§8/rename (name)");
+				player.sendMessage(Main.name + " §7/rename (name)");
 			}
 			
 		} else {
-			System.out.println(Main.name + "§6Du hast kein Inventar wie soll ich das Item umbenennen?");
+			System.out.println(Main.name + " §7Du hast kein Inventar wie soll ich das Item umbenennen?");
 		}
 		return true;
 	}

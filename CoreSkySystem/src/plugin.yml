@@ -91,3 +91,7 @@ commands:
    armor:
      description: Gib einem Spieler eine Ruestung aus einem Material deiner Wahl
      usage: /armor (player) (material)
+   skyfight:
+     description: Bekomme eine Liste aller Commands
+     usage: /skyfight
+     aliases: sf

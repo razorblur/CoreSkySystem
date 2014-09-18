@@ -34,7 +34,7 @@ import com.CoreSkySystem.Listeners.PlayerListeners;
 
 public class Main extends JavaPlugin {
 	
-	public static String name = "§6§lSkyFight &7&l|"; //§8§l[§6§lCS§8§l]
+	public static String name = "§6§lSkyFight &8&l|"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
 	
 
@@ -111,7 +111,7 @@ public class Main extends JavaPlugin {
 	private void loadConfig() {
 		FileConfiguration cfg = this.getConfig();
 		
-		cfg.addDefault("server.motd", " §6Setzt das MOTD mit: §c/setmotd (motd)");
+		cfg.addDefault("server.motd", " §7Setzt das MOTD mit: §c/setmotd (motd)");
 		
 		cfg.options().copyDefaults();
 	}

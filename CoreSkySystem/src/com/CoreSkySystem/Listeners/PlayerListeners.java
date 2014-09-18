@@ -15,7 +15,7 @@ public class PlayerListeners implements Listener {
 		if(COMMAND_globalmute.globalmute) {
 			if(!event.getPlayer().hasPermission(Permission.globalmute_chat)) {
 				event.setCancelled(true);
-				event.getPlayer().sendMessage(Main.name + "§6Der GlobalMute ist aktiviert. Du darfst nicht chatten.");
+				event.getPlayer().sendMessage(Main.name + "§7Der Chat ist momentan §cDeaktiviert§7!");
 			}
 		}
 	}

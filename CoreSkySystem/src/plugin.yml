@@ -9,25 +9,25 @@ commands:
    skype:
      description: Zeigt die Skype namen an
    epic:
-     description: Epic
+     description: Alle Infos zum Spendenrang Epic
    premium:
-     description: premium
+     description: Alle Infos zum Spendenrang Premium
    spenden:
-     description: SPenden
+     description: Zeigt dir, wie du spenden kannst
    regeln:
-     description: Regeln
+     description: Zeigt dir unsere Server regeln
    hilfe:
-     description: Hilfe
+     description: Zeigt dir alle wichtigen Befehle
    ja:
-     description: Hilfe
+     description: Stimme für ja ab 
    nein:
-     description: Hilfe
+     description: Stimme für nein ab
    umfrage:
-     description: Hilfe
+     description: starte eine abstimm aktion
    copyright:
-     description: Hilfe
+     description: COPYRIGHT BY SKYFIGHT.CH
    ultimate:
-     description: Hilfe
+     description: Alle Infos zum Spendenrang Ultimate
    setmotd:
      description: Set the motd of the server.
      usage: /setmotd (motd)

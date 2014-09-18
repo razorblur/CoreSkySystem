@@ -25,7 +25,7 @@ public class KostenlosSign implements Listener  {
 		Player p = evt.getPlayer();
 		if(evt.getLine(0).equalsIgnoreCase("[Kostenlos]"))  {
 			if(!p.hasPermission(Permission.kostenlos_create))  {
-				p.sendMessage(Main.name +" §6Du kannst kein §2[Kostenlos] §6Schild erstellen!");
+				p.sendMessage(Main.name +" §7Du kannst kein §2[Kostenlos] §7Schild erstellen!");
 				evt.getBlock().setType(Material.AIR);
 				return;
 			}

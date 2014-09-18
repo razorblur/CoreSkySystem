@@ -26,7 +26,7 @@ public class CoreSkySign implements Listener  {
 		Player p = evt.getPlayer();
 		if(evt.getLine(0).equalsIgnoreCase("[SkyFight]"))  {
 			if(!p.hasPermission(Permission.create_delayed_sign))  {
-				p.sendMessage(Main.name +" §6Du kannst kein §cCoreSky-Schild §6erstellen!");
+				p.sendMessage(Main.name +" §7Du kannst kein §cSkyFight-Schild §7erstellen!");
 				evt.getBlock().setType(Material.AIR);
 				return;
 			}

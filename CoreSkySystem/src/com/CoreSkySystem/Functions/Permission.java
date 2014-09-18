@@ -13,15 +13,15 @@ public class Permission {
 	public static String kostenlos_create = "skyfight.kostenlos.create";
 	// CommandKit Commands 
 	public static String chat = "ck.chat";
-	public static String giveall = "skyfight.giveall";
-	public static String noarmor = "skyfight.noarmor";
-	public static String cenchant = "skyfight.cenchant";
-	public static String globalmute = "skyfight.globalmute";
-	public static String globalmute_chat = "skyfight.globalmute.chat";
-	public static String rename = "skyfight.rename";
-	public static String hkick = "skyfight.hkick";
-	public static String hban = "skyfight.hban";
-	public static String cvanish = "skyfight.cvanish";
-	public static String armor = "skyfight.armor";
-	public static String gamemode = "skyfight.gm";
+	public static String giveall = "ck.giveall";
+	public static String noarmor = "ck.noarmor";
+	public static String cenchant = "ck.cenchant";
+	public static String globalmute = "ck.globalmute";
+	public static String globalmute_chat = "ck.globalmute.chat";
+	public static String rename = "ck.rename";
+	public static String hkick = "ck.hkick";
+	public static String hban = "ck.hban";
+	public static String cvanish = "ck.cvanish";
+	public static String armor = "ck.armor";
+	public static String gamemode = "ck.gm";
 }

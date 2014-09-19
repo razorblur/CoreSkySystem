@@ -35,7 +35,7 @@ import com.CoreSkySystem.Listeners.PlayerListeners;
 
 public class Main extends JavaPlugin {
 	
-	public static String name = "§6§lSkyFight &8&l|"; //§8§l[§6§lCf§8§l]
+	public static String name = "§6§lSkyFight §8§l|"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
 	
 

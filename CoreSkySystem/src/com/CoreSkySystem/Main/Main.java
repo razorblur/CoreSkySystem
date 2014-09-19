@@ -19,6 +19,7 @@ import com.CoreSkySystem.Commands.COMMAND_hban;
 import com.CoreSkySystem.Commands.COMMAND_hkick;
 import com.CoreSkySystem.Commands.COMMAND_noarmor;
 import com.CoreSkySystem.Commands.COMMAND_rename;
+import com.CoreSkySystem.Commands.COMMAND_skyfight;
 import com.CoreSkySystem.Commands.ChatClear;
 import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_setmotd;
@@ -70,6 +71,9 @@ public class Main extends JavaPlugin {
 		this.getCommand("team").setExecutor(new Commands());
 		this.getCommand("warn").setExecutor(new COMMAND_Warn());
 		this.getCommand("clearwarn").setExecutor(new COMMAND_clearwarn());
+		
+		// Command skyfight
+		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
 
 		// Command Kit COmmands
 		this.getCommand("clearchat").setExecutor(new ChatClear(this));

@@ -43,15 +43,15 @@ public class COMMAND_skyfight implements CommandExecutor {
 					for(int i = page; i < page + 5; i++) {
 						String command = commands.get(i);
 						String desc = plugin.getCommand(command).getDescription();
-						sender.sendMessage(Main.name + "§8" + command + " - " + desc);
+						sender.sendMessage(Main.name + " §7" + command + " - " + desc);
 					}
 				} catch (NumberFormatException exception) {
-					sender.sendMessage(Main.name + "§4Fehler: §cUnbekannter Format.");
+					sender.sendMessage(Main.name + " §4Fehler: §cUnbekannter Format.");
 				} catch (IndexOutOfBoundsException exception) {
-					sender.sendMessage(Main.name + "§4Die Seite existiert nicht");
+					sender.sendMessage(Main.name + " §4Die Seite existiert nicht");
 				}
 			} else {
-				sender.sendMessage(Main.name + "§8/skyfight (page) ");
+				sender.sendMessage(Main.name + " §c/skyfight (page) ");
 			}
 			
 		}

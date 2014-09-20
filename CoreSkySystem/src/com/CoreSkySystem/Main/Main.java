@@ -2,12 +2,12 @@ package com.CoreSkySystem.Main;
 
 import java.io.File;
 import java.io.IOException;
-
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.CoreSkySystem.Commands.COMMAND_armor;
+import com.CoreSkySystem.Commands.COMMAND_broadcast;
 import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
@@ -71,6 +71,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("team").setExecutor(new Commands());
 		this.getCommand("warn").setExecutor(new COMMAND_Warn());
 		this.getCommand("clearwarn").setExecutor(new COMMAND_clearwarn());
+		this.getCommand("sk").setExecutor(new COMMAND_broadcast());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -95,6 +96,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new CoreSkySign(), this);
 		pm.registerEvents(new PlayerListeners(), this);
+
 		
 	}
 	
@@ -114,6 +116,8 @@ public class Main extends JavaPlugin {
 	
 	private void loadConfig() {
 		FileConfiguration cfg = this.getConfig();
+		
+
 		
 		cfg.addDefault("server.motd", " §7Setzt das MOTD mit: §c/setmotd (motd)");
 		

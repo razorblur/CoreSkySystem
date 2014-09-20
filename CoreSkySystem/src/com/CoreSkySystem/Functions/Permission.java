@@ -11,6 +11,7 @@ public class Permission {
 	public static String clearwarn = "skyfight.clearwarn";
 	public static String start_umfrage = "skyfight.umfrage.start";
 	public static String kostenlos_create = "skyfight.kostenlos.create";
+	public static String sk_broadcast = "skyfight.broadcast.sk";
 	// CommandKit Commands 
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";

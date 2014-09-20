@@ -95,3 +95,7 @@ commands:
      description: Bekomme eine Liste aller Commands
      usage: /skyfight
      aliases: sf
+   sk:
+     description: Mache einen Rundruf
+   kit:
+     description: Öffte dir Kit auswahl

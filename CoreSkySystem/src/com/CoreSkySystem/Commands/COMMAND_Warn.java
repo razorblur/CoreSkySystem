@@ -99,6 +99,8 @@ public class COMMAND_Warn implements CommandExecutor  {
 	
 	
 	public static int getWarnNumber(Player player) {
+		file = new File("plugins//CoreSkySystem//warns.yml");
+		cfg = YamlConfiguration.loadConfiguration(file);
 		int warns = 0;
 		while(cfg.getString("warns."+player.getName()+"."+warns) != null) warns++;
 		return warns;

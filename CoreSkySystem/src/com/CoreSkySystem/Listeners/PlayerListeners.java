@@ -1,7 +1,9 @@
 package com.CoreSkySystem.Listeners;
 
+import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
+import org.bukkit.event.entity.PlayerDeathEvent;
 import org.bukkit.event.player.AsyncPlayerChatEvent;
 
 import com.CoreSkySystem.Commands.COMMAND_globalmute;
@@ -17,6 +19,17 @@ public class PlayerListeners implements Listener {
 				event.setCancelled(true);
 				event.getPlayer().sendMessage(Main.name + "§7Der Chat ist momentan §cDeaktiviert§7!");
 			}
+		}
+	}
+	
+	@EventHandler
+	public void onDeath(PlayerDeathEvent event) {
+		Player player = event.getEntity();
+		if(player.getKiller() instanceof Player) {
+			player.sendMessage(Main.name + " §8Du wurdest getötet von §6§l"+player.getKiller().getName());
+			player.getKiller().sendMessage(Main.name + " §8Du hast §6§l" + player.getName() + " §8getötet");
+			player.getKiller().setHealth(20.0);
+			player.getKiller().sendMessage(Main.name + " §7Du wurdest §cgeheilt §7weil du jemanden §cgetötet §7hast");
 		}
 	}
 

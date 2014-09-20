@@ -39,6 +39,7 @@ public class COMMAND_gm implements CommandExecutor {
 			Player player = (Player) sender;
 			if(!player.hasPermission(Permission.gamemode)) {
 				player.sendMessage(Main.name + " §4Keine Permission " + Permission.gamemode);
+				return true;
 			}
 			if(args.length == 0) {
 				switchGameMode(player);

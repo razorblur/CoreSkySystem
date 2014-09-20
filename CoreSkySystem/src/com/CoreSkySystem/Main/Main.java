@@ -2,6 +2,7 @@ package com.CoreSkySystem.Main;
 
 import java.io.File;
 import java.io.IOException;
+
 import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -12,6 +13,7 @@ import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
 import com.CoreSkySystem.Commands.COMMAND_cvanish;
+import com.CoreSkySystem.Commands.COMMAND_friede;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
 import com.CoreSkySystem.Commands.COMMAND_globalmute;
 import com.CoreSkySystem.Commands.COMMAND_gm;
@@ -37,6 +39,7 @@ public class Main extends JavaPlugin {
 	
 	public static String name = "§6§lSkyFight §8§l|"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
+	public static String path;
 	
 
 	@Override
@@ -47,10 +50,11 @@ public class Main extends JavaPlugin {
 	
 	@Override
 	public void onEnable()  {
+		path = this.getName();
 		PluginManager pm = this.getServer().getPluginManager();
 		// Create Files
 		loadConfig();
-		loadReportFile();
+		loadtFiles();
 		// Useless Info :D
 		info();
 
@@ -71,7 +75,8 @@ public class Main extends JavaPlugin {
 		this.getCommand("team").setExecutor(new Commands());
 		this.getCommand("warn").setExecutor(new COMMAND_Warn());
 		this.getCommand("clearwarn").setExecutor(new COMMAND_clearwarn());
-		this.getCommand("sk").setExecutor(new COMMAND_broadcast());
+		this.getCommand("sfbroadcast").setExecutor(new COMMAND_broadcast());
+		this.getCommand("friede").setExecutor(new COMMAND_friede());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -124,13 +129,27 @@ public class Main extends JavaPlugin {
 		cfg.options().copyDefaults();
 	}
 	
-	private void loadReportFile() {
-		File file = new File("plugins//CoreSkySystem//warns.yml");
-		if(!file.exists()) {
-			try {
-				file.createNewFile();
-			} catch (IOException e) {
-				System.out.println(normal_name + "Die warns.yml konnte nicht erstellt werden");
+	private void loadtFiles() {
+		// Warn Files
+		{ 
+			File file = new File("plugins//" + this.getDescription().getName() +"//warns.yml");
+			if(!file.exists()) {
+				try {
+					file.createNewFile();
+				} catch (IOException e) {
+					System.out.println(normal_name + "Die warns.yml konnte nicht erstellt werden");
+				}
+			}
+		}
+		//////////Friede Files////////////
+		{
+			File file = new File("plguins//" + this.getDescription().getName() + "//friede.yml");
+			if(!file.exists()) {
+				try {
+					file.createNewFile();
+				} catch (IOException e) {
+					System.out.println(normal_name + "Die friede.yml konnte nicht erstellt werden");
+				}
 			}
 		}
 	}

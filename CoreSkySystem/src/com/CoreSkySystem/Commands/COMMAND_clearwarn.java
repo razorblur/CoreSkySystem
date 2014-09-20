@@ -63,8 +63,6 @@ public class COMMAND_clearwarn implements CommandExecutor {
 		} catch (IOException e) {
 			System.out.println("Die warns.yml existiert nicht");
 			return false;
-		} finally {
-			cfg = YamlConfiguration.loadConfiguration(file);
 		}
 		return true;
 	}

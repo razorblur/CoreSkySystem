@@ -38,7 +38,7 @@ public class COMMAND_setmotd implements CommandExecutor {
 		}
 		motd = ColorFormatter.getColoredString(motd);
 		sender.sendMessage(Main.name + " §7Du hast das MOTD zu §c'"+ motd+"§c'§7 geändert.");
-		
+		motd = ColorFormatter.getIngameCode(motd);
 		cfg.set("server.motd", motd);
 		try {
 			cfg.save(file);

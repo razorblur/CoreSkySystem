@@ -11,7 +11,8 @@ public class MOTDListener implements Listener {
 	
 	@EventHandler(priority=EventPriority.HIGHEST)
 	public void onPacketSend(ServerListPingEvent event) {
-		event.setMotd(COMMAND_setmotd.motd);
+		
+		event.setMotd(COMMAND_setmotd.motd.replaceAll("&", "§"));
 	}
 
 }

@@ -54,7 +54,7 @@ public class COMMAND_cvanish implements CommandExecutor {
 	}
 	
 	private void changeVanishStatus(Player player) {
-		if(vanished.contains(player.getUniqueId())) {
+		if(vanished.contains(player.getName())) {
 			showPlayerOfServer(player);
 			vanished.remove(player.getName());
 			player.sendMessage(Main.name + " §7Du bist nun für alle §4Sichtbar");

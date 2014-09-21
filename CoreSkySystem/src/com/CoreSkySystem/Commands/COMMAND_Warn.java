@@ -23,7 +23,7 @@ public class COMMAND_Warn implements CommandExecutor  {
 	private static File file = new File("plugins//CoreSkySystem//warns.yml");
 	private static YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
 	public static int limit = 3;
-	public static String kickMessage = Main.name + " §7Du wurdest gebannt weil du §c" + limit + " §7Verwarnungen erhalten hast.";
+	public static String kickMessage = Main.name + "§6Du wurdest gebannt weil du §c" + limit + " §6Verwarnungen erhalten hast.";
 	String reason = "";
 
 	@Override
@@ -41,16 +41,16 @@ public class COMMAND_Warn implements CommandExecutor  {
 				reason = reason.substring(0, reason.length()-1);
 				// Spieler verwarnen
 				warnPlayer(sender, target, reason);
-				Bukkit.broadcastMessage(Main.name + " §e"+target.getName() + " §7wurde verwarnt Grund: §a" + reason);
+				Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §8wurde verwarnt Grund: §a" + reason);
 			} catch(NullPointerException exception) {
-				sender.sendMessage(Main.name + ChatColor.DARK_RED + " Dieser Spieler ist nicht Online");
+				sender.sendMessage(Main.name + ChatColor.DARK_RED + "Dieser Spieler ist nicht Online");
 			}
 		} else {
 			Player player = (Player) sender;
 			
 			//Permission prüfen
 			if(!player.hasPermission(Permission.warn_player)) {
-				player.sendMessage(Main.name + " §4Du hast nicht die Permission.");
+				player.sendMessage(Main.name + "§4Du hast nicht die Permission " + Permission.warn_player);
 				return true;
 			}
 			
@@ -66,12 +66,12 @@ public class COMMAND_Warn implements CommandExecutor  {
 					reason = reason.substring(0, reason.length()-1);
 					// Spieler verwarnen
 					warnPlayer(player, target, reason);
-					Bukkit.broadcastMessage(Main.name + " §e"+target.getName() + " §7wurde verwarnt Grund: §a" + reason);
+					Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §8wurde verwarnt Grund: §a" + reason);
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + ChatColor.DARK_RED + " Dieser Spieler ist nicht Online");
+					player.sendMessage(Main.name + ChatColor.DARK_RED + "Dieser Spieler ist nicht Online");
 				}
 			} else {
-				player.sendMessage(Main.name + " §7/warn (player) (reason)");
+				player.sendMessage(Main.name + "§8/warn (player) (reason)");
 			}
 		}
 		return true;
@@ -99,8 +99,6 @@ public class COMMAND_Warn implements CommandExecutor  {
 	
 	
 	public static int getWarnNumber(Player player) {
-		file = new File("plugins//CoreSkySystem//warns.yml");
-		cfg = YamlConfiguration.loadConfiguration(file);
 		int warns = 0;
 		while(cfg.getString("warns."+player.getName()+"."+warns) != null) warns++;
 		return warns;

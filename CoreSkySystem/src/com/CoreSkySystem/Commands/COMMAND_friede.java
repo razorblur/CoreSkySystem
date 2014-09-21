@@ -75,6 +75,12 @@ public class COMMAND_friede implements CommandExecutor {
 					}
 					break;
 				case "list": 
+					try {
+						showList(player, player);
+					} catch(NullPointerException exception) {
+						player.sendMessage(Main.name + "§4Dieser Spieler ist nicht Online");
+					}
+					break;
 				default:
 					try {
 						Player target = Bukkit.getPlayer(args[0]);
@@ -136,6 +142,20 @@ public class COMMAND_friede implements CommandExecutor {
 			if(str.getValue() == value) return str.getKey();
 		}
 		return null;
+	}
+	
+	private void showList(Player to, Player from) {
+		try {
+		List<?> list = cfg.getList(from.getName());
+		to.sendMessage(Main.name + "§7Du hast mit folgenden Spielern friede:");
+		String str = "";
+		for(int i = 0; i < list.size(); i++) {
+			str = str + list.get(i) + ", ";
+		}
+		to.sendMessage("§c"+str);
+		} catch (NullPointerException exception) {
+			to.sendMessage(Main.name + "§7Du hast mit niemandem frieden");
+		}
 	}
 
 }

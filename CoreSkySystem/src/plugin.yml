@@ -102,3 +102,7 @@ commands:
    friede:
      description: Schliesse mit einem Spieler frieden
      usage: /friede (spieler)
+   leer:
+     description: setze einen Broadcast ohne Main Prefix
+     aliases: lm
+     usage: /leer (message)

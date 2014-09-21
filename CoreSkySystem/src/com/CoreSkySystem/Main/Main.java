@@ -9,6 +9,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 import com.CoreSkySystem.Commands.COMMAND_armor;
 import com.CoreSkySystem.Commands.COMMAND_broadcast;
+import com.CoreSkySystem.Commands.COMMAND_broadcast2;
 import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
@@ -77,6 +78,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("clearwarn").setExecutor(new COMMAND_clearwarn());
 		this.getCommand("sfbroadcast").setExecutor(new COMMAND_broadcast());
 		this.getCommand("friede").setExecutor(new COMMAND_friede());
+		this.getCommand("leer").setExecutor(new COMMAND_broadcast2());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));

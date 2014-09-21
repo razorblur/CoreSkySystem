@@ -11,22 +11,35 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.COMMAND_cvanish;
+import com.CoreSkySystem.Main.Main;
 
 public class JoinQuitListener implements Listener{
 	
 	/* This class block the join and leave messages.*/
 	@EventHandler
-	public void onJoin(PlayerJoinEvent evt)  {
-		evt.setJoinMessage("");
+	public void onJoin(PlayerJoinEvent e)  {
+		Player p = e.getPlayer();
+		if (p.isOp())  {
+			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
+		} else  {  
+			e.setJoinMessage("");
+		}
+		
 		// Vanish the PLayer
 		for(int i = 0; i < COMMAND_cvanish.vanished.size(); i++) {
 			Player player = Bukkit.getPlayer(COMMAND_cvanish.vanished.get(i));
-			player.hidePlayer(evt.getPlayer());
+			player.hidePlayer(e.getPlayer());
 		}
 	}
 	@EventHandler
-	public void onQuit(PlayerQuitEvent evt)  {
-		evt.setQuitMessage("");
+	public void onJoin(PlayerQuitEvent e)  {
+		Player p = e.getPlayer();
+		if (p.isOp())  {
+			e.setQuitMessage(Main.name + " §cDas Team-Mitglied: §4"+ p.getName() + "§c, hat den Server verlassen.");
+		} else  {  
+	        e.setQuitMessage("");
+		}
+	
 	}
 	@EventHandler
 	public void onLogin(PlayerLoginEvent evt) {

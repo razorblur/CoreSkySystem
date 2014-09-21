@@ -49,7 +49,7 @@ public class Umfrage implements CommandExecutor {
 	        nein += 1;
 	        uspieler.add(p.getName());
 	        p.sendMessage(Main.name +" §7Deine Stimme wurde gezählt!");
-	        Bukkit.broadcastMessage(Main.name +" §c" + p.getName() + " §7hat für §4nein §6gestimmt!");
+	        Bukkit.broadcastMessage(Main.name +" §c" + p.getName() + " §7hat für §4nein §7gestimmt!");
 	      } else {
 	        p.sendMessage(Main.name +" §cDerzeit läuft keine Umfrage!");
 	      }
@@ -96,7 +96,7 @@ public class Umfrage implements CommandExecutor {
 	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
 	          Bukkit.broadcastMessage("§7Eine Umfrage wurde von §c§o" + p.getName() +  " §7gestartet!");
 	          Bukkit.broadcastMessage("§7Frage: §c§o" + umfrage);
-	          Bukkit.broadcastMessage("§7Stimme mit §c/ja §6oder §c/nein §6ab.");
+	          Bukkit.broadcastMessage("§7Stimme mit §c/ja §7oder §c/nein §7ab.");
 	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
 	          return true;
 	        }

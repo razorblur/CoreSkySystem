@@ -137,7 +137,7 @@ public class Main extends JavaPlugin {
 				try {
 					file.createNewFile();
 				} catch (IOException e) {
-					System.out.println(normal_name + "Die warns.yml konnte nicht erstellt werden");
+					System.out.println(normal_name + " Die warns.yml konnte nicht erstellt werden");
 				}
 			}
 		}
@@ -148,7 +148,7 @@ public class Main extends JavaPlugin {
 				try {
 					file.createNewFile();
 				} catch (IOException e) {
-					System.out.println(normal_name + "Die friede.yml konnte nicht erstellt werden");
+					System.out.println(normal_name + " Die friede.yml konnte nicht erstellt werden");
 				}
 			}
 		}

@@ -54,19 +54,19 @@ public class COMMAND_friede implements CommandExecutor {
 							System.out.println("Datei konnte nicht gefunden werden");
 						}
 						
-						player.sendMessage(Main.name + "§7Du hast mit " + target + " frieden geschlossen");
+						player.sendMessage(Main.name + " §7Du hast mit " + target + " frieden geschlossen");
 						Bukkit.getPlayer(target).sendMessage(Main.name + "§7Du hast mit " + player.getName() + " frieden geschlossen");
 						
 						friede.remove(target);
 					} else {
-						player.sendMessage(Main.name + "§7Keine ausstehenden Friedens Angebote");
+						player.sendMessage(Main.name + " §7Keine ausstehenden Friedens Angebote");
 					}
 					break;
 				case "ablehnen":
 					if(friede.containsValue(player.getName())) {
 						String target = getKey(player.getName());
 						
-						player.sendMessage(Main.name + "§7Du hast " + target + "'s Friedensangebot abgelehnt");
+						player.sendMessage(Main.name + " §7Du hast " + target + "'s Friedensangebot abgelehnt");
 						Bukkit.getPlayer(target).sendMessage(Main.name + "§c" + player.getName() + " hat dein Friedensangebot abgelehnt");
 						
 						friede.remove(target);
@@ -97,23 +97,23 @@ public class COMMAND_friede implements CommandExecutor {
 						if(!friede.containsKey(player.getName())) {
 							friede.put(player.getName(), target.getName());
 							// Messages
-							player.sendMessage(Main.name + "§7Du hast §c" + target.getName() + " §7 ein Friedens-Angebot gestellt");
-							target.sendMessage(Main.name + "§c" + player.getName() + " §7 hat dir Friedens-Angebot gestellt");
+							player.sendMessage(Main.name + " §7Du hast §c" + target.getName() + " §7 ein Friedens-Angebot gestellt");
+							target.sendMessage(Main.name + " §c" + player.getName() + " §7 hat dir Friedens-Angebot gestellt");
 						} else {
-							player.sendMessage(Main.name + "§7Es gibt noch ein austehendes Friedensangebot von dir");
+							player.sendMessage(Main.name + " §7Es gibt noch ein austehendes Friedensangebot von dir");
 						}
 
 					} catch (NullPointerException exception) { 
-						player.sendMessage(Main.name + "§4Dieser Spieler ist offline");
+						player.sendMessage(Main.name + " §4Dieser Spieler ist offline");
 					}
 					
 				} // player1 player2
 			} else {
-				player.sendMessage(Main.name + "/friede (player)");
+				player.sendMessage(Main.name + " §7/friede (player)");
 			}
 			
 		} else {
-			sender.sendMessage(Main.name + "§4Du kannst diesen Command nicht verwenden!");
+			sender.sendMessage(Main.name + " §4Du kannst diesen Command nicht verwenden!");
 		}
 		
 		return true;

@@ -99,8 +99,6 @@ commands:
      description: Mache einen Rundruf
      aliases: sfb
      usage: /sfbroadcast (message)
-   kit:
-     description: Oeffnet dir eine Kit auswahl
    friede:
      description: Schliesse mit einem Spieler frieden
      usage: /friede (spieler)

@@ -71,7 +71,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§4/recipe");
 				cs.sendMessage("§4/repair");
 				cs.sendMessage("§4/ci");
-				cs.sendMessage("§4/meta");
+				cs.sendMessage("§4/rename");
 				cs.sendMessage("§4/enderchest");
 				cs.sendMessage("§4/workbench");
 			    cs.sendMessage("§7[]-------------[§6Premium§7]-------------[]");

@@ -13,6 +13,7 @@ public class Permission {
 	public static String kostenlos_create = "skyfight.kostenlos.create";
 	public static String sk_broadcast = "skyfight.broadcast.sk";
 	public static String friede = "skyfight.friede";
+	public static String team_Join = "team.join";
 	// CommandKit Commands 
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";
@@ -27,5 +28,4 @@ public class Permission {
 	public static String armor = "ck.armor";
 	public static String gamemode = "ck.gm";
 	public static String leer_broadcast = "broadcast.leer";
-	public static String team_Join = "team.join";
 }

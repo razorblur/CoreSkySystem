@@ -22,8 +22,10 @@ public class JoinQuitListener implements Listener{
 		Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
+			p.sendMessage(Main.name+ "&aFür Hilfe, tippe: &e&l/hilfe");
 		} else  {  
 			e.setJoinMessage("");
+			p.sendMessage(Main.name+ "&aFür Hilfe, tippe: &e&l/hilfe");
 		}
 		
 		// Vanish the PLayer

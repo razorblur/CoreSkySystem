@@ -14,6 +14,8 @@ public class Permission {
 	public static String sk_broadcast = "skyfight.broadcast.sk";
 	public static String friede = "skyfight.friede";
 	public static String team_Join = "team.join";
+	public static String set_motd = "motd.set";
+	
 	// CommandKit Commands 
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";

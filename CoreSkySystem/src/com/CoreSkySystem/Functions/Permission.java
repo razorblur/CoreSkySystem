@@ -15,6 +15,7 @@ public class Permission {
 	public static String friede = "skyfight.friede";
 	public static String team_Join = "team.join";
 	public static String set_motd = "motd.set";
+	public static String umwelt_create = "umwelt.create";
 	
 	// CommandKit Commands 
 	public static String chat = "ck.chat";

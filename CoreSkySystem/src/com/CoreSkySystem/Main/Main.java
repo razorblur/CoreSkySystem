@@ -34,6 +34,7 @@ import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.MOTDListener;
 import com.CoreSkySystem.Listeners.PlayerListeners;
+import com.CoreSkySystem.Listeners.UmweltSign;
 
 public class Main extends JavaPlugin {
 	
@@ -101,6 +102,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new MOTDListener(), this);
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new PlayerListeners(), this);
+		pm.registerEvents(new UmweltSign(), this);
 
 		
 	}

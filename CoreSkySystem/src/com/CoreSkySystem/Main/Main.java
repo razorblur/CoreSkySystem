@@ -29,7 +29,6 @@ import com.CoreSkySystem.Commands.COMMAND_setmotd;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
-import com.CoreSkySystem.Listeners.CoreSkySign;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
@@ -101,7 +100,6 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new DeathDrop(), this);
 		pm.registerEvents(new MOTDListener(), this);
 		pm.registerEvents(new JoinQuitListener(), this);
-		pm.registerEvents(new CoreSkySign(), this);
 		pm.registerEvents(new PlayerListeners(), this);
 
 		

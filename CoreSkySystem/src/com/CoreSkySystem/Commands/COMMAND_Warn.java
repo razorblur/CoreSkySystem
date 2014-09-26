@@ -23,7 +23,7 @@ public class COMMAND_Warn implements CommandExecutor  {
 	private static File file = new File("plugins//CoreSkySystem//warns.yml");
 	private static YamlConfiguration cfg = YamlConfiguration.loadConfiguration(file);
 	public static int limit = 3;
-	public static String kickMessage = Main.name + "§6Du wurdest gebannt weil du §c" + limit + " §6Verwarnungen erhalten hast.";
+	public static String kickMessage = Main.name + " §6Du wurdest gebannt weil du §c" + limit + " §6Verwarnungen erhalten hast.";
 	String reason = "";
 
 	@Override
@@ -66,12 +66,12 @@ public class COMMAND_Warn implements CommandExecutor  {
 					reason = reason.substring(0, reason.length()-1);
 					// Spieler verwarnen
 					warnPlayer(player, target, reason);
-					Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §8wurde verwarnt Grund: §a" + reason);
+					Bukkit.broadcastMessage(Main.name + "§e"+target.getName() + " §7wurde verwarnt Grund: §a" + reason);
 				} catch(NullPointerException exception) {
-					player.sendMessage(Main.name + ChatColor.DARK_RED + "Dieser Spieler ist nicht Online");
+					player.sendMessage(Main.name + ChatColor.DARK_RED + " Dieser Spieler ist nicht Online");
 				}
 			} else {
-				player.sendMessage(Main.name + "§8/warn (player) (reason)");
+				player.sendMessage(Main.name + " §c/warn (player) (reason)");
 			}
 		}
 		return true;

@@ -1,4 +1,4 @@
-package com.CoreSkySystem.Commands
+package com.CoreSkySystem.Commands;
 
 import com.CoreSkySystem.Functions.Permission;
 

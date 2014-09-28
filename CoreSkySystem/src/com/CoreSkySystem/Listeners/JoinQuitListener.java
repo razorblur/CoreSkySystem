@@ -22,10 +22,10 @@ public class JoinQuitListener implements Listener{
 		Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
-			p.sendMessage(Main.name+ "&aFür Hilfe, tippe: &e&l/hilfe");
+			p.sendMessage(Main.name+ "§4§lFür Hilfe, tippe: §e§l/hilfe");
 		} else  {  
 			e.setJoinMessage("");
-			p.sendMessage(Main.name+ "&aFür Hilfe, tippe: &e&l/hilfe");
+			p.sendMessage(Main.name+ " §4§lFür Hilfe, tippe: §e§l/hilfe");
 		}
 		
 		// Vanish the PLayer
@@ -44,7 +44,7 @@ public class JoinQuitListener implements Listener{
 		}
 	
 	}
-	@EventHandler
+	@EventHandler   
 	public void onLogin(PlayerLoginEvent evt) {
 		if(COMMAND_Warn.getWarnNumber(evt.getPlayer()) >= COMMAND_Warn.limit) {
 			evt.disallow(Result.KICK_BANNED, COMMAND_Warn.kickMessage);

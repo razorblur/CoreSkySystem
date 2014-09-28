@@ -39,7 +39,7 @@ public class Commands implements CommandExecutor {
 					cs.sendMessage("§8» §7Die §cOwner §7findest du unter §c/skype§7.");
 					cs.sendMessage("§8» §cSpenden §7kannst du nur per §cPaySafeCard§7!");
 					cs.sendMessage("§8» §cInfos §7zu den §cSpenden-Rängen§7:");
-					cs.sendMessage("§8» §c/premium §7, §c/epic §7oder §c/ultimate");
+					cs.sendMessage("§8» §c/iron§7, §c/gold§7, §c/Diamond§7, §c/Emerald§7");
 					cs.sendMessage("§7[]-------------[§6Spenden§7]-------------[]");
 			
 							
@@ -47,6 +47,8 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§7[]--------[§6Skype§7]--------[]");
 				cs.sendMessage("§8> §4Owner §7 * §4byBambus§7: §eprimeewolf§7");
 				cs.sendMessage("§8> §4Owner §7 * §4DerDickeEins§7: §eiSnoopHDx§7");
+				cs.sendMessage("&7-----------------------------------------------");
+				cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
 				cs.sendMessage("§7[]-------------[§6Skype§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("regeln"))  {
@@ -58,64 +60,74 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§8> §cKein CAPSLOCK! §8«");
 		        cs.sendMessage("§7[]-------------[§6Regelwerk§7]-------------[]");
 			
-			} else if (cmd.getName().equalsIgnoreCase("premium"))  {
-				cs.sendMessage("§7[]-------------[§6Premium§7]-------------[]");
+			} else if (cmd.getName().equalsIgnoreCase("iron"))  {
+				cs.sendMessage("§7[]-------------[§f§lIron§7]-------------[]");
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 10 Euro       ");
 				cs.sendMessage("");
 				cs.sendMessage("§8» §cRang | Rechte §8«");
 				cs.sendMessage("");
-				cs.sendMessage("§4/kit premium");
+				cs.sendMessage("§4/kit Iron");
 				cs.sendMessage("§4/tpahere");
 				cs.sendMessage("§4/near");
 				cs.sendMessage("§4/recipe");
 				cs.sendMessage("§4/repair");
 				cs.sendMessage("§4/ci");
-				cs.sendMessage("§4/rename");
 				cs.sendMessage("§4/enderchest");
 				cs.sendMessage("§4/workbench");
-			    cs.sendMessage("§7[]-------------[§6Premium§7]-------------[]");
+			    cs.sendMessage("§7[]-------------[§f§lIron§7]-------------[]");
 		
-			} else if (cmd.getName().equalsIgnoreCase("epic"))  {
-				cs.sendMessage("§7[]-------------[§6Epic§7]-------------[]");
+			} else if (cmd.getName().equalsIgnoreCase("gold"))  {
+				cs.sendMessage("§7[]-------------[§6§lGold§7]-------------[]");
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 20 Euro       ");
 				cs.sendMessage("");
 				cs.sendMessage("§8» §cRang | Rechte §8«");
 				cs.sendMessage("");
-				cs.sendMessage("§4/kit Epic");
+				cs.sendMessage("§4/kit Gold");
 				cs.sendMessage("§4/repiar all");
 				cs.sendMessage("§4/heal");
 				cs.sendMessage("§4/feed");
 				cs.sendMessage("§4/ping");
-				cs.sendMessage("§7[]-------------[§6Epic§7]-------------[]");
+				cs.sendMessage("§7[]-------------[§6§lGold§7]-------------[]");
 				
-			} else if (cmd.getName().equalsIgnoreCase("ultimate"))  {
-				cs.sendMessage("§7[]-------------[§6Ultimate§7]-------------[]");
+			} else if (cmd.getName().equalsIgnoreCase("diamond"))  {
+				cs.sendMessage("§7[]-------------[§d§lDiamond§7]-------------[]");
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 30 Euro       ");
 				cs.sendMessage("");
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("");
-				cs.sendMessage("§4/kit Ultimate");
+				cs.sendMessage("§4/kit Diamond");
 				cs.sendMessage("§4/top");
 				cs.sendMessage("§4/hat");
 				cs.sendMessage("§4/invsee");
 				cs.sendMessage("§4/tpaall");
 				cs.sendMessage("§4/back");
+				cs.sendMessage("§7[]-------------[§d§lDiamond§7]-------------[]");
+
+			} else if (cmd.getName().equalsIgnoreCase("ermerald"))  {
+				cs.sendMessage("§7[]-------------[§e§lEmerald§7]-------------[]");
+				cs.sendMessage("§8» §cRang | Kosten §8«");
+				cs.sendMessage("        §c 40 Euro       ");
+				cs.sendMessage("");
+				cs.sendMessage("§8» §cRang | Kosten §8«");
+				cs.sendMessage("");
+				cs.sendMessage("§4/kit Emerald");
+				cs.sendMessage("§4/rename");
 				cs.sendMessage("§4/god");
-				cs.sendMessage("§7[]-------------[§6Ultimate§7]-------------[]");
+				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
 		
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 				cs.sendMessage("§4§lOwner:");
 				cs.sendMessage("§abyBambus, DerDickeEins");
-				cs.sendMessage("");
+				cs.sendMessage("§7-----------------------------");
+				cs.sendMessage("§4§lDeveloper:");
+				cs.sendMessage("§arazorblur, TGM_Nick");
+				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§c§lAdmin's:");
 				cs.sendMessage("§aTGM_Nick, Killerahz, Darrek2503");
-				cs.sendMessage("");
-				cs.sendMessage("§a§lDeveloper:");
-				cs.sendMessage("§arazorblur, (TGM_Nick)");
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 			}
 

@@ -2,6 +2,7 @@ package com.CoreSkySystem.Functions;
 
 public class Permission {
 	
+	public static String Fly_Partikel = "skyfight.fly.partikel";
 	public static String chat_clear = "skyfight.chat.clear";
 	public static String report_show_list = "skyfight.report";
 	public static String warn_player = "skyfight.warn.player";

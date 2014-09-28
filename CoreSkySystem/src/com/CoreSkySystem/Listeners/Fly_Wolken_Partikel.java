@@ -5,6 +5,8 @@ import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerMoveEvent;
 
+import com.CoreSkySystem.Functions.Permission;
+
 import api.ParticleEffect;
 
 public class Fly_Wolken_Partikel implements Listener {
@@ -18,6 +20,10 @@ public class Fly_Wolken_Partikel implements Listener {
 			ParticleEffect.CLOUD.display(p.getLocation(), 1, 1, 1, 1, 10);
 			
 		}  
+		
+		if(!p.hasPermission(Permission.Fly_Partikel))  {
+			
+		}
 		
 	}
 	

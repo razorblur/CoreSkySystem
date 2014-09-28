@@ -13,6 +13,7 @@ import com.CoreSkySystem.Commands.COMMAND_broadcast2;
 import com.CoreSkySystem.Commands.COMMAND_cenchant;
 import com.CoreSkySystem.Commands.COMMAND_chat;
 import com.CoreSkySystem.Commands.COMMAND_clearwarn;
+import com.CoreSkySystem.Commands.COMMAND_crash;
 import com.CoreSkySystem.Commands.COMMAND_cvanish;
 import com.CoreSkySystem.Commands.COMMAND_friede;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
@@ -79,6 +80,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("sfbroadcast").setExecutor(new COMMAND_broadcast());
 		this.getCommand("friede").setExecutor(new COMMAND_friede());
 		this.getCommand("leer").setExecutor(new COMMAND_broadcast2());
+		this.getCommand("crash").setExecutor(new COMMAND_crash());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));

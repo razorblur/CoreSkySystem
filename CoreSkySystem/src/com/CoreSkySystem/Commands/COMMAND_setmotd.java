@@ -22,7 +22,7 @@ public class COMMAND_setmotd implements CommandExecutor {
 	
 	
 	public COMMAND_setmotd(Main m) {
-		motd = m.getConfig().getString(Permission.set_motd);
+		motd = m.getConfig().getString("server.motd");
 	}
 	
 	

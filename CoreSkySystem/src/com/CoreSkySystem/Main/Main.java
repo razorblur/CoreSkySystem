@@ -31,6 +31,7 @@ import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
 import com.CoreSkySystem.Listeners.DeathDrop;
+import com.CoreSkySystem.Listeners.Fly_Wolken_Partikel;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.MOTDListener;
@@ -105,6 +106,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new PlayerListeners(), this);
 		pm.registerEvents(new UmweltSign(), this);
+		pm.registerEvents(new Fly_Wolken_Partikel(), this);
 
 		
 	}

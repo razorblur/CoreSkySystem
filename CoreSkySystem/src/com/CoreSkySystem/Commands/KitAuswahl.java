@@ -25,33 +25,36 @@ public class KitAuswahl implements CommandExecutor, Listener {
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		
 	Inventory kits = Bukkit.createInventory(null, 9, "§cKit Auswahl" );
-		// Iron
+	    // Normal
+		ItemStack sky = new ItemStack(Material.NETHER_STAR);
+	 	ItemMeta skyMeta = sky.getItemMeta();
+	 	skyMeta.setDisplayName("§7Standart Kit");
+	 	sky.setItemMeta(skyMeta);
+	 	kits.setItem(0, sky);
+		
+		//iron
 	 	ItemStack iron = new ItemStack(Material.IRON_INGOT);
 	 	ItemMeta ironMeta = iron.getItemMeta();
 	 	ironMeta.setDisplayName("§fIron Kit");
 	 	iron.setItemMeta(ironMeta);
-	 	iron.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
-	 	kits.setItem(0, iron);
+	 	kits.setItem(2, iron);
 	 	// Gold
 	 	ItemStack gold = new ItemStack(Material.GOLD_INGOT);
 	 	ItemMeta goldMeta = gold.getItemMeta();
 	 	goldMeta.setDisplayName("§6Gold Kit");
 	 	gold.setItemMeta(goldMeta);
-	 	gold.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
-	 	kits.setItem(2, gold);
+	 	kits.setItem(4, gold);
 	 	// Diamond
 	 	ItemStack Diamond = new ItemStack(Material.DIAMOND);
 	 	ItemMeta diamondMeta = Diamond.getItemMeta();
 	 	diamondMeta.setDisplayName("§bDiamond Kit");
 	 	Diamond.setItemMeta(diamondMeta);
-	 	gold.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 4);
-	 	kits.setItem(5, Diamond);
+	 	kits.setItem(6, Diamond);
 	 	// Emerald
 	 	ItemStack emerald = new ItemStack(Material.EMERALD);
 	 	ItemMeta emeraldMeta = iron.getItemMeta();
 	 	emeraldMeta.setDisplayName("§aEmerald Kit");
 	 	emerald.setItemMeta(ironMeta);
-	 	emerald.addUnsafeEnchantment(Enchantment.PROTECTION_ENVIRONMENTAL, 3);
 	 	kits.setItem(8, emerald);
 		
 	 	Player p = (Player)cs;
@@ -60,8 +63,6 @@ public class KitAuswahl implements CommandExecutor, Listener {
 			if(p.hasPermission(Permission.NoRangKit)) {
 				p.openInventory(kits);
 				
-			}else {
-				p.performCommand("kit sky");
 			}
 			
 			
@@ -99,8 +100,9 @@ public class KitAuswahl implements CommandExecutor, Listener {
 				p.performCommand("kit emerald");
 				
 				
+			}else if(e.getCurrentItem().getType() == Material.NETHER_STAR)  {
+				p.performCommand("kit sky");
 			}
-			
 			
 		}
 		

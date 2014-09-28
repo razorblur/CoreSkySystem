@@ -110,3 +110,6 @@ commands:
      description: Crashe das Minecraft eines Users
      aliases: cr
      usage: /crash (player)
+   kit:
+     description: Kit Auswahl
+     usage: </kit>

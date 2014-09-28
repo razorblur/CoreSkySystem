@@ -29,6 +29,7 @@ import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_setmotd;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
+import com.CoreSkySystem.Commands.KitAuswahl;
 import com.CoreSkySystem.Commands.Umfrage;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.Fly_Wolken_Partikel;
@@ -82,6 +83,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("friede").setExecutor(new COMMAND_friede());
 		this.getCommand("leer").setExecutor(new COMMAND_broadcast2());
 		this.getCommand("crash").setExecutor(new COMMAND_crash());
+		this.getCommand("kit").setExecutor(new KitAuswahl());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -107,6 +109,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new PlayerListeners(), this);
 		pm.registerEvents(new UmweltSign(), this);
 		pm.registerEvents(new Fly_Wolken_Partikel(), this);
+		pm.registerEvents(new KitAuswahl(), this);
 
 		
 	}

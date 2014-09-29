@@ -7,7 +7,6 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -18,10 +17,6 @@ import org.bukkit.inventory.meta.ItemMeta;
 
 public class KitAuswahl implements CommandExecutor, Listener {
 
-	
-	
-	
-	
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		
 	Inventory kits = Bukkit.createInventory(null, 9, "§cKit Auswahl" );
@@ -54,7 +49,7 @@ public class KitAuswahl implements CommandExecutor, Listener {
 	 	ItemStack emerald = new ItemStack(Material.EMERALD);
 	 	ItemMeta emeraldMeta = iron.getItemMeta();
 	 	emeraldMeta.setDisplayName("§aEmerald Kit");
-	 	emerald.setItemMeta(ironMeta);
+	 	emerald.setItemMeta(emeraldMeta);
 	 	kits.setItem(8, emerald);
 		
 	 	Player p = (Player)cs;
@@ -84,24 +79,24 @@ public class KitAuswahl implements CommandExecutor, Listener {
 		
 		if(e.getInventory().getName().equalsIgnoreCase("§cKit Auswahl")) {
 			if(e.getCurrentItem().getType() == Material.IRON_INGOT) {
-		
-				
-			
-					p.performCommand("kit iron");
+		       p.performCommand("kits iron");
+		       p.closeInventory();
 			}else if(e.getCurrentItem().getType() == Material.GOLD_INGOT)  {
-				p.performCommand("kit gold");
+				p.performCommand("kits gold");
+				p.closeInventory();
 				
 				
 			}else if(e.getCurrentItem().getType() == Material.DIAMOND)  {
-				p.performCommand("kit diamond");
-				
+				p.performCommand("kits diamond");
+				p.closeInventory();
 				
 			}else if(e.getCurrentItem().getType() == Material.EMERALD)  {
-				p.performCommand("kit emerald");
-				
+				p.performCommand("kits emerald");
+				p.closeInventory();
 				
 			}else if(e.getCurrentItem().getType() == Material.NETHER_STAR)  {
-				p.performCommand("kit sky");
+				p.performCommand("kits sky");
+				p.closeInventory();
 			}
 			
 		}

@@ -1,7 +1,5 @@
 package com.CoreSkySystem.Commands;
 
-import com.CoreSkySystem.Functions.Permission;
-
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -55,10 +53,7 @@ public class KitAuswahl implements CommandExecutor, Listener {
 	 	Player p = (Player)cs;
 	
 		if(args.length == 0) {
-			if(p.hasPermission(Permission.NoRangKit)) {
-				p.openInventory(kits);
-				
-			}
+			p.openInventory(kits);
 			
 			
 			

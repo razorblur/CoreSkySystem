@@ -9,9 +9,9 @@ commands:
    skype:
      description: Zeigt die Skype namen an
    gold:
-     description: Alle Infos zum Spendenrang Epic
+     description: Alle Infos zum Spendenrang Gold
    iron:
-     description: Alle Infos zum Spendenrang Premium
+     description: Alle Infos zum Spendenrang Iron
    spenden:
      description: Zeigt dir, wie du spenden kannst
    regeln:

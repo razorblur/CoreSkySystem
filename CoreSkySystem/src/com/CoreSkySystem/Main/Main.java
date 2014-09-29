@@ -65,15 +65,15 @@ public class Main extends JavaPlugin {
 		this.getCommand("hilfe").setExecutor(new Commands());
 		this.getCommand("regeln").setExecutor(new Commands());
 		this.getCommand("spenden").setExecutor(new Commands());
-		this.getCommand("premium").setExecutor(new Commands());
-		this.getCommand("epic").setExecutor(new Commands());
+		this.getCommand("iron").setExecutor(new Commands());
+		this.getCommand("gold").setExecutor(new Commands());
 		this.getCommand("skype").setExecutor(new Commands());
 		this.getCommand("ts").setExecutor(new Commands());
 		this.getCommand("ja").setExecutor(new Umfrage(this));
 		this.getCommand("nein").setExecutor(new Umfrage(this));
 		this.getCommand("umfrage").setExecutor(new Umfrage(this));
 		this.getCommand("copyright").setExecutor(new Commands());
-		this.getCommand("ultimate").setExecutor(new Commands());
+		this.getCommand("diamond").setExecutor(new Commands());
 		this.getCommand("setmotd").setExecutor(new COMMAND_setmotd(this));
 		this.getCommand("report").setExecutor(new COMMAND_Report());
 		this.getCommand("team").setExecutor(new Commands());
@@ -84,6 +84,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("leer").setExecutor(new COMMAND_broadcast2());
 		this.getCommand("crash").setExecutor(new COMMAND_crash());
 		this.getCommand("kit").setExecutor(new KitAuswahl());
+		this.getCommand("emerald").setExecutor(new Commands());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -141,7 +142,7 @@ public class Main extends JavaPlugin {
 	private void loadtFiles() {
 		// Warn Files
 		{ 
-			File file = new File("plugins//" + this.getDescription().getName() +"//warns.yml");
+			File file = new File("plugins/" + this.getDescription().getName() +"/warns.yml");
 			if(!file.exists()) {
 				try {
 					file.createNewFile();
@@ -152,7 +153,7 @@ public class Main extends JavaPlugin {
 		}
 		//////////Friede Files////////////
 		{
-			File file = new File("plguins//" + this.getDescription().getName() + "//friede.yml");
+			File file = new File("plugins/" + this.getDescription().getName() + "/friede.yml");
 			if(!file.exists()) {
 				try {
 					file.createNewFile();

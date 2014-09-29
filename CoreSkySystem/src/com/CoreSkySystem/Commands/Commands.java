@@ -47,7 +47,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§7[]--------[§6Skype§7]--------[]");
 				cs.sendMessage("§8> §4Owner §7 * §4byBambus§7: §eprimeewolf§7");
 				cs.sendMessage("§8> §4Owner §7 * §4DerDickeEins§7: §eiSnoopHDx§7");
-				cs.sendMessage("&7-----------------------------------------------");
+				cs.sendMessage("§7-----------------------------------------------");
 				cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
 				cs.sendMessage("§7[]-------------[§6Skype§7]-------------[]");
 			
@@ -57,7 +57,9 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§8> §cNicht Beleidigen! §8«");
 				cs.sendMessage("§8> §cKeine Werbung! §8«");
 				cs.sendMessage("§8> §cNicht Betteln! §8«");
+				cs.sendMessage("§8> §cFragen direkt stellen! §8«");
 				cs.sendMessage("§8> §cKein CAPSLOCK! §8«");
+				cs.sendMessage("§8> §cZuerst bei /hilfe nachschauen! §8«");
 		        cs.sendMessage("§7[]-------------[§6Regelwerk§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("iron"))  {

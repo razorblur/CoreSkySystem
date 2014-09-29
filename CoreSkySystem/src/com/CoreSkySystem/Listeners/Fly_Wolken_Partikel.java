@@ -17,7 +17,7 @@ public class Fly_Wolken_Partikel implements Listener {
 		
 		if(p.isFlying()) {
 			
-			ParticleEffect.CLOUD.display(p.getLocation(), 1, 1, 1, 1, 10);
+			ParticleEffect.CLOUD.display(p.getLocation(), 1, 1, 1, 1, 1);
 			
 		}  
 		

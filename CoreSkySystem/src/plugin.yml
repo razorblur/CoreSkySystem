@@ -113,4 +113,8 @@ commands:
      aliases: cr
      usage: /crash (player)
    kit:
-     description: Kit Auswahl
+     description: Öffnet ein Kit GUI
+     usage: /kit
+   warp:
+     description: Öffnet ein Warp GUI
+     usage: /warp

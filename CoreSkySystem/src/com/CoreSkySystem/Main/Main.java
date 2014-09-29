@@ -31,6 +31,7 @@ import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.KitAuswahl;
 import com.CoreSkySystem.Commands.Umfrage;
+import com.CoreSkySystem.Commands.WarpGUI;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.Fly_Wolken_Partikel;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
@@ -74,6 +75,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("umfrage").setExecutor(new Umfrage(this));
 		this.getCommand("copyright").setExecutor(new Commands());
 		this.getCommand("diamond").setExecutor(new Commands());
+		this.getCommand("warp").setExecutor(new WarpGUI());
 		this.getCommand("setmotd").setExecutor(new COMMAND_setmotd(this));
 		this.getCommand("report").setExecutor(new COMMAND_Report());
 		this.getCommand("team").setExecutor(new Commands());
@@ -111,7 +113,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new UmweltSign(), this);
 		pm.registerEvents(new Fly_Wolken_Partikel(), this);
 		pm.registerEvents(new KitAuswahl(), this);
-
+		pm.registerEvents(new WarpGUI(), this);
 		
 	}
 	

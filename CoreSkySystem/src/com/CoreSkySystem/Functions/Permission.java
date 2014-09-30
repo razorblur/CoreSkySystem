@@ -19,6 +19,7 @@ public class Permission {
 	public static String set_motd = "motd.set";
 	public static String umwelt_create = "umwelt.create";
 	public static String crash = "skyfight.crash";
+	public static String random = "skyfight.random";
 	
 	// CommandKit Commands 
 	public static String chat = "ck.chat";

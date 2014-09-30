@@ -22,6 +22,7 @@ import com.CoreSkySystem.Commands.COMMAND_gm;
 import com.CoreSkySystem.Commands.COMMAND_hban;
 import com.CoreSkySystem.Commands.COMMAND_hkick;
 import com.CoreSkySystem.Commands.COMMAND_noarmor;
+import com.CoreSkySystem.Commands.COMMAND_random;
 import com.CoreSkySystem.Commands.COMMAND_rename;
 import com.CoreSkySystem.Commands.COMMAND_skyfight;
 import com.CoreSkySystem.Commands.ChatClear;
@@ -29,11 +30,8 @@ import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_setmotd;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
-import com.CoreSkySystem.Commands.KitAuswahl;
 import com.CoreSkySystem.Commands.Umfrage;
-import com.CoreSkySystem.Commands.WarpGUI;
 import com.CoreSkySystem.Listeners.DeathDrop;
-import com.CoreSkySystem.Listeners.Fly_Wolken_Partikel;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.MOTDListener;
@@ -75,7 +73,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("umfrage").setExecutor(new Umfrage(this));
 		this.getCommand("copyright").setExecutor(new Commands());
 		this.getCommand("diamond").setExecutor(new Commands());
-		this.getCommand("warp").setExecutor(new WarpGUI());
 		this.getCommand("setmotd").setExecutor(new COMMAND_setmotd(this));
 		this.getCommand("report").setExecutor(new COMMAND_Report());
 		this.getCommand("team").setExecutor(new Commands());
@@ -85,8 +82,8 @@ public class Main extends JavaPlugin {
 		this.getCommand("friede").setExecutor(new COMMAND_friede());
 		this.getCommand("leer").setExecutor(new COMMAND_broadcast2());
 		this.getCommand("crash").setExecutor(new COMMAND_crash());
-		this.getCommand("kit").setExecutor(new KitAuswahl());
 		this.getCommand("emerald").setExecutor(new Commands());
+		this.getCommand("random").setExecutor(new COMMAND_random());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -111,10 +108,6 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new PlayerListeners(), this);
 		pm.registerEvents(new UmweltSign(), this);
-		pm.registerEvents(new Fly_Wolken_Partikel(), this);
-		pm.registerEvents(new KitAuswahl(), this);
-		pm.registerEvents(new WarpGUI(), this);
-		
 	}
 	
 	private void info() {
@@ -136,7 +129,7 @@ public class Main extends JavaPlugin {
 		
 
 		
-		cfg.addDefault("server.motd", " §7Setzt das MOTD mit: §c/setmotd (motd)");
+		cfg.addDefault("server.motd", "§6§lSkyFight §8>> §cEUER SKYPVP SERVER!");
 		
 		cfg.options().copyDefaults();
 	}

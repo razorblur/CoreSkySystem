@@ -112,9 +112,5 @@ commands:
      description: Crashe das Minecraft eines Users
      aliases: cr
      usage: /crash (player)
-   kit:
-     description: Öffnet ein Kit GUI
-     usage: /kit
-   warp:
-     description: Öffnet ein Warp GUI
-     usage: /warp
+   random:
+     description: bestimme einen Random Player.

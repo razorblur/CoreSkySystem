@@ -30,6 +30,7 @@ public class Commands implements CommandExecutor {
 				   cs.sendMessage("§8» §c/copyright §8«");
 				   cs.sendMessage("§8» §c/is §8«");
 				   cs.sendMessage("§8» §c/friede <name> §8«");
+				   cs.sendMessage("§8» §c/system §8«");
 				   cs.sendMessage("§8» §c/report <Spieler> <Grund> §8«");
 				   cs.sendMessage("§7[]-------------[§6Hilfe§7]-------------[]");
 			
@@ -49,6 +50,8 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§8> §4Owner §7 * §4DerDickeEins§7: §eiSnoopHDx§7");
 				cs.sendMessage("§7-----------------------------------------------");
 				cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
+				cs.sendMessage("§8> §cAdmin §7 * §cDarrek2503§7: §ealbanien1999§7");
+				cs.sendMessage("§8> §cAdmin §7 * §cKillerahz§7: §efurkan4670§7");
 				cs.sendMessage("§7[]-------------[§6Skype§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("regeln"))  {
@@ -108,7 +111,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§4/back");
 				cs.sendMessage("§7[]-------------[§d§lDiamond§7]-------------[]");
 
-			} else if (cmd.getName().equalsIgnoreCase("ermerald"))  {
+			} else if (cmd.getName().equalsIgnoreCase("emerald"))  {
 				cs.sendMessage("§7[]-------------[§e§lEmerald§7]-------------[]");
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 40 Euro       ");
@@ -118,6 +121,12 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§4/kit Emerald");
 				cs.sendMessage("§4/rename");
 				cs.sendMessage("§4/god");
+				cs.sendMessage("§4/fly &6&l-FLY IM PVP IST VERBOTEN UND WIRD BESTRAFT!");
+				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
+			
+			}else if (cmd.getName().equalsIgnoreCase("system"))  {
+				cs.sendMessage("§7[]-------------[§e§lEmerald§7]-------------[]");
+				cs.sendMessage("§8» §6SkyFight-System geschrieben von: §cTGM_Nick / razorblur. §8«");
 				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
 		
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {

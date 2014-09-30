@@ -121,7 +121,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§4/kit Emerald");
 				cs.sendMessage("§4/rename");
 				cs.sendMessage("§4/god");
-				cs.sendMessage("§4/fly &6&l-FLY IM PVP IST VERBOTEN UND WIRD BESTRAFT!");
+				cs.sendMessage("§4/fly §6§l-FLY IM PVP IST VERBOTEN UND WIRD BESTRAFT!");
 				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
 			
 			}else if (cmd.getName().equalsIgnoreCase("system"))  {

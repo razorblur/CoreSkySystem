@@ -7,6 +7,8 @@ import org.bukkit.configuration.file.FileConfiguration;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
+import com.CoreSkySystem.Commands.COMMAND_Kit;
+import com.CoreSkySystem.Commands.COMMAND_Warp;
 import com.CoreSkySystem.Commands.COMMAND_armor;
 import com.CoreSkySystem.Commands.COMMAND_broadcast;
 import com.CoreSkySystem.Commands.COMMAND_broadcast2;
@@ -84,6 +86,8 @@ public class Main extends JavaPlugin {
 		this.getCommand("crash").setExecutor(new COMMAND_crash());
 		this.getCommand("emerald").setExecutor(new Commands());
 		this.getCommand("random").setExecutor(new COMMAND_random());
+		this.getCommand("kit").setExecutor(new COMMAND_Kit());
+		this.getCommand("warp").setExecutor(new COMMAND_Warp());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -108,6 +112,8 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JoinQuitListener(), this);
 		pm.registerEvents(new PlayerListeners(), this);
 		pm.registerEvents(new UmweltSign(), this);
+		pm.registerEvents(new COMMAND_Kit(), this);
+		pm.registerEvents(new COMMAND_Warp(), this);
 	}
 	
 	private void info() {

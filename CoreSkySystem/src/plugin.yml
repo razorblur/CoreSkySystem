@@ -114,3 +114,7 @@ commands:
      usage: /crash (player)
    random:
      description: bestimme einen Random Player.
+   kit:
+     description: Oeffnet eine Kit Auswahl! 
+   warp:
+     description: Oeffnet eine Warp Auswahl

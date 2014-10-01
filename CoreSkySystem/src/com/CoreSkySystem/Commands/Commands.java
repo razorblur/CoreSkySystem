@@ -63,6 +63,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§8> §cFragen direkt stellen! §8«");
 				cs.sendMessage("§8> §cKein CAPSLOCK! §8«");
 				cs.sendMessage("§8> §cZuerst bei /hilfe nachschauen! §8«");
+				cs.sendMessage("§8> §cKein /fly im PvP!§8«");
 		        cs.sendMessage("§7[]-------------[§6Regelwerk§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("iron"))  {
@@ -97,7 +98,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§7[]-------------[§6§lGold§7]-------------[]");
 				
 			} else if (cmd.getName().equalsIgnoreCase("diamond"))  {
-				cs.sendMessage("§7[]-------------[§d§lDiamond§7]-------------[]");
+				cs.sendMessage("§7[]-------------[§b§lDiamond§7]-------------[]");
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 30 Euro       ");
 				cs.sendMessage("");
@@ -109,7 +110,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§4/invsee");
 				cs.sendMessage("§4/tpaall");
 				cs.sendMessage("§4/back");
-				cs.sendMessage("§7[]-------------[§d§lDiamond§7]-------------[]");
+				cs.sendMessage("§7[]-------------[§b§lDiamond§7]-------------[]");
 
 			} else if (cmd.getName().equalsIgnoreCase("emerald"))  {
 				cs.sendMessage("§7[]-------------[§e§lEmerald§7]-------------[]");
@@ -125,9 +126,10 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
 			
 			}else if (cmd.getName().equalsIgnoreCase("system"))  {
-				cs.sendMessage("§7[]-------------[§e§lEmerald§7]-------------[]");
-				cs.sendMessage("§8» §6SkyFight-System geschrieben von: §cTGM_Nick / razorblur. §8«");
-				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
+				cs.sendMessage("§7[]-------------[§4§lSystem§7]-------------[]");
+				cs.sendMessage("§9             Server-System by");
+				cs.sendMessage("§c           TGM_Nick & razorblur ");
+				cs.sendMessage("§7[]-------------[§4§lSystem§7]-------------[]");
 		
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");

@@ -118,3 +118,5 @@ commands:
      description: Oeffnet eine Kit Auswahl! 
    warp:
      description: Oeffnet eine Warp Auswahl
+   system:
+     description: Unser Server System

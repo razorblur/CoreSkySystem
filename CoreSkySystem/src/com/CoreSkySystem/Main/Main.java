@@ -88,6 +88,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("random").setExecutor(new COMMAND_random());
 		this.getCommand("kit").setExecutor(new COMMAND_Kit());
 		this.getCommand("warp").setExecutor(new COMMAND_Warp());
+		this.getCommand("system").setExecutor(new Commands());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));

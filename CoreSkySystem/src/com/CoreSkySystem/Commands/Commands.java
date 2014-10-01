@@ -24,9 +24,10 @@ public class Commands implements CommandExecutor {
 				   cs.sendMessage("§8» §c/regeln §8«");
 				   cs.sendMessage("§8» §c/skype §8«");
 				   cs.sendMessage("§8» §c/ts §8«");
-				   cs.sendMessage("§8» §c/premium §8«");
-				   cs.sendMessage("§8» §c/epic §8«");
-				   cs.sendMessage("§8» §c/ultimate §8«");
+				   cs.sendMessage("§8» §c/iron §8«");
+				   cs.sendMessage("§8» §c/gold §8«");
+				   cs.sendMessage("§8» §c/diamond §8«");
+				   cs.sendMessage("§8» §c/emerald §8«");
 				   cs.sendMessage("§8» §c/copyright §8«");
 				   cs.sendMessage("§8» §c/is §8«");
 				   cs.sendMessage("§8» §c/friede <name> §8«");

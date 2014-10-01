@@ -23,13 +23,13 @@ public class COMMAND_crash implements CommandExecutor {
 					Player target = Bukkit.getPlayer(args[0]);
 					crashMinecraft(target);
 				} catch (NullPointerException exception) {
-					sender.sendMessage(Main.name + "§4Dieser Spieler ist nicht Online");
+					sender.sendMessage(Main.name + " §4Dieser Spieler ist nicht Online");
 				}
-			} else sender.sendMessage(Main.name + "§8/crash (player)");
+			} else sender.sendMessage(Main.name + "§ 8/crash (player)");
 		} else {
 			Player player = (Player) sender;
 			if(!player.hasPermission(Permission.crash)) {
-				player.sendMessage(Main.name + "§4Keine Permission " + Permission.crash);
+				player.sendMessage(Main.name + " §4Keine Permission " + Permission.crash);
 				return true;
 			}
 			if(args.length == 1) {
@@ -37,15 +37,15 @@ public class COMMAND_crash implements CommandExecutor {
 					Player target = Bukkit.getPlayer(args[0]);
 					crashMinecraft(target);
 				} catch (NullPointerException exception) {
-					sender.sendMessage(Main.name + "§4Dieser Spieler ist nicht Online");
+					sender.sendMessage(Main.name + " §4Dieser Spieler ist nicht Online");
 				}
-			} else sender.sendMessage(Main.name + "§8/crash (player)");
+			} else sender.sendMessage(Main.name + " §8/crash (player)");
 		}
 		
 		return true;
 	}
 	
-	private void crashMinecraft(Player player) {
+	private void crashMinecraft(Player player) { 
 		Inventory inv = Bukkit.createInventory(null, 9*100);
 		player.openInventory(inv);
 	}

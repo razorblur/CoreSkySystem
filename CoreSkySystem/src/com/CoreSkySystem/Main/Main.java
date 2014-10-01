@@ -62,6 +62,7 @@ public class Main extends JavaPlugin {
 		loadtFiles();
 		// Useless Info :D
 		info();
+		
 
 		this.getCommand("hilfe").setExecutor(new Commands());
 		this.getCommand("regeln").setExecutor(new Commands());
@@ -115,7 +116,11 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new UmweltSign(), this);
 		pm.registerEvents(new COMMAND_Kit(), this);
 		pm.registerEvents(new COMMAND_Warp(), this);
-	}
+		
+        }
+        	
+        
+	
 	
 	private void info() {
 	    System.out.println("<======================================================>");

@@ -103,7 +103,7 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 30 Euro       ");
 				cs.sendMessage("");
-				cs.sendMessage("§8» §cRang | Kosten §8«");
+				cs.sendMessage("§8» §cRang | Rechte §8«");
 				cs.sendMessage("");
 				cs.sendMessage("§4/kit Diamond");
 				cs.sendMessage("§4/top");
@@ -118,13 +118,13 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§8» §cRang | Kosten §8«");
 				cs.sendMessage("        §c 40 Euro       ");
 				cs.sendMessage("");
-				cs.sendMessage("§8» §cRang | Kosten §8«");
+				cs.sendMessage("§8» §cRang | Rechte §8«");
 				cs.sendMessage("");
 				cs.sendMessage("§4/kit Emerald");
 				cs.sendMessage("§4/rename");
 				cs.sendMessage("§4/god");
 				cs.sendMessage("§4/fly §6§l-FLY IM PVP IST VERBOTEN UND WIRD BESTRAFT!");
-				cs.sendMessage("§7[]-------------[§dDiamond§7]-------------[]");
+				cs.sendMessage("§7[]-------------[§e§lEmerald§7]-------------[]");
 			
 			}else if (cmd.getName().equalsIgnoreCase("system"))  {
 				cs.sendMessage("§7[]-------------[§4§lSystem§7]-------------[]");

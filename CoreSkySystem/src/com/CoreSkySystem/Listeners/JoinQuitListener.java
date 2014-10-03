@@ -22,10 +22,40 @@ public class JoinQuitListener implements Listener{
 		Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
-			p.sendMessage(Main.name+ "§4§lFür Hilfe, tippe: §e§l/hilfe");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("§6§l            SkyFight.ch");
+			p.sendMessage("§a§l      Für Hilfe, tippe /Hilfe");
+			p.sendMessage("§a§l oder schreib uns auf Skype an! /skype");
+			p.sendMessage("§a§l       Unser Server-Team: /team");
+			p.sendMessage("§6§l             Viel Spass! ");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
 		} else  {  
 			e.setJoinMessage("");
-			p.sendMessage(Main.name+ " §4§lFür Hilfe, tippe: §e§l/hilfe");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("§6§l            SkyFight.ch");
+			p.sendMessage("§a§l      Für Hilfe, tippe /Hilfe");
+			p.sendMessage("§a§l oder schreib uns auf Skype an! /skype");
+			p.sendMessage("§a§l       Unser Server-Team: /team");
+			p.sendMessage("§6§l             Viel Spass! ");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
+			p.sendMessage("");
 		}
 		
 		// Vanish the PLayer

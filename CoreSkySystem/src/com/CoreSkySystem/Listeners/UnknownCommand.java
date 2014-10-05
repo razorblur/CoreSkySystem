@@ -20,7 +20,8 @@ public class UnknownCommand implements Listener{
 			HelpTopic tpic = Bukkit.getServer().getHelpMap().getHelpTopic(msg);
 			
 			if(tpic == null)  {
-				p.sendMessage(Main.name +" §7Dieser Befehl existiet nicht. §e[" + msg + "§e]");
+				p.sendMessage(Main.name +" §7Dieser Befehl existiert nicht. §e[" + msg + "§e] §7Tippe: §c/Hilfe");
+				
 				event.setCancelled(true);
 			}
 		}

@@ -2,6 +2,7 @@ package com.CoreSkySystem.Functions;
 
 public class Permission {
 	
+	public static String NoCombat = "skyfight.notagged";
 	public static String NoRangKit = "skyfight.no.rang.kit";
 	public static String Fly_Partikel = "skyfight.fly.partikel";
 	public static String chat_clear = "skyfight.chat.clear";

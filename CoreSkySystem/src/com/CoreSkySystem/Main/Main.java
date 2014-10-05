@@ -38,6 +38,7 @@ import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.MOTDListener;
 import com.CoreSkySystem.Listeners.PlayerListeners;
+import com.CoreSkySystem.Listeners.RepawnKit;
 import com.CoreSkySystem.Listeners.UnknownCommand;
 
 public class Main extends JavaPlugin {
@@ -116,6 +117,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new COMMAND_Kit(), this);
 		pm.registerEvents(new COMMAND_Warp(), this);
 		pm.registerEvents(new UnknownCommand(), this);
+		pm.registerEvents(new RepawnKit(), this);
 		
         }
         	

@@ -19,11 +19,13 @@ public class RepawnKit implements Listener  {
 		p.getInventory().setLeggings(new ItemStack(Material.CHAINMAIL_LEGGINGS));
 		p.getInventory().setBoots(new ItemStack(Material.CHAINMAIL_BOOTS));
 		
-		p.getInventory().addItem(new ItemStack(Material.IRON_SWORD));
-		p.getInventory().addItem(new ItemStack(Material.BOW));
-		p.getInventory().addItem(new ItemStack(Material.FISHING_ROD));
-		p.getInventory().addItem(new ItemStack(Material.GOLDEN_APPLE , 3));
-		p.getInventory().addItem(new ItemStack(Material.ARROW , 32));
+		p.getInventory().addItem(new ItemStack(Material.STONE_SWORD, 1));          
+		p.getInventory().addItem(new ItemStack(Material.FISHING_ROD, 1));
+		p.getInventory().addItem(new ItemStack(Material.BOW, 1));  
+		
+		p.getInventory().setItem(4, new ItemStack(Material.COOKED_BEEF, 5)); 
+		p.getInventory().setItem(7, new ItemStack(Material.GOLDEN_APPLE , 1));
+		p.getInventory().setItem(8, new ItemStack(Material.ARROW , 16));
 	}
 
 }

@@ -22,40 +22,24 @@ public class JoinQuitListener implements Listener{
 		Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("§6§l            SkyFight.ch");
-			p.sendMessage("§a§l      Für Hilfe, tippe /Hilfe");
-			p.sendMessage("§a§l oder schreib uns auf Skype an! /skype");
-			p.sendMessage("§a§l       Unser Server-Team: /team");
-			p.sendMessage("§6§l             Viel Spass! ");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
+			for(int zeilen = 0; zeilen != 150; zeilen++){
+				p.sendMessage("");
+			}
+			p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
+			p.sendMessage("§a§l              Für Hilfe, tippe /Hilfe");
+			p.sendMessage("§a§l        oder schreib uns auf Skype an! /skype");
+			p.sendMessage("§a§l             Unser Server-Team: /team");
+			p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
 		} else  {  
 			e.setJoinMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("§6§l            SkyFight.ch");
-			p.sendMessage("§a§l      Für Hilfe, tippe /Hilfe");
-			p.sendMessage("§a§l oder schreib uns auf Skype an! /skype");
-			p.sendMessage("§a§l       Unser Server-Team: /team");
-			p.sendMessage("§6§l             Viel Spass! ");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
-			p.sendMessage("");
+			for(int zeilen = 0; zeilen != 150; zeilen++){
+				p.sendMessage("");
+			}
+			p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
+			p.sendMessage("§a§l              Für Hilfe, tippe /Hilfe");
+			p.sendMessage("§a§l        oder schreib uns auf Skype an! /skype");
+			p.sendMessage("§a§l             Unser Server-Team: /team");
+			p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
 		}
 		
 		// Vanish the PLayer
@@ -65,7 +49,7 @@ public class JoinQuitListener implements Listener{
 		}
 	}
 	@EventHandler
-	public void onJoin(PlayerQuitEvent e)  {
+	public void onQuit(PlayerQuitEvent e)  {
 		Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setQuitMessage(Main.name + " §cDas Team-Mitglied: §4"+ p.getName() + "§c, hat den Server verlassen.");

@@ -6,7 +6,6 @@ import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.enchantments.Enchantment;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -15,53 +14,44 @@ import org.bukkit.inventory.Inventory;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
-import com.CoreSkySystem.Functions.Permission;
-
-@SuppressWarnings("unused")
-public class COMMAND_Kit implements CommandExecutor, Listener {
+public class COMMAND_Ranglist implements CommandExecutor, Listener {
 	
 	
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		
-	Inventory kits = Bukkit.createInventory(null, 9, "§cKit Auswahl" );
-	    
-	 	ItemStack sky = new ItemStack(Material.FEATHER);
-	 	ItemMeta skyMeta = sky.getItemMeta();
-	 	skyMeta.setDisplayName("§4Sky Kit");
-	 	sky.setItemMeta(skyMeta);
-	 	kits.setItem(0, sky);
+	Inventory ranglist = Bukkit.createInventory(null, 9, "§cServer-Ränge" );
 	    // Iron
 	 	ItemStack iron = new ItemStack(Material.IRON_INGOT);
 	 	ItemMeta ironMeta = iron.getItemMeta();
-	 	ironMeta.setDisplayName("§fIron Kit");
+	 	ironMeta.setDisplayName("§f§lIron-Rang");
 	 	iron.setItemMeta(ironMeta);
-	 	kits.setItem(2, iron);
+	 	ranglist.setItem(1, iron);
 	 	// Gold
 	 	ItemStack gold = new ItemStack(Material.GOLD_INGOT);
 	 	ItemMeta goldMeta = gold.getItemMeta();
-	 	goldMeta.setDisplayName("§6Gold Kit");
+	 	goldMeta.setDisplayName("§6§lGold-Rang");
 	 	gold.setItemMeta(goldMeta);
-	 	kits.setItem(4, gold);
+	 	ranglist.setItem(3, gold);
 	 	// Diamond
 	 	ItemStack Diamond = new ItemStack(Material.DIAMOND);
 	 	ItemMeta diamondMeta = Diamond.getItemMeta();
-	 	diamondMeta.setDisplayName("§bDiamond Kit");
+	 	diamondMeta.setDisplayName("§b§lDiamond-Rang");
 	 	Diamond.setItemMeta(diamondMeta);
-	 	kits.setItem(6, Diamond);
+	 	ranglist.setItem(5, Diamond);
 	 	// Emerald
 	 	ItemStack emerald = new ItemStack(Material.EMERALD);
 	 	ItemMeta emeraldMeta = iron.getItemMeta();
-	 	emeraldMeta.setDisplayName("§aEmerald Kit");
+	 	emeraldMeta.setDisplayName("§a§lEmerald-Rang");
 	 	emerald.setItemMeta(emeraldMeta);
-	 	kits.setItem(8, emerald);
+	 	ranglist.setItem(7, emerald);
 		
 	 	Player p = (Player)cs;
 	
 		if(args.length == 0) {
-			p.openInventory(kits);
+			p.openInventory(ranglist);
 			
 		}else {
-			p.openInventory(kits);
+			p.openInventory(ranglist);
 			
 		}
 		
@@ -75,26 +65,26 @@ public class COMMAND_Kit implements CommandExecutor, Listener {
 		
 		Player p = (Player)e.getWhoClicked();
 		
-		if(e.getInventory().getName().equalsIgnoreCase("§cKit Auswahl")) {
+		if(e.getInventory().getName().equalsIgnoreCase("§cServer-Ränge")) {
 			e.setCancelled(true);
 			if(e.getCurrentItem().getType() == Material.IRON_INGOT) {
 				p.closeInventory();	
-				p.performCommand("kits iron");
+				p.performCommand("iron");
 
 			}else if(e.getCurrentItem().getType() == Material.GOLD_INGOT)  {
 				p.closeInventory();
-				p.performCommand("kits gold");
+				p.performCommand("gold");
 				
 				
 			}else if(e.getCurrentItem().getType() == Material.DIAMOND)  {
 				p.closeInventory();
-				p.performCommand("kits diamond");
+				p.performCommand("diamond");
 				
 			}else if(e.getCurrentItem().getType() == Material.EMERALD)  {
 				p.closeInventory();
-				p.performCommand("kits emerald");
+				p.performCommand("emerald");
 				
-			} else if(e.getCurrentItem().getType() == Material.FEATHER)  {
+			} else if(e.getCurrentItem().getType() == Material.NETHER_STAR)  {
 				p.closeInventory();
 				p.performCommand("kits sky");
 			

@@ -25,7 +25,7 @@ public class COMMAND_crash implements CommandExecutor {
 				} catch (NullPointerException exception) {
 					sender.sendMessage(Main.name + " §4Dieser Spieler ist nicht Online");
 				}
-			} else sender.sendMessage(Main.name + "§ 8/crash (player)");
+			} else sender.sendMessage(Main.name + " §8/crash (player)");
 		} else {
 			Player player = (Player) sender;
 			if(!player.hasPermission(Permission.crash)) {

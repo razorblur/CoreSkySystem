@@ -24,10 +24,7 @@ public class Commands implements CommandExecutor {
 				   cs.sendMessage("§8» §c/regeln §8«");
 				   cs.sendMessage("§8» §c/skype §8«");
 				   cs.sendMessage("§8» §c/ts §8«");
-				   cs.sendMessage("§8» §c/iron §8«");
-				   cs.sendMessage("§8» §c/gold §8«");
-				   cs.sendMessage("§8» §c/diamond §8«");
-				   cs.sendMessage("§8» §c/emerald §8«");
+				   cs.sendMessage("§8» §c/ranglist §8«");
 				   cs.sendMessage("§8» §c/copyright §8«");
 				   cs.sendMessage("§8» §c/is §8«");
 				   cs.sendMessage("§8» §c/friede <name> §8«");
@@ -35,24 +32,24 @@ public class Commands implements CommandExecutor {
 				   cs.sendMessage("§8» §c/report <Spieler> <Grund> §8«");
 				   cs.sendMessage("§7[]-------------[§6Hilfe§7]-------------[]");
 			
-			} else if (cmd.getName().equalsIgnoreCase("spenden"))  {
+			} else if (cmd.getName().equalsIgnoreCase("qwertzuiopü"))  {
 					cs.sendMessage("§7[]-------------[§6Spenden§7]-------------[]");
 					cs.sendMessage("§8» §cSpenden §7gehen nur an die §cOwner§7!");
 					cs.sendMessage("§8» §7Die §cOwner §7findest du unter §c/skype§7.");
 					cs.sendMessage("§8» §cSpenden §7kannst du nur per §cPaySafeCard§7!");
 					cs.sendMessage("§8» §cInfos §7zu den §cSpenden-Rängen§7:");
-					cs.sendMessage("§8» §c/iron§7, §c/gold§7, §c/Diamond§7, §c/Emerald§7");
+					cs.sendMessage("§8» §c/ranglist");
 					cs.sendMessage("§7[]-------------[§6Spenden§7]-------------[]");
 			
 							
 			} else if (cmd.getName().equalsIgnoreCase("skype"))  {
-				cs.sendMessage("§7[]--------[§6Skype§7]--------[]");
-				cs.sendMessage("§8> §4Owner §7 * §4 _iTzVace§7: §eprimeewolf§7");
-				cs.sendMessage("§8> §4Owner §7 * §4DerDickeEins§7: §eiSnoopHDx§7");
-				cs.sendMessage("§7-----------------------------------------------");
-				cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
-				cs.sendMessage("§8> §cAdmin §7 * §cDarrek2503§7: §ealbanien1999§7");
-				cs.sendMessage("§8> §cAdmin §7 * §cKillerahz§7: §efurkan4670§7");
+					cs.sendMessage("§7[]--------[§6Skype§7]--------[]");
+					cs.sendMessage("§8> §4Owner §7 * §4 _iTzVace§7: §eprimeewolf§7");
+					cs.sendMessage("§8> §4Owner §7 * §4DerDickeEins§7: §eiSnoopHDx§7");
+					cs.sendMessage("§7-----------------------------------------------");
+					cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
+					cs.sendMessage("§8> §cAdmin §7 * §cDarrek2503§7: §ealbanien1999§7");
+					cs.sendMessage("§8> §cAdmin §7 * §cKillerahz§7: §efurkan4670§7");
 				cs.sendMessage("§7[]-------------[§6Skype§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("regeln"))  {

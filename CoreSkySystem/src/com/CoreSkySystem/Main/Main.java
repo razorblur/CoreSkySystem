@@ -8,6 +8,8 @@ import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.CoreSkySystem.Commands.COMMAND_Kit;
+import com.CoreSkySystem.Commands.COMMAND_Ranglist;
+import com.CoreSkySystem.Commands.COMMAND_Spenden;
 import com.CoreSkySystem.Commands.COMMAND_Warp;
 import com.CoreSkySystem.Commands.COMMAND_armor;
 import com.CoreSkySystem.Commands.COMMAND_broadcast;
@@ -65,9 +67,11 @@ public class Main extends JavaPlugin {
 		info();
 		
 
+		this.getCommand("spenden").setExecutor(new COMMAND_Spenden());
+		this.getCommand("ranglist").setExecutor(new COMMAND_Ranglist());
 		this.getCommand("hilfe").setExecutor(new Commands());
 		this.getCommand("regeln").setExecutor(new Commands());
-		this.getCommand("spenden").setExecutor(new Commands());
+		this.getCommand("qwertzuiopü").setExecutor(new Commands());
 		this.getCommand("iron").setExecutor(new Commands());
 		this.getCommand("gold").setExecutor(new Commands());
 		this.getCommand("skype").setExecutor(new Commands());
@@ -118,6 +122,8 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new COMMAND_Warp(), this);
 		pm.registerEvents(new UnknownCommand(), this);
 		pm.registerEvents(new RepawnKit(), this);
+		pm.registerEvents(new COMMAND_Ranglist(), this);
+		pm.registerEvents(new COMMAND_Spenden(), this);
 		
         }
         	

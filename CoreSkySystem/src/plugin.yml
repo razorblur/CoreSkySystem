@@ -120,3 +120,7 @@ commands:
      description: Oeffnet eine Warp Auswahl
    system:
      description: Unser Server System
+   ranglist:
+     description: Oeffnet eine Rang Liste
+   qwertzuiopü:
+     description: Spenden Info

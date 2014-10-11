@@ -30,7 +30,7 @@ public class PlayerListeners implements Listener {
 	public void onDeath(PlayerDeathEvent event) {
 		Player player = event.getEntity();
 		if(player.getKiller() instanceof Player) {
-			player.sendMessage(Main.name + " §7Du wurdest von §c§l"+player.getKiller().getName()+ " §7getötet.");
+			player.sendMessage(Main.name + " §7Du wurdest von §c§l" +player.getKiller().getName()+ " §7getötet.");
 			player.getKiller().sendMessage(Main.name + " §7Du hast §c§l" + player.getName() + " §7getötet");
 			player.getKiller().setHealth(20.0);
 			player.getKiller().sendMessage(Main.name + " §7Du wurdest §ageheilt §7weil du jemanden §cgetötet §7hast");

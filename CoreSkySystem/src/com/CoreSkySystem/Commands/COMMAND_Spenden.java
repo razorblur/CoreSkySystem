@@ -1,6 +1,9 @@
 package com.CoreSkySystem.Commands;
 
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.bukkit.Bukkit;
 import org.bukkit.Material;
 import org.bukkit.command.Command;
@@ -20,6 +23,8 @@ import com.CoreSkySystem.Functions.Permission;
 @SuppressWarnings("unused")
 public class COMMAND_Spenden implements CommandExecutor, Listener {
 	
+	ArrayList<String> lore1 = new ArrayList<String>();
+	
 	
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		
@@ -28,6 +33,8 @@ public class COMMAND_Spenden implements CommandExecutor, Listener {
 	 	ItemStack paper = new ItemStack(Material.PAPER);
 	 	ItemMeta paperMeta = paper.getItemMeta();
 	 	paperMeta.setDisplayName("§6§l§oWie Spende ich?");
+	 	lore1.add("§8Klick Mich");
+	 	paperMeta.setLore(lore1);
 	 	paper.setItemMeta(paperMeta);
 	 	spenden.setItem(1, paper);
 	    // Iron
@@ -35,12 +42,14 @@ public class COMMAND_Spenden implements CommandExecutor, Listener {
 	 	ItemMeta rangMeta = rang.getItemMeta();
 	 	rangMeta.setDisplayName("§4§lServer-Ränge");
 	 	rang.setItemMeta(rangMeta);
+	 	paperMeta.setLore(lore1);
 	 	spenden.setItem(4, rang);
 	 	// Gold
 	 	ItemStack gold = new ItemStack(Material.SKULL_ITEM);
 	 	ItemMeta goldMeta = gold.getItemMeta();
 	 	goldMeta.setDisplayName("§9§l§oDie Owner in Skype:");
 	 	gold.setItemMeta(goldMeta);
+	 	paperMeta.setLore(lore1);
 	 	spenden.setItem(7, gold);
 		
 	 	Player p = (Player)cs;

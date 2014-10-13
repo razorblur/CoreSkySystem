@@ -24,7 +24,9 @@ public class Umfrage implements CommandExecutor {
 	  public Umfrage(Main plugin) {
 		  this.plugin = plugin;
 	  }
-		
+		/* Nick am Programmieren */
+	  //   Nick | Developer      //
+	 //    CombatSky.de         //
 		
 	public boolean onCommand(CommandSender p, Command cmd, String label, String[] args)
 	  {

@@ -116,7 +116,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);
 		pm.registerEvents(new MOTDListener(), this);
-		pm.registerEvents(new JoinQuitListener(), this);
+		pm.registerEvents(new JoinQuitListener(this), this);
 		pm.registerEvents(new PlayerListeners(), this);
 		pm.registerEvents(new COMMAND_Kit(), this);
 		pm.registerEvents(new COMMAND_Warp(), this);

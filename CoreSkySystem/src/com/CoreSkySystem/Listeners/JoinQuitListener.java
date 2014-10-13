@@ -16,13 +16,37 @@ import com.CoreSkySystem.Main.Main;
 
 public class JoinQuitListener implements Listener{
 	
+	private Main Plugin;
+	public JoinQuitListener(Main instance)  {
+		
+	}
+	
 	/* This class block the join and leave messages.*/
 	@EventHandler
-	public void onJoin(PlayerJoinEvent e)  {
-		Player p = e.getPlayer();
+	public void onJoin(final PlayerJoinEvent e)  {
+		final Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
-			for(int zeilen = 0; zeilen != 150; zeilen++){
+			} else  {  
+			  e.setJoinMessage("");
+			}	
+		Bukkit.getScheduler().scheduleSyncDelayedTask(this.Plugin, new Runnable() {
+				
+				@Override
+				public void run() {
+					
+					for(int zeilen = 0; zeilen != 150; zeilen++){
+						p.sendMessage("");
+					} 
+					p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
+					p.sendMessage("§a§l   Willkommen auf SkyFight" + e.getPlayer() +" §a§l!");
+					p.sendMessage("§a§l            Du willst Vorteile? §c§l/spenden");
+					p.sendMessage("§a§l              Unser Server-Team: /team");
+					p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
+			    }
+			}, 1L);
+			
+		/*	for(int zeilen = 0; zeilen != 150; zeilen++){
 				p.sendMessage("");
 			}
 			p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
@@ -40,7 +64,7 @@ public class JoinQuitListener implements Listener{
 			p.sendMessage("§a§l        oder schreib uns auf Skype an! /skype");
 			p.sendMessage("§a§l             Unser Server-Team: /team");
 			p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
-		}
+		} */
 		
 		// Vanish the PLayer
 		for(int i = 0; i < COMMAND_cvanish.vanished.size(); i++) {

@@ -45,11 +45,11 @@ public class Commands implements CommandExecutor {
 			} else if (cmd.getName().equalsIgnoreCase("skype"))  {
 					cs.sendMessage("§7[]--------[§6Skype§7]--------[]");
 					cs.sendMessage("§8> §4Owner §7 * §4 _iTzVace§7: §eprimeewolf§7");
-					cs.sendMessage("§8> §4Owner §7 * §4DerDickeEins§7: §eiSnoopHDx§7");
+					cs.sendMessage("§8> §4Owner §7 * §4SeroxPlays§7: §eiSnoopHDx§7");
 					cs.sendMessage("§7-----------------------------------------------");
 					cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
 					cs.sendMessage("§8> §cAdmin §7 * §cDarrek2503§7: §ealbanien1999§7");
-					cs.sendMessage("§8> §cAdmin §7 * §cKillerahz§7: §efurkan4670§7");
+					cs.sendMessage("§8> §cAdmin §7 * §cSayZo§7: §eSayZo_§7");
 				cs.sendMessage("§7[]-------------[§6Skype§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("regeln"))  {
@@ -132,13 +132,13 @@ public class Commands implements CommandExecutor {
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 				cs.sendMessage("§4§lOwner:");
-				cs.sendMessage("§a _iTzVace, DerDickeEins");
+				cs.sendMessage("§a _iTzVace, SeroxPlays");
 				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§4§lDeveloper:");
 				cs.sendMessage("§arazorblur, TGM_Nick");
 				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§c§lAdmin's:");
-				cs.sendMessage("§aTGM_Nick, Killerahz, Darrek2503");
+				cs.sendMessage("§aTGM_Nick, Darrek2503, SayZo");
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 			}
 

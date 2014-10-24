@@ -22,7 +22,9 @@ public class COMMAND_random implements CommandExecutor{
 		} else {
 			Bukkit.broadcastMessage(Main.name +" §7Der Spieler: §c"+ r.getName() +" §7wurde zufällig ausgewählt!");
 		}
-		
+		if(p.isOp()) {
+			p.performCommand("random");
+		}
 		
 		
 		return false;

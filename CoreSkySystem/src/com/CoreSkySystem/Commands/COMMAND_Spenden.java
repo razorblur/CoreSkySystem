@@ -32,26 +32,29 @@ public class COMMAND_Spenden implements CommandExecutor, Listener {
 	 	ItemMeta paperMeta = paper.getItemMeta();
 	 	paperMeta.setDisplayName("§6§l§oWie Spende ich?");
 	 	ArrayList<String> lore1 = new ArrayList<String>();
-	 	lore1.add("§8Klick Mich");
-	 	paperMeta.setLore(lore1);
+	 	lore1.add("§7§oKlick Mich :)");
+	 	lore1.add("§c§oSo erfährst du, wie man Spendet.");
 	 	paper.setItemMeta(paperMeta);
+	 	paperMeta.setLore(lore1);
 	 	spenden.setItem(1, paper);
 	    // Iron
 	 	ItemStack rang = new ItemStack(Material.BEACON);
 	 	ItemMeta rangMeta = rang.getItemMeta();
 	 	rangMeta.setDisplayName("§4§lServer-Ränge");
 	 	ArrayList<String> lore2 = new ArrayList<String>();
-	 	lore2.add("§8Klick Mich");
-	 	paperMeta.setLore(lore2);
+	 	lore2.add("§7§oKlick Mich");
+	 	lore2.add("§c§oAlle Server-Ränge!");
 	 	rang.setItemMeta(rangMeta);
+	 	paperMeta.setLore(lore2);
 	 	spenden.setItem(4, rang);
 	 	// Gold
 	 	ItemStack gold = new ItemStack(Material.SKULL_ITEM);
 	 	ItemMeta goldMeta = gold.getItemMeta();
 	 	goldMeta.setDisplayName("§9§l§oDie Owner in Skype:");
-	 	gold.setItemMeta(goldMeta);
 	 	ArrayList<String> lore3 = new ArrayList<String>();
-	 	lore3.add("§8Klick Mich");
+	 	lore3.add("§7§oKlick Mich");
+	 	lore3.add("§c§oBitte nur bei den Ownern Spenden!");
+	 	gold.setItemMeta(goldMeta);
 	 	paperMeta.setLore(lore3);
 	 	spenden.setItem(7, gold);
 		

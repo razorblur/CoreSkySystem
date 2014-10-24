@@ -20,6 +20,9 @@ public class Permission {
 	public static String set_motd = "motd.set";
 	public static String crash = "skyfight.crash";
 	public static String random = "skyfight.random";
+	public static String reload_system = "skyfight.reload";
+	public static String healnachkill = "skyfight.nonheal";
+	public static String allow_werbung = "skyfight.allow.werbung";
 	
 	// CommandKit Commands 
 	public static String chat = "ck.chat";

@@ -70,7 +70,7 @@ public class COMMAND_Report implements CommandExecutor {
 					DateFormat df = new SimpleDateFormat("mm:ss");
 					Date date = new Date(cooldown.get(player.getName()) + COOLDOWN - System.currentTimeMillis());
 					String formatted = df.format(date);
-					player.sendMessage(Main.name + " §7Du kannst diesen Command erst in §c" + formatted + " §6 Minuten verwenden");
+					player.sendMessage(Main.name + " §7Du kannst diesen Command erst in §c" + formatted + " §7Minuten verwenden");
 					return true;
 				}
 				try {

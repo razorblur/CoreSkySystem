@@ -31,14 +31,13 @@ import com.CoreSkySystem.Commands.COMMAND_rename;
 import com.CoreSkySystem.Commands.COMMAND_skyfight;
 import com.CoreSkySystem.Commands.ChatClear;
 import com.CoreSkySystem.Commands.COMMAND_Report;
-import com.CoreSkySystem.Commands.COMMAND_setmotd;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
+import com.CoreSkySystem.Listeners.AntiWerbung;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.KostenlosSign;
-import com.CoreSkySystem.Listeners.MOTDListener;
 import com.CoreSkySystem.Listeners.PlayerListeners;
 import com.CoreSkySystem.Listeners.RepawnKit;
 import com.CoreSkySystem.Listeners.UnknownCommand;
@@ -48,6 +47,7 @@ public class Main extends JavaPlugin {
 	public static String name = "§6§lSkyFight §8§l|"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
 	public static String path;
+	public static Main plugin;
 	
 
 	@Override
@@ -67,6 +67,7 @@ public class Main extends JavaPlugin {
 		info();
 		
 
+		plugin = this;
 		this.getCommand("spenden").setExecutor(new COMMAND_Spenden());
 		this.getCommand("ranglist").setExecutor(new COMMAND_Ranglist());
 		this.getCommand("hilfe").setExecutor(new Commands());
@@ -81,7 +82,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("umfrage").setExecutor(new Umfrage(this));
 		this.getCommand("copyright").setExecutor(new Commands());
 		this.getCommand("diamond").setExecutor(new Commands());
-		this.getCommand("setmotd").setExecutor(new COMMAND_setmotd(this));
 		this.getCommand("report").setExecutor(new COMMAND_Report());
 		this.getCommand("team").setExecutor(new Commands());
 		this.getCommand("warn").setExecutor(new COMMAND_Warn());
@@ -115,7 +115,6 @@ public class Main extends JavaPlugin {
 		
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);
-		pm.registerEvents(new MOTDListener(), this);
 		pm.registerEvents(new JoinQuitListener(this), this);
 		pm.registerEvents(new PlayerListeners(), this);
 		pm.registerEvents(new COMMAND_Kit(), this);
@@ -124,6 +123,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new RepawnKit(), this);
 		pm.registerEvents(new COMMAND_Ranglist(), this);
 		pm.registerEvents(new COMMAND_Spenden(), this);
+		pm.registerEvents(new AntiWerbung(), this);
 		
         }
         	

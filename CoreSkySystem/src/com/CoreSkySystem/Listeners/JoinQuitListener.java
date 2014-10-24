@@ -16,6 +16,7 @@ import com.CoreSkySystem.Main.Main;
 
 public class JoinQuitListener implements Listener{
 	
+	@SuppressWarnings("unused")
 	private Main Plugin;
 	public JoinQuitListener(Main instance)  {
 		
@@ -26,45 +27,10 @@ public class JoinQuitListener implements Listener{
 	public void onJoin(final PlayerJoinEvent e)  {
 		final Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
-			e.setJoinMessage(Main.name + " §3Das Team-Mitglied: §b"+ p.getName() + "§3, hat den Server betreten.");
+			e.setJoinMessage(Main.name + " §bDas Team-Mitglied: §3"+ p.getName() + "§b, hat den Server betreten.");
 			} else  {  
-			  e.setJoinMessage("");
-			}	
-		Bukkit.getScheduler().scheduleSyncDelayedTask(this.Plugin, new Runnable() {
-				
-				@Override
-				public void run() {
-					
-					for(int zeilen = 0; zeilen != 150; zeilen++){
-						p.sendMessage("");
-					} 
-					p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
-					p.sendMessage("§a§l   Willkommen auf SkyFight" + e.getPlayer() +" §a§l!");
-					p.sendMessage("§a§l            Du willst Vorteile? §c§l/spenden");
-					p.sendMessage("§a§l              Unser Server-Team: /team");
-					p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
-			    }
-			}, 1L);
-			
-		/*	for(int zeilen = 0; zeilen != 150; zeilen++){
-				p.sendMessage("");
-			}
-			p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
-			p.sendMessage("§a§l              Für Hilfe, tippe /Hilfe");
-			p.sendMessage("§a§l        oder schreib uns auf Skype an! /skype");
-			p.sendMessage("§a§l             Unser Server-Team: /team");
-			p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
-		} else  {  
-			e.setJoinMessage("");
-			for(int zeilen = 0; zeilen != 150; zeilen++){
-				p.sendMessage("");
-			}
-			p.sendMessage("§7§l---------------[§6§lWillkommen!§7§l]---------------");
-			p.sendMessage("§a§l              Für Hilfe, tippe /Hilfe");
-			p.sendMessage("§a§l        oder schreib uns auf Skype an! /skype");
-			p.sendMessage("§a§l             Unser Server-Team: /team");
-			p.sendMessage("§7§l---------------[§6§lViel Spass!§7§l]---------------");
-		} */
+				e.setJoinMessage("");
+			} 
 		
 		// Vanish the PLayer
 		for(int i = 0; i < COMMAND_cvanish.vanished.size(); i++) {

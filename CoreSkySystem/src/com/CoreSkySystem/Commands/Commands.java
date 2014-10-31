@@ -47,7 +47,8 @@ public class Commands implements CommandExecutor {
 					cs.sendMessage("§8> §4Owner §7 * §4 _iTzVace§7: §eprimeewolf§7");
 					cs.sendMessage("§8> §4Owner §7 * §4SeroxPlays§7: §eiSnoopHDx§7");
 					cs.sendMessage("§7-----------------------------------------------");
-					cs.sendMessage("§8> §cAdmin §7 * §cTGM_Nick§7: §eTGM_Nick§7");
+					cs.sendMessage("§8> §4Developer §7 * §4TGM_Nick§7: §eTGM_Nick§7");
+					cs.sendMessage("§7-----------------------------------------------");
 					cs.sendMessage("§8> §cAdmin §7 * §cDarrek2503§7: §ealbanien1999§7");
 					cs.sendMessage("§8> §cAdmin §7 * §cSayZo§7: §eSayZo_§7");
 				cs.sendMessage("§7[]-------------[§6Skype§7]-------------[]");
@@ -135,10 +136,10 @@ public class Commands implements CommandExecutor {
 				cs.sendMessage("§a _iTzVace, SeroxPlays");
 				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§4§lDeveloper:");
-				cs.sendMessage("§arazorblur, TGM_Nick");
+				cs.sendMessage("§aTGM_Nick, razorblur");
 				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§c§lAdmin's:");
-				cs.sendMessage("§aTGM_Nick, Darrek2503, SayZo");
+				cs.sendMessage("SayZo, Darrek2503");
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 			}
 

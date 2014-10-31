@@ -124,5 +124,5 @@ commands:
      description: Oeffnet eine Rang Liste
    qwertzuiopü:
      description: Spenden Info
-   abfall:
-     description: open a disposal gui
+   brunnen:
+     description: starte einen Brunnen

@@ -38,4 +38,5 @@ public class Permission {
 	public static String armor = "ck.armor";
 	public static String gamemode = "ck.gm";
 	public static String leer_broadcast = "broadcast.leer";
+	public static String start_brunnen = "start.brunnen";
 }

@@ -26,7 +26,6 @@ import com.CoreSkySystem.Commands.COMMAND_gm;
 import com.CoreSkySystem.Commands.COMMAND_hban;
 import com.CoreSkySystem.Commands.COMMAND_hkick;
 import com.CoreSkySystem.Commands.COMMAND_noarmor;
-import com.CoreSkySystem.Commands.COMMAND_random;
 import com.CoreSkySystem.Commands.COMMAND_rename;
 import com.CoreSkySystem.Commands.COMMAND_skyfight;
 import com.CoreSkySystem.Commands.ChatClear;
@@ -36,7 +35,9 @@ import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
 import com.CoreSkySystem.Listeners.AntiWerbung;
 import com.CoreSkySystem.Listeners.DeathDrop;
+import com.CoreSkySystem.Listeners.DisableCommand;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
+import com.CoreSkySystem.Listeners.JumpPad;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.PlayerListeners;
 import com.CoreSkySystem.Listeners.RepawnKit;
@@ -44,7 +45,7 @@ import com.CoreSkySystem.Listeners.UnknownCommand;
 
 public class Main extends JavaPlugin {
 	
-	public static String name = "§6§lSkyFight §8§l|"; //§8§l[§6§lCf§8§l]
+	public static String name = "Â§6Â§lSkyFight Â§8Â§lâ”ƒ"; //Â§8Â§l[Â§6Â§lCfÂ§8Â§l]
 	public static String normal_name = "[SkyFight]";
 	public static String path;
 	public static Main plugin;
@@ -72,7 +73,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("ranglist").setExecutor(new COMMAND_Ranglist());
 		this.getCommand("hilfe").setExecutor(new Commands());
 		this.getCommand("regeln").setExecutor(new Commands());
-		this.getCommand("qwertzuiopü").setExecutor(new Commands());
+		this.getCommand("qwertzuiopÃ¼").setExecutor(new Commands());
 		this.getCommand("iron").setExecutor(new Commands());
 		this.getCommand("gold").setExecutor(new Commands());
 		this.getCommand("skype").setExecutor(new Commands());
@@ -91,7 +92,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("leer").setExecutor(new COMMAND_broadcast2());
 		this.getCommand("crash").setExecutor(new COMMAND_crash());
 		this.getCommand("emerald").setExecutor(new Commands());
-		this.getCommand("random").setExecutor(new COMMAND_random());
 		this.getCommand("kit").setExecutor(new COMMAND_Kit());
 		this.getCommand("warp").setExecutor(new COMMAND_Warp());
 		this.getCommand("system").setExecutor(new Commands());
@@ -124,11 +124,10 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new COMMAND_Ranglist(), this);
 		pm.registerEvents(new COMMAND_Spenden(), this);
 		pm.registerEvents(new AntiWerbung(), this);
-		
+		pm.registerEvents(new JumpPad(), this);
+		pm.registerEvents(new DisableCommand(), this);
         }
-        	
-        
-	
+
 	
 	private void info() {
 	    System.out.println("<======================================================>");
@@ -146,12 +145,10 @@ public class Main extends JavaPlugin {
 	
 	private void loadConfig() {
 		FileConfiguration cfg = this.getConfig();
-		
-
-		
-		cfg.addDefault("server.motd", "§6§lSkyFight §8>> §cEUER SKYPVP SERVER!");
+		cfg.addDefault(".Motd", "Â§6Â§lSkyFight Â§8<-> Â§7EUER SKYPVP SERVER!");
 		
 		cfg.options().copyDefaults();
+		saveConfig();
 	}
 	
 	private void loadtFiles() {

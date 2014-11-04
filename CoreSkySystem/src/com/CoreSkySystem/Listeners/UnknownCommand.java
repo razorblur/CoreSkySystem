@@ -21,7 +21,6 @@ public class UnknownCommand implements Listener{
 			
 			if(tpic == null)  {
 				p.sendMessage(Main.name +" §7Dieser Befehl existiert nicht. §e[" + msg + "§e] §7Tippe: §c/Hilfe");
-				
 				event.setCancelled(true);
 			}
 		}
@@ -29,4 +28,3 @@ public class UnknownCommand implements Listener{
 	}
 
 }
- 

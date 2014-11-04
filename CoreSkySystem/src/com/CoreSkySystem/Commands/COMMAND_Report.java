@@ -26,7 +26,7 @@ public class COMMAND_Report implements CommandExecutor {
 	private static ArrayList<String> ignore_message = new ArrayList<>();
 	private static int id = 0;
 	private static HashMap<String, Long> cooldown = new HashMap<>();
-	private static int COOLDOWN = 1000 * 60 * 15 ; // = 1000 Für Sekunden * 60 Für Minuten * 15 Für 15 Minuten
+	private static int COOLDOWN = 1000 * 60 * 10 ; // = 1000 Für Sekunden * 60 Für Minuten * 15 Für 15 Minuten
 	String message = "";
 
 	@Override

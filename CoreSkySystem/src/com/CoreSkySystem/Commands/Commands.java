@@ -30,6 +30,9 @@ public class Commands implements CommandExecutor {
 				   cs.sendMessage("§8» §c/friede <name> §8«");
 				   cs.sendMessage("§8» §c/system §8«");
 				   cs.sendMessage("§8» §c/report <Spieler> <Grund> §8«");
+				   cs.sendMessage("§8» §c/vote §8«");
+				   cs.sendMessage("§8» §c/warp §8«");
+				   cs.sendMessage("§8» §c/kit §8«");
 				   cs.sendMessage("§7[]-------------[§6Hilfe§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("qwertzuiopü"))  {
@@ -44,8 +47,8 @@ public class Commands implements CommandExecutor {
 							
 			} else if (cmd.getName().equalsIgnoreCase("skype"))  {
 					cs.sendMessage("§7[]--------[§6Skype§7]--------[]");
-					cs.sendMessage("§8> §4Owner §7 * §4 _iTzVace§7: §eprimeewolf§7");
-					cs.sendMessage("§8> §4Owner §7 * §4SeroxPlays§7: §eiSnoopHDx§7");
+					cs.sendMessage("§8> §4Owner §7 * §4SphexPvP§7: §eprimeewolf§7");
+					cs.sendMessage("§8> §4Owner §7 * §4SeroxPlays§7: §ederdickeeins§7");
 					cs.sendMessage("§7-----------------------------------------------");
 					cs.sendMessage("§8> §4Developer §7 * §4TGM_Nick§7: §eTGM_Nick§7");
 					cs.sendMessage("§7-----------------------------------------------");
@@ -133,16 +136,20 @@ public class Commands implements CommandExecutor {
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 				cs.sendMessage("§4§lOwner:");
-				cs.sendMessage("§a _iTzVace, SeroxPlays");
+				cs.sendMessage("§aSphexPvP, SeroxPlays");
 				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§4§lDeveloper:");
 				cs.sendMessage("§aTGM_Nick, razorblur");
 				cs.sendMessage("§7-----------------------------");
 				cs.sendMessage("§c§lAdmin's:");
-				cs.sendMessage("SayZo, Darrek2503");
+				cs.sendMessage("§aSayZo, Darrek2503");
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
+			} else if (cmd.getName().equalsIgnoreCase("vote"))  {
+				cs.sendMessage("§7[]---------------[§b§lVote§7]---------------[]");
+				cs.sendMessage("§c    Um zu Voten bitte auf den Link klicken");
+				cs.sendMessage("§c   http://serverliste.org/?s=server&id=6385 ");
+				cs.sendMessage("§7[]---------------[§b§lVote§7]---------------[]");
 			}
-
 
 		
 			return true;

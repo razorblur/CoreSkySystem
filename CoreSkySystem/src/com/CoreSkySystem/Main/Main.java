@@ -33,7 +33,7 @@ import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
-import com.CoreSkySystem.Listeners.AntiWerbung;
+import com.CoreSkySystem.Listeners.DisallowedWords;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.DisableCommand;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
@@ -45,7 +45,7 @@ import com.CoreSkySystem.Listeners.UnknownCommand;
 
 public class Main extends JavaPlugin {
 	
-	public static String name = "§6§lSkyFight §8§l┃"; //§8§l[§6§lCf§8§l]
+	public static String name = "§8§l[§6§l!§8§l]"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
 	public static String path;
 	public static Main plugin;
@@ -95,6 +95,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("kit").setExecutor(new COMMAND_Kit());
 		this.getCommand("warp").setExecutor(new COMMAND_Warp());
 		this.getCommand("system").setExecutor(new Commands());
+		this.getCommand("vote").setExecutor(new Commands());
 		
 		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
@@ -123,7 +124,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new RepawnKit(), this);
 		pm.registerEvents(new COMMAND_Ranglist(), this);
 		pm.registerEvents(new COMMAND_Spenden(), this);
-		pm.registerEvents(new AntiWerbung(), this);
+		pm.registerEvents(new DisallowedWords(), this);
 		pm.registerEvents(new JumpPad(), this);
 		pm.registerEvents(new DisableCommand(), this);
         }
@@ -146,7 +147,7 @@ public class Main extends JavaPlugin {
 	private void loadConfig() {
 		FileConfiguration cfg = this.getConfig();
 		cfg.addDefault(".Motd", "§6§lSkyFight §8<-> §7EUER SKYPVP SERVER!");
-		
+		cfg.addDefault(".Slots", "72");
 		cfg.options().copyDefaults();
 		saveConfig();
 	}

@@ -16,6 +16,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
 
 import com.CoreSkySystem.Functions.Permission;
+import com.CoreSkySystem.Main.Main;
 
 @SuppressWarnings("unused")
 public class COMMAND_Warp implements CommandExecutor, Listener {
@@ -97,7 +98,8 @@ public class COMMAND_Warp implements CommandExecutor, Listener {
 				
 			} else if(e.getCurrentItem().getType() == Material.GOLD_SWORD)  {
 				p.closeInventory();
-				p.performCommand("warps pvp");
+				p.sendMessage(Main.name +" §7Zur Zeit deaktiviert!");
+				//p.performCommand("warps pvp");
 			
 			}
 		}

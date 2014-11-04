@@ -30,10 +30,6 @@ commands:
      description: Alle Infos zum Spendenrang Ultimate
    emerald:
      description: Alle Infos zum Spendenrang Emerald
-   setmotd:
-     description: Set the motd of the server.
-     usage: /setmotd (motd)
-     aliases: sm
    report:
      description: Report a player
      usage: /report (player) (reason)
@@ -124,5 +120,5 @@ commands:
      description: Oeffnet eine Rang Liste
    qwertzuiopü:
      description: Spenden Info
-   brunnen:
-     description: starte einen Brunnen
+   vote:
+     description: Vote

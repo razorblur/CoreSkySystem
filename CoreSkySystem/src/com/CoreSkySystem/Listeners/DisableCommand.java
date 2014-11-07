@@ -20,7 +20,7 @@ public class DisableCommand implements Listener  {
 		} else {
 			 if(msg.startsWith("/pl"))  {
 					event.setCancelled(true);
-					p.sendMessage("Plugins (6); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core");
+					p.sendMessage("Plugins (6); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
 					
 				}
 		}
@@ -29,7 +29,7 @@ public class DisableCommand implements Listener  {
 		} else {
 			if(msg.startsWith("/?"))  {
 				event.setCancelled(true);
-				p.sendMessage("Plugins (6); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core");
+				p.sendMessage("Plugins (6); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
 				p.sendMessage(Main.name + " §cAlle wichtigen Befehle findest du unter §c/Hilfe");
 			}
 		}

@@ -42,6 +42,7 @@ import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.PlayerListeners;
 import com.CoreSkySystem.Listeners.RepawnKit;
 import com.CoreSkySystem.Listeners.UnknownCommand;
+import com.CoreSkySystem.Listeners.broadcaster;
 
 public class Main extends JavaPlugin {
 	
@@ -66,7 +67,7 @@ public class Main extends JavaPlugin {
 		loadtFiles();
 		// Useless Info :D
 		info();
-		
+		new broadcaster(this);
 
 		plugin = this;
 		this.getCommand("spenden").setExecutor(new COMMAND_Spenden());

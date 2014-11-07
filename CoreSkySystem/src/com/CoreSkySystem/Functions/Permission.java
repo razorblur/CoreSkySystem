@@ -2,7 +2,6 @@ package com.CoreSkySystem.Functions;
 
 public class Permission {
 	
-	// CommandKit Commands 
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";
 	public static String noarmor = "ck.noarmor";
@@ -17,7 +16,6 @@ public class Permission {
 	public static String gamemode = "ck.gm";
 	public static String leer_broadcast = "broadcast.leer";
 	public static String start_brunnen = "start.brunnen";
-	
 	public static String NoCombat = "skyfight.notagged";
 	public static String NoRangKit = "skyfight.no.rang.kit";
 	public static String Fly_Partikel = "skyfight.fly.partikel";
@@ -39,7 +37,5 @@ public class Permission {
 	public static String healnachkill = "skyfight.nonheal";
 	public static String allow_werbung = "skyfight.allow.werbung";
 	public static String allow_hacks = "skyfight.allow.hacks";
-	public static String setmotd = "skyfight.setmotd";
-	public static String slots = "skyfight.set.slots";
 	public static String allow_name = "skyfight.allow.teamname";
 }

@@ -4,12 +4,12 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 public class Commands implements CommandExecutor {
-
+	
 	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
 		     if (cmd.getName().equalsIgnoreCase("ts"))  {
 				cs.sendMessage("§7[]-------------[§6TeamSpeak§7]-------------[]");
-				cs.sendMessage("§8» §7Wir haben bislang noch keinen §cTeamSpeak³-Server§7!");
+				cs.sendMessage("§8» §7Unseren TeamSpeak³: §cSkyFight.ch§7!");
 				cs.sendMessage("§7[]-------------[§6TeamSpeak§7]-------------[]");
 			
 			} else if (cmd.getName().equalsIgnoreCase("copyright"))  {
@@ -135,20 +135,17 @@ public class Commands implements CommandExecutor {
 		
 			} else if (cmd.getName().equalsIgnoreCase("team"))  {
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
-				cs.sendMessage("§4§lOwner:");
-				cs.sendMessage("§aSphexPvP, SeroxPlays");
-				cs.sendMessage("§7-----------------------------");
-				cs.sendMessage("§4§lDeveloper:");
-				cs.sendMessage("§aTGM_Nick, razorblur");
-				cs.sendMessage("§7-----------------------------");
-				cs.sendMessage("§c§lAdmin's:");
-				cs.sendMessage("§aSayZo, Darrek2503");
+				cs.sendMessage("§4Owner§7: §7SphexPvP, SeroxPlays");
+				cs.sendMessage("§4Developer§7: §7TGM_Nick, razorblur");
+				cs.sendMessage("§cAdmin's§7: SayZo, Darrek2503");
+				cs.sendMessage("§5Moderator§7: screamking1337§7");
+				cs.sendMessage("§eSupporter§7: ItzLuk§7, Burakcrafter168§7, spartan09");
 				cs.sendMessage("§7[]-------------[§6Team§7]-------------[]");
 			} else if (cmd.getName().equalsIgnoreCase("vote"))  {
-				cs.sendMessage("§7[]---------------[§b§lVote§7]---------------[]");
+				cs.sendMessage("§7[]-----------------[§b§lVote§7]-----------------[]");
 				cs.sendMessage("§c    Um zu Voten bitte auf den Link klicken");
 				cs.sendMessage("§c   http://serverliste.org/?s=server&id=6385 ");
-				cs.sendMessage("§7[]---------------[§b§lVote§7]---------------[]");
+				cs.sendMessage("§7[]-----------------[§b§lVote§7]-----------------[]");
 			}
 
 		

@@ -23,34 +23,14 @@ public class JoinQuitListener implements Listener{
 	}
 	
 	/* This class block the join and leave messages.*/
-	@EventHandler(priority=EventPriority.LOWEST)
+	@EventHandler(priority=EventPriority.HIGHEST)
 	public void onJoin(PlayerJoinEvent e)  {
 		final Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §bDas Team-Mitglied: §3"+ p.getName() + "§b, hat den Server betreten.");
-			for(int i = 0; i < 150; i++)  {
-				p.sendMessage(" ");
-			}
-			p.sendMessage("§7[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
-			p.sendMessage("             §bVote für uns mit §e/vote");
-			p.sendMessage("    §bAlle Wichtigen Befehle siehst du unter §e/hilfe");
-			p.sendMessage("         §bDu möchtest Spenden? §e/spenden");
-			p.sendMessage("      §bUnsere Warps findest du unter §e/warp");
-			p.sendMessage("     §bHacker gesehen? §c/report <Name> <Grund>");
-			p.sendMessage("§7[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
 									
 			} else  {  
 				e.setJoinMessage("");
-				for(int i = 0; i < 150; i++)  {
-					p.sendMessage(" ");
-				}
-				p.sendMessage("[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
-				p.sendMessage("             §bVote für uns mit §e/vote");
-				p.sendMessage("    §bAlle Wichtigen Befehle siehst du unter §e/hilfe");
-				p.sendMessage("         §bDu möchtest Spenden? §e/spenden");
-				p.sendMessage("      §bUnsere Warps findest du unter §e/warp");
-				p.sendMessage("     §bHacker gesehen? §c/report <Name> <Grund>");
-				p.sendMessage("[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
 			} 
 			Bukkit.getScheduler().scheduleSyncDelayedTask(Plugin, new Runnable() {
 
@@ -68,7 +48,7 @@ public class JoinQuitListener implements Listener{
 					p.sendMessage("     §bHacker gesehen? §c/report <Name> <Grund>");
 					p.sendMessage("[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
 				}	
-		}, 1);
+		}, 10);
 		// Vanish the PLayer
 		for(int i = 0; i < COMMAND_cvanish.vanished.size(); i++) {
 			Player player = Bukkit.getPlayer(COMMAND_cvanish.vanished.get(i));

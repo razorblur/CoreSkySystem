@@ -18,7 +18,6 @@ public class Permission {
 	public static String start_brunnen = "start.brunnen";
 	public static String NoCombat = "skyfight.notagged";
 	public static String NoRangKit = "skyfight.no.rang.kit";
-	public static String Fly_Partikel = "skyfight.fly.partikel";
 	public static String chat_clear = "skyfight.chat.clear";
 	public static String report_show_list = "skyfight.report";
 	public static String warn_player = "skyfight.warn.player";
@@ -38,4 +37,6 @@ public class Permission {
 	public static String allow_werbung = "skyfight.allow.werbung";
 	public static String allow_hacks = "skyfight.allow.hacks";
 	public static String allow_name = "skyfight.allow.teamname";
+	public static String send_support = "skyfight.support";
+	public static String bewerben = "skyfight.bewerben";
 }

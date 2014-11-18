@@ -18,18 +18,18 @@ public class DisableCommand implements Listener  {
 		if(p.hasPermission("*")){
 			event.setCancelled(false);
 		} else {
-			 if(msg.startsWith("/pl"))  {
+			 if(msg.startsWith("/pl"))  { 
 					event.setCancelled(true);
-					p.sendMessage("Plugins (6); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
+					p.sendMessage("Plugins (7); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
 					
 				}
 		}
 		if(p.hasPermission("*")){
-			event.setCancelled(false);
+			event.setCancelled(false); 
 		} else {
-			if(msg.startsWith("/?"))  {
+			if(msg.startsWith("/?"))  { 
 				event.setCancelled(true);
-				p.sendMessage("Plugins (6); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
+				p.sendMessage("Plugins (7); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
 				p.sendMessage(Main.name + " §cAlle wichtigen Befehle findest du unter §c/Hilfe");
 			}
 		}

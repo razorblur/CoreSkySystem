@@ -33,6 +33,7 @@ import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
+import com.CoreSkySystem.Listeners.AdventSign;
 import com.CoreSkySystem.Listeners.DisallowedWords;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.DisableCommand;
@@ -49,6 +50,8 @@ public class Main extends JavaPlugin {
 	public static String name = "§8§l[§6§l!§8§l]"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
 	public static String path;
+	public static String a = "§7§l[]>==========<<§6§l";
+	public static String b = "§7§l>>==========<[]";
 	public static Main plugin;
 	
 
@@ -97,11 +100,11 @@ public class Main extends JavaPlugin {
 		this.getCommand("warp").setExecutor(new COMMAND_Warp());
 		this.getCommand("system").setExecutor(new Commands());
 		this.getCommand("vote").setExecutor(new Commands());
+		this.getCommand("obsidian").setExecutor(new Commands());
+		this.getCommand("youtuber").setExecutor(new Commands());
+		this.getCommand("bewerben").setExecutor(new Commands());
 		
-		// Command skyfight
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
-
-		// Command Kit COmmands
 		this.getCommand("clearchat").setExecutor(new ChatClear(this));
 		this.getCommand("gamemode").setExecutor(new COMMAND_gm());
 		this.getCommand("chat").setExecutor(new COMMAND_chat());
@@ -114,7 +117,7 @@ public class Main extends JavaPlugin {
 		this.getCommand("hban").setExecutor(new COMMAND_hban());
 		this.getCommand("cvanish").setExecutor(new COMMAND_cvanish());
 		this.getCommand("armor").setExecutor(new COMMAND_armor());
-		
+		// Listeners
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);
 		pm.registerEvents(new JoinQuitListener(this), this);
@@ -128,6 +131,7 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new DisallowedWords(), this);
 		pm.registerEvents(new JumpPad(), this);
 		pm.registerEvents(new DisableCommand(), this);
+		pm.registerEvents(new AdventSign(), this);
         }
 
 	

@@ -68,10 +68,10 @@ public class Umfrage implements CommandExecutor {
 	          if (args[0].equalsIgnoreCase("stop")) {
 	            if (umfragestart) {
 	              umfragestart = false;
-	              Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
+	              Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
 	              Bukkit.broadcastMessage("§7Die Umfrage ist zuende!");
 	              Bukkit.broadcastMessage("§7Frage: §c§o" + umfrage);
-	              Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
+	              Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
 	              if (ja > nein) {
 	                Bukkit.broadcastMessage("§7Gewinner: §a§lJA §7mit §c" + ja + " §7- §c" + nein + " §7Stimmen!");
 	              }
@@ -95,11 +95,11 @@ public class Umfrage implements CommandExecutor {
 	          nein = 0;
 	          ja = 0;
 	          uspieler.clear();
-	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
+	         Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
 	          Bukkit.broadcastMessage("§7Eine Umfrage wurde von §c§o" + p.getName() +  " §7gestartet!");
 	          Bukkit.broadcastMessage("§7Frage: §c§o" + umfrage);
 	          Bukkit.broadcastMessage("§7Stimme mit §c/ja §7oder §c/nein §7ab.");
-	          Bukkit.broadcastMessage("§7§l[]-----------------[§6§lSkyFight§7§l]-----------------[]");
+	          Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
 	          return true;
 	        }
 	      }

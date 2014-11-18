@@ -17,7 +17,7 @@ import com.CoreSkySystem.Main.Main;
 
 public class JoinQuitListener implements Listener{
 	
-	private Main Plugin;
+	//private Main Plugin;
 	public JoinQuitListener(Main instance)  {
 		
 	}
@@ -28,27 +28,19 @@ public class JoinQuitListener implements Listener{
 		final Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §bDas Team-Mitglied: §3"+ p.getName() + "§b, hat den Server betreten.");
-									
+			for(int i = 0; i != 150; i++) {
+				p.sendMessage("");
+			}
+			p.sendMessage(Main.a+ "§6§lＳｋｙＦｉｇｈｔ" + Main.b);
+			p.sendMessage("§c»           §7/Vote §8- §cFür bessere Items!");
+			p.sendMessage("§c»      §7/spenden §8- §cUm uns zu unterstützen!");
+			p.sendMessage("§c»        §7/Regeln §8- §cBeachte die Regeln!");
+			p.sendMessage("§c»     §7/team §8- §cSieh dir das Server-Team an!");
+			p.sendMessage("§c»    §7/Hilfe §8- §cZeigt dir die wichtigsten Befehle!");
+			p.sendMessage(Main.a+ "§6§lＳｋｙＦｉｇｈｔ" + Main.b);
 			} else  {  
 				e.setJoinMessage("");
 			} 
-			Bukkit.getScheduler().scheduleSyncDelayedTask(Plugin, new Runnable() {
-
-				@Override
-				public void run() {
-					
-					for(int i = 0; i < 150; i++)  {
-						p.sendMessage(" ");
-					}
-					p.sendMessage("[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
-					p.sendMessage("             §bVote für uns mit §e/vote");
-					p.sendMessage("    §bAlle Wichtigen Befehle siehst du unter §e/hilfe");
-					p.sendMessage("         §bDu möchtest Spenden? §e/spenden");
-					p.sendMessage("      §bUnsere Warps findest du unter §e/warp");
-					p.sendMessage("     §bHacker gesehen? §c/report <Name> <Grund>");
-					p.sendMessage("[]==============<<§6§lＳＫＹＦＩＧＨＴ.ＣＨ§7>>==============[]");
-				}	
-		}, 10);
 		// Vanish the PLayer
 		for(int i = 0; i < COMMAND_cvanish.vanished.size(); i++) {
 			Player player = Bukkit.getPlayer(COMMAND_cvanish.vanished.get(i));

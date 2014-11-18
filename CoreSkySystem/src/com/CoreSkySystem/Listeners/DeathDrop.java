@@ -20,6 +20,8 @@ public class DeathDrop implements Listener  {
 		if(event.getEntity().getKiller() instanceof Player)  {
 			ItemStack star = new ItemStack(Material.NETHER_STAR, 1);
 			event.getDrops().add(star);
+			
+			
 		}
 	}
 }

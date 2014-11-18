@@ -122,3 +122,9 @@ commands:
      description: Spenden Info
    vote:
      description: Vote
+   YouTuber:
+     description: So wird man YouTuber!
+   Bewerben:
+     description: Bewerbe dich!
+   obsidian:
+     description: Obsidian Infos

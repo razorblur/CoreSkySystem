@@ -98,8 +98,7 @@ public class COMMAND_Warp implements CommandExecutor, Listener {
 				
 			} else if(e.getCurrentItem().getType() == Material.GOLD_SWORD)  {
 				p.closeInventory();
-				p.sendMessage(Main.name +" §7Zur Zeit deaktiviert!");
-				//p.performCommand("warps pvp");
+				p.performCommand("warps pvp");
 			
 			}
 		}

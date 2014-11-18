@@ -82,7 +82,7 @@ public class COMMAND_friede implements CommandExecutor {
 					}
 					break;
 				default:
-					try {
+					try { 
 						Player target = Bukkit.getPlayer(args[0]);
 						// Prüfen ob die Person mit sich selbst frieden schließen möchte
 						if(target.getName().equals(player.getName())) {

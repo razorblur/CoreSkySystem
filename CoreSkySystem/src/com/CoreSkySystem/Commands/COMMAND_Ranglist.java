@@ -25,25 +25,31 @@ public class COMMAND_Ranglist implements CommandExecutor, Listener {
 	 	ItemMeta ironMeta = iron.getItemMeta();
 	 	ironMeta.setDisplayName("§f§lIron-Rang");
 	 	iron.setItemMeta(ironMeta);
-	 	ranglist.setItem(1, iron);
+	 	ranglist.setItem(0, iron);
 	 	// Gold
 	 	ItemStack gold = new ItemStack(Material.GOLD_INGOT);
 	 	ItemMeta goldMeta = gold.getItemMeta();
 	 	goldMeta.setDisplayName("§6§lGold-Rang");
 	 	gold.setItemMeta(goldMeta);
-	 	ranglist.setItem(3, gold);
+	 	ranglist.setItem(2, gold);
 	 	// Diamond
 	 	ItemStack Diamond = new ItemStack(Material.DIAMOND);
 	 	ItemMeta diamondMeta = Diamond.getItemMeta();
 	 	diamondMeta.setDisplayName("§b§lDiamond-Rang");
 	 	Diamond.setItemMeta(diamondMeta);
-	 	ranglist.setItem(5, Diamond);
+	 	ranglist.setItem(4, Diamond);
 	 	// Emerald
 	 	ItemStack emerald = new ItemStack(Material.EMERALD);
 	 	ItemMeta emeraldMeta = iron.getItemMeta();
 	 	emeraldMeta.setDisplayName("§a§lEmerald-Rang");
 	 	emerald.setItemMeta(emeraldMeta);
-	 	ranglist.setItem(7, emerald);
+	 	ranglist.setItem(6, emerald);
+	 	// Obsidian
+	 	ItemStack ob = new ItemStack(Material.OBSIDIAN);
+	 	ItemMeta obmeta = ob.getItemMeta();
+	 	obmeta.setDisplayName("§0§lObsidian Kit");
+	 	ob.setItemMeta(obmeta);
+	 	ranglist.setItem(8, ob);
 		
 	 	Player p = (Player)cs;
 	
@@ -84,9 +90,9 @@ public class COMMAND_Ranglist implements CommandExecutor, Listener {
 				p.closeInventory();
 				p.performCommand("emerald");
 				
-			} else if(e.getCurrentItem().getType() == Material.NETHER_STAR)  {
+			} else if(e.getCurrentItem().getType() == Material.OBSIDIAN)  {
 				p.closeInventory();
-				p.performCommand("kits sky");
+				p.performCommand("obsidian");
 			
 			}
 		}

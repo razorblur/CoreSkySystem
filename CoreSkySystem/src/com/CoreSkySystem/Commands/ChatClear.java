@@ -49,7 +49,7 @@ public class ChatClear implements CommandExecutor {
 			
 		}
 		if(name == "") return; 
-		Bukkit.getServer().broadcastMessage("§7Der Chat wurde von §b"+ name +" §7geelert");
+		Bukkit.getServer().broadcastMessage("§7Der Chat wurde von §b"+ name +" §7geleert");
 	}
 
 }

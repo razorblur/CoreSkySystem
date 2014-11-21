@@ -17,27 +17,17 @@ import com.CoreSkySystem.Main.Main;
 
 public class JoinQuitListener implements Listener{
 	
-	//private Main Plugin;
+	private Main Plugin;
 	public JoinQuitListener(Main instance)  {
 		
 	}
 	
 	/* This class block the join and leave messages.*/
-	@EventHandler(priority=EventPriority.HIGHEST)
+	@EventHandler(priority=EventPriority.LOWEST)
 	public void onJoin(PlayerJoinEvent e)  {
 		final Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §bDas Team-Mitglied: §3"+ p.getName() + "§b, hat den Server betreten.");
-			for(int i = 0; i != 150; i++) {
-				p.sendMessage("");
-			}
-			p.sendMessage(Main.a+ "§6§lＳｋｙＦｉｇｈｔ" + Main.b);
-			p.sendMessage("§c»           §7/Vote §8- §cFür bessere Items!");
-			p.sendMessage("§c»      §7/spenden §8- §cUm uns zu unterstützen!");
-			p.sendMessage("§c»        §7/Regeln §8- §cBeachte die Regeln!");
-			p.sendMessage("§c»     §7/team §8- §cSieh dir das Server-Team an!");
-			p.sendMessage("§c»    §7/Hilfe §8- §cZeigt dir die wichtigsten Befehle!");
-			p.sendMessage(Main.a+ "§6§lＳｋｙＦｉｇｈｔ" + Main.b);
 			} else  {  
 				e.setJoinMessage("");
 			} 

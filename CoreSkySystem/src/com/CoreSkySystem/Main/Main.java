@@ -23,7 +23,6 @@ import com.CoreSkySystem.Commands.COMMAND_friede;
 import com.CoreSkySystem.Commands.COMMAND_giveall;
 import com.CoreSkySystem.Commands.COMMAND_globalmute;
 import com.CoreSkySystem.Commands.COMMAND_gm;
-import com.CoreSkySystem.Commands.COMMAND_hban;
 import com.CoreSkySystem.Commands.COMMAND_hkick;
 import com.CoreSkySystem.Commands.COMMAND_noarmor;
 import com.CoreSkySystem.Commands.COMMAND_rename;
@@ -33,6 +32,7 @@ import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
+import com.CoreSkySystem.Functions.DelayedSchedueler;
 import com.CoreSkySystem.Listeners.AdventSign;
 import com.CoreSkySystem.Listeners.DisallowedWords;
 import com.CoreSkySystem.Listeners.DeathDrop;
@@ -114,7 +114,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("globalmute").setExecutor(new COMMAND_globalmute());
 		this.getCommand("rename").setExecutor(new COMMAND_rename());
 		this.getCommand("hkick").setExecutor(new COMMAND_hkick());
-		this.getCommand("hban").setExecutor(new COMMAND_hban());
 		this.getCommand("cvanish").setExecutor(new COMMAND_cvanish());
 		this.getCommand("armor").setExecutor(new COMMAND_armor());
 		// Listeners
@@ -132,7 +131,11 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JumpPad(), this);
 		pm.registerEvents(new DisableCommand(), this);
 		pm.registerEvents(new AdventSign(), this);
-        }
+		
+		// Chat SCheduler Aktivieren
+		DelayedSchedueler sch = new DelayedSchedueler(60 * 5);
+		sch.start();
+	}
 
 	
 	private void info() {

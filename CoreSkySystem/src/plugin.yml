@@ -33,6 +33,7 @@ commands:
    report:
      description: Report a player
      usage: /report (player) (reason)
+     aliases: /melden
    team:
      description: zeigt dir das Team
    warn:
@@ -128,3 +129,5 @@ commands:
      description: Bewerbe dich!
    obsidian:
      description: Obsidian Infos
+   hacks:
+     description: Bann einen Spieler wegen Hacks!

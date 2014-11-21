@@ -2,6 +2,7 @@ package com.CoreSkySystem.Functions;
 
 public class Permission {
 	
+	public static String Hacks = "skyfight.hacks";
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";
 	public static String noarmor = "ck.noarmor";
@@ -37,6 +38,6 @@ public class Permission {
 	public static String allow_werbung = "skyfight.allow.werbung";
 	public static String allow_hacks = "skyfight.allow.hacks";
 	public static String allow_name = "skyfight.allow.teamname";
-	public static String send_support = "skyfight.support";
 	public static String bewerben = "skyfight.bewerben";
+	public static String hack_unban = "skyfight.ban.unban";
 }

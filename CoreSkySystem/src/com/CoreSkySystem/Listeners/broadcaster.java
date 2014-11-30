@@ -17,17 +17,16 @@ public class broadcaster {
 	
 	public broadcaster(Main m) {
 		plugin = m;
-		
-		
-		//m.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
-			
-			//@Override
-			//public void run() {
-			//	String message = loadMsg();
-			//	plugin.getServer().broadcastMessage(Main.name +" §7"+message);
 				
-			//}
-		//}, 0, 20 * 60 * 2); 
+//		m.getServer().getScheduler().scheduleSyncRepeatingTask(plugin, new Runnable() {
+//			
+//			@Override
+//			public void run() {
+//				String message = loadMsg();
+//				plugin.getServer().broadcastMessage(message);
+//				
+//			}
+//		}, 0, 20 * 60 * 2); 
 		
 		
 	}

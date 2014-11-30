@@ -15,12 +15,15 @@ public class DisableCommand implements Listener  {
 	public void onChat(PlayerCommandPreprocessEvent event)  {
 		String msg = event.getMessage();
 		Player p = event.getPlayer();
+		/** 
+		 *  geblockte Commands
+		 */
 		if(p.hasPermission("*")){
 			event.setCancelled(false);
 		} else {
 			 if(msg.startsWith("/pl"))  { 
 					event.setCancelled(true);
-					p.sendMessage("Plugins (7); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
+					p.sendMessage("Plugins (7); §aSkyFightAntiHack-System§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
 					
 				}
 		}
@@ -29,10 +32,18 @@ public class DisableCommand implements Listener  {
 		} else {
 			if(msg.startsWith("/?"))  { 
 				event.setCancelled(true);
-				p.sendMessage("Plugins (7); §aSkyFightSystem§f, §aWorldEdit§f, §aWorldGuard§f, §aNoCheatPlus§f, §aGroupManager§f, §aMultivers-Core§f, §aGroupManager§f, §aMultivers-Core§f, §aEssentials");
 				p.sendMessage(Main.name + " §cAlle wichtigen Befehle findest du unter §c/Hilfe");
 			}
 		}
+		
+		if(p.hasPermission("*")){
+			event.setCancelled(false); 
+		} else {
+			if(msg.startsWith("/Bukkit:me"))  { 
+				event.setCancelled(true);
+				p.sendMessage(Main.name +" §cAha, Ban?");
+			}
+		}	
 	}
 
 }

@@ -2,6 +2,7 @@ package com.CoreSkySystem.Functions;
 
 public class Permission {
 	
+	public static String SPEED_by_Block = "skyfight.speed.block";
 	public static String Hacks = "skyfight.hacks";
 	public static String chat = "ck.chat";
 	public static String giveall = "ck.giveall";

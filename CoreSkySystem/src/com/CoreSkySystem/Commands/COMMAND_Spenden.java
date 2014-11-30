@@ -93,8 +93,8 @@ public class COMMAND_Spenden implements CommandExecutor, Listener {
 			}else if(e.getCurrentItem().getType() == Material.SKULL_ITEM)  {
 				p.closeInventory();
 				 p.sendMessage(Main.a +"§6§lSkype"+ Main.b);
-				 p.sendMessage("§8> §4Owner§7: §4SphexPvP§7: §eprimeewolf§7");
-				 p.sendMessage("§8> §4Owner§7: §4SeroxPlays§7: §ederdickeeins§7");
+				 p.sendMessage("§8> §4Inhaber§7: §4SphexPvP§7: §eprimeewolf§7");
+				 p.sendMessage("§8> §4Inhaber§7: §4SeroxPlays§7: §ederdickeeins§7");
 				 p.sendMessage(Main.a +"§6§lSkype"+ Main.b);
 				
 			}

@@ -12,179 +12,232 @@ public class Commands implements CommandExecutor {
 	
 	@Override
 	public boolean onCommand(CommandSender cs, Command cmd, String label, String[] args) {
-		     if (cmd.getName().equalsIgnoreCase("ts"))  {
-				cs.sendMessage(Main.a +"§6§lTeamSpeak"+ Main.b);
-				cs.sendMessage("§c» §7Unseren TeamSpeak³: §cSkyFight.ch§7! §c«");
-				cs.sendMessage(Main.a +"§6§lTeamSpeak"+ Main.b);
-			
-			} else if (cmd.getName().equalsIgnoreCase("copyright"))  {
-				   cs.sendMessage(Main.a +"§6§lCopyright"+ Main.b);
-				   cs.sendMessage("§c» §7Copyright by §cSkyFight.ch§7! §c«");
-				   cs.sendMessage("§c» §7Verstöße werden je nach Art bestraft §c«");
-				   cs.sendMessage(Main.a +"§6§lCopyright"+ Main.b);
-			
-			} else if (cmd.getName().equalsIgnoreCase("hilfe"))  {
-				   cs.sendMessage(Main.a +"§6§lHilfe"+ Main.b);
-				   cs.sendMessage("§c» §7/spenden §c«");
-				   cs.sendMessage("§c» §7/regeln §c«");
-				   cs.sendMessage("§c» §7/skype §c«");
-				   cs.sendMessage("§c» §7/ts §c«");
-				   cs.sendMessage("§c» §7/ranglist §c«");
-				   cs.sendMessage("§c» §7/copyright §c«");
-				   cs.sendMessage("§c» §7/is §c«");
-				   cs.sendMessage("§c» §7/friede <name> §c«");
-				   cs.sendMessage("§c» §7/system §c«");
-				   cs.sendMessage("§c» §7/report <Spieler> <Grund> §c«");
-				   cs.sendMessage("§c» §7/vote §c«");
-				   cs.sendMessage("§c» §7/warp §c«");
-				   cs.sendMessage("§c» §7/kit §c«");
-				   cs.sendMessage("§c» §7/YouTuber §c«");
-				   cs.sendMessage("§c»§7 /Bewerben §c«");
-				   cs.sendMessage(Main.a +"§6§lHilfe"+ Main.b);
-			
-			} else if (cmd.getName().equalsIgnoreCase("qwertzuiopü"))  {
-					cs.sendMessage(Main.a +"§6§lSpenden"+ Main.b);
-					cs.sendMessage("§c» §7Spenden gehen nur an die §cOwner§7! ");
-					cs.sendMessage("§c» §7Die Owner findest du unter §c/skype§7. ");
-					cs.sendMessage("§c» §7Spenden kannst du per §cPaySafeCard §7oder §cPayPal");
-					cs.sendMessage("§c» §7Infos zu den Spenden-Rängen§7: ");
-					cs.sendMessage("§c» §c/ranglist ");
-					cs.sendMessage(Main.a +"§6§lSpenden"+ Main.b);
-			
-							
-			} else if (cmd.getName().equalsIgnoreCase("skype"))  {
-				    cs.sendMessage(Main.a +"§6§lSkype"+ Main.b);
-					cs.sendMessage("§c» §4Owner§7: §4SphexPvP§7: §eprimeewolf§7");
-					cs.sendMessage("§c» §4Owner§7: §4SeroxPlays§7: §ederdickeeins§7");
-					cs.sendMessage("§c» §4Developer§7: §4TGM_Nick§7: §eTGM_Nick§7");
-					cs.sendMessage("§c» §cAdmin§7: §cSayZo§7: §eSayZo_§7");
-					cs.sendMessage(Main.a +"§6§lSkype"+ Main.b);
-			} else if (cmd.getName().equalsIgnoreCase("regeln"))  {
-				cs.sendMessage(Main.a +"§6§lRegeln"+ Main.b);
-				cs.sendMessage("§c» §7Keine Hacks! §c«");
-				cs.sendMessage("§c» §7Nicht Beleidigen! §c«");
-				cs.sendMessage("§c» §7Keine Werbung! §c«");
-				cs.sendMessage("§c» §7Nicht Betteln! §c«");
-				cs.sendMessage("§c» §7Fragen direkt stellen! §c«");
-				cs.sendMessage("§c» §7Kein CAPSLOCK! §c«");
-				cs.sendMessage("§c» §7Kein /fly im PvP!§c«");
-				cs.sendMessage("§c» §7Kein Campen§c«");
-				cs.sendMessage("§c» §7Keine Grossen Teams!§c«");
-				cs.sendMessage("§c» §7Respektvolles Verhalten!!§c«");
-				
-				cs.sendMessage(Main.a +"§6§lRegeln"+ Main.b);
-			
-			} else if (cmd.getName().equalsIgnoreCase("iron"))  {
-				cs.sendMessage(Main.a +"§f§lIron"+ Main.b);
-				cs.sendMessage("   §cRang | Kosten §8«");
-				cs.sendMessage("        §c 10 Euro       ");
-				cs.sendMessage("");
-				cs.sendMessage("    §cRang | Rechte §8«");
-				cs.sendMessage("");
-				cs.sendMessage("§c» §7/kit Iron §c«");
-				cs.sendMessage("§c» §7/tpahere §c«");
-				cs.sendMessage("§c» §7/near §c«");
-				cs.sendMessage("§c» §7/recipe §c«");
-				cs.sendMessage("§c» §7/repair §c«");
-				cs.sendMessage("§c» §7/clearinventory §c«");
-				cs.sendMessage("§c» §7/enderchest §c«");
-				cs.sendMessage("§c» §7/workbench §c«");
-				cs.sendMessage(Main.a +"§f§lIron"+ Main.b);
 		
-			} else if (cmd.getName().equalsIgnoreCase("gold"))  {
-				cs.sendMessage(Main.a +"§6§lGold"+ Main.b);
-				cs.sendMessage("   §cRang | Kosten §8«");
-				cs.sendMessage("        §c 20 Euro       ");
-				cs.sendMessage("");
-				cs.sendMessage("    §cRang | Rechte §8«");
-				cs.sendMessage("");
-				cs.sendMessage("§c» §7/kit Gold §c«");
-				cs.sendMessage("§c» §7/repiar all §c«");
-				cs.sendMessage("§c» §7/heal §c«");
-				cs.sendMessage("§c» §7/feed §c«");
-				cs.sendMessage("§c» §7/ping §c«");
-				cs.sendMessage(Main.a +"§6§lGold"+ Main.b);
+		// Ts
+		if (cmd.getName().equalsIgnoreCase("ts"))  {
+			cs.sendMessage(Main.a +"TeamSpeak"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ» "+ Main.text +"Unseren TeamSpeakÂ³: Â§cSkyFight.ch"+ Main.text +"!");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"TeamSpeak"+ Main.b);
+			
+		// CopyRight
+		} else if (cmd.getName().equalsIgnoreCase("copyright"))  {
+		   cs.sendMessage(Main.a +"Copyright"+ Main.b);
+		   cs.sendMessage(Main.leer);
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"Copyright by Â§cSkyFight.ch"+ Main.text +"!");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"VerstÃ¶ÃŸe werden je nach Art bestraft");
+		   cs.sendMessage(Main.leer);
+		   cs.sendMessage(Main.a +"Copyright"+ Main.b);
+	
+   		// Hilfe	
+		} else if (cmd.getName().equalsIgnoreCase("hilfe"))  {
+		   cs.sendMessage(Main.a +"Hilfe"+ Main.b);
+		   cs.sendMessage(Main.leer);
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/spenden ");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/regeln ");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +""+ Main.text +"skype ");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/ts Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/ranglist Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/copyright Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/is Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/friede <name> Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/system Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/report <Spieler> <Grund> Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/vote Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/warp Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/kit Â§c");
+		   cs.sendMessage("Â§eÂ» "+ Main.text +"/YouTuber Â§c");
+		   cs.sendMessage("Â§eÂ»"+ Main.text +" /Bewerben Â§c");
+		   cs.sendMessage(Main.leer);
+		   cs.sendMessage(Main.a +"Hilfe"+ Main.b);
+			   
+		// Spenden-Info
+		} else if (cmd.getName().equalsIgnoreCase("qwertzuiopÃ¼"))  {
+			cs.sendMessage(Main.a +"Spenden"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ» "+ Main.text +"Spenden gehen nur an die "+ Main.bt +"Inhaber"+ Main.text +"! ");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"Die Inhaber findest du unter "+ Main.bt +"/skype"+ Main.text +". ");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"Spenden kannst du per "+ Main.bt +"PaySafeCard "+ Main.text +"oder Â§cPayPal");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"Infos zu den Spenden-RÃ¤ngen: ");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"/ranglist ");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Spenden"+ Main.b);
 				
-			} else if (cmd.getName().equalsIgnoreCase("diamond"))  {
-				cs.sendMessage(Main.a +"§b§lDiamond"+ Main.b);
-				cs.sendMessage("    §cRang | Kosten §8«");
-				cs.sendMessage("        §c 30 Euro       ");
-				cs.sendMessage("");
-				cs.sendMessage("    §cRang | Rechte §8«");
-				cs.sendMessage("");
-				cs.sendMessage("§c» §7/kit Diamond §c«");
-				cs.sendMessage("§c» §7/top §c«");
-				cs.sendMessage("§c» §7/hat §c«");
-				cs.sendMessage("§c» §7/invsee §c«");
-				cs.sendMessage("§c» §7/tpaall §c«");
-				cs.sendMessage("§c» §7/back §c«");
-				cs.sendMessage(Main.a +"§b§lDiamond"+ Main.b);
+		// Skype		
+		} else if (cmd.getName().equalsIgnoreCase("skype"))  {
+		    cs.sendMessage(Main.a +"Skype"+ Main.b);
+		    cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ» Â§4InhaberÂ§7: Â§4SphexPvPÂ§7: Â§eSphexPvPÂ§7");
+			cs.sendMessage("Â§eÂ» Â§4InhaberÂ§7: Â§4SeroxPlaysÂ§7: Â§ederdickeeinsÂ§7");
+			cs.sendMessage("Â§eÂ» Â§4DeveloperÂ§7: Â§4TGM_NickÂ§7: Â§eTGM_NickÂ§7");
+			cs.sendMessage("Â§eÂ» Â§cAdminÂ§7: Â§cSayZoÂ§7: Â§eSayZo_Â§7");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Skype"+ Main.b);
+		
+		// Regeln		
+		} else if (cmd.getName().equalsIgnoreCase("regeln"))  {
+			cs.sendMessage(Main.a +"Regeln"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Keine Hacks! Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Nicht Beleidigen! Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Keine Werbung! Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Nicht Betteln! Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Fragen direkt stellen! Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Kein CAPSLOCK! Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Kein /fly im PvP!Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Kein CampenÂ§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Keine Grossen Teams!Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.bt +"Respektvolles Verhalten!!Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Regeln"+ Main.b);
+		
+		// Iron	
+		} else if (cmd.getName().equalsIgnoreCase("iron"))  {
+			cs.sendMessage(Main.a +"Iron"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("   "+ Main.bt +"Rang | Kosten Â§8");
+			cs.sendMessage("        "+ Main.bt +" 10 Euro       ");
+			cs.sendMessage("");
+			cs.sendMessage("    "+ Main.bt +"Rang | Rechte Â§8");
+			cs.sendMessage("");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/kit Iron Â§cÂ«");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/tpahere Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/near Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/recipe Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/repair Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/clearinventory Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/enderchest Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/workbench Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Iron"+ Main.b);
+	
+		// Gold	
+		} else if (cmd.getName().equalsIgnoreCase("gold"))  {
+			cs.sendMessage(Main.a +"Gold"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("   "+ Main.bt +"Rang | Kosten Â§8");
+			cs.sendMessage("        "+ Main.bt +" 20 Euro       ");
+			cs.sendMessage("");
+			cs.sendMessage("    "+ Main.bt +"Rang | Rechte Â§8");
+			cs.sendMessage("");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/kit Gold Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/repiar all Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/heal Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/feed Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/ping Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Gold"+ Main.b);
+		
+		// Diamond	
+		} else if (cmd.getName().equalsIgnoreCase("diamond"))  {
+			cs.sendMessage(Main.a +"Diamond"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("    "+ Main.bt +"Rang | Kosten Â§8");
+			cs.sendMessage("        "+ Main.bt +" 30 Euro       ");
+			cs.sendMessage("");
+			cs.sendMessage("    "+ Main.bt +"Rang | Rechte ");
+			cs.sendMessage("");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/kit Diamond Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/top Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/hat Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/invsee Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/tpaall Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/back Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Diamond"+ Main.b);
 
-			} else if (cmd.getName().equalsIgnoreCase("emerald"))  {
-				cs.sendMessage(Main.a +"§a§lEmerald"+ Main.b);
-				cs.sendMessage("    §cRang | Kosten §8«");
-				cs.sendMessage("        §c 40 Euro       ");
-				cs.sendMessage("");
-				cs.sendMessage("    §cRang | Rechte §8«");
-				cs.sendMessage("");
-				cs.sendMessage("§c» §7/kit Emerald §c«");
-				cs.sendMessage("§c» §7/rename §c«");
-				cs.sendMessage("§c» §7/god §c«");
-				cs.sendMessage(Main.a +"§a§lEmerald"+ Main.b);
+		// Emerald	
+		} else if (cmd.getName().equalsIgnoreCase("emerald"))  {
+			cs.sendMessage(Main.a +"Emerald"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("    "+ Main.bt +"Rang | Kosten Â§8");
+			cs.sendMessage("        "+ Main.bt +" 40 Euro       ");
+			cs.sendMessage("");
+			cs.sendMessage("    "+ Main.bt +"Rang | Rechte Â§8");
+			cs.sendMessage("");
+			cs.sendMessage("Â§Â» "+ Main.text +"/kit Emerald Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/rename Â§c");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/god Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Emerald"+ Main.b);
 			
-			}else if (cmd.getName().equalsIgnoreCase("system"))  {
-				cs.sendMessage(Main.a +"§9§lSystem"+ Main.b);
-				cs.sendMessage("§7            Server-System by");
-				cs.sendMessage("§7          TGM_Nick & razorblur ");
-				cs.sendMessage(Main.a +"§9§lSystem"+ Main.b);
+		// Obsidian	
+		} else if (cmd.getName().equalsIgnoreCase("obsidian")) {
+			cs.sendMessage(Main.a +"Obsidian"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("    "+ Main.bt +"Rang | Kosten Â§8");
+			cs.sendMessage("        "+ Main.bt +" 50 Euro       ");
+			cs.sendMessage("");
+			cs.sendMessage("    "+ Main.bt +"Rang | Rechte Â§8");
+			cs.sendMessage("");
+			cs.sendMessage("Â§eÂ» "+ Main.text +"/kit Obsidian Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Obsidian"+ Main.b);	
 		
-			} else if (cmd.getName().equalsIgnoreCase("team"))  {
-				cs.sendMessage(Main.a +"Team"+ Main.b);
-				cs.sendMessage("§c» §4Owner§7: §7SphexPvP, SeroxPlays");
-				cs.sendMessage("§c» §4Developer§7: §7TGM_Nick, razorblur");
-				cs.sendMessage("§c» §cAdmin's§7: SayZo");
-				cs.sendMessage("§c» §5Moderator§7:§7 Burakcrafter168");
-				cs.sendMessage("§c» §eSupporter§7:§7");
-				cs.sendMessage("");
-				cs.sendMessage("§c» §7Du willst auch ins Team? §e/Bewerben §c«");
-				cs.sendMessage(Main.a +"Team"+ Main.b);
-			} else if (cmd.getName().equalsIgnoreCase("vote"))  {
-				cs.sendMessage(Main.a +"§b§lVote"+ Main.b);
-				cs.sendMessage("§c»§7 Um zu Voten bitte auf den Link klicken §c«");
-				cs.sendMessage("§c»§7§n http://serverliste.org/?s=server&id=6385 §c«");
-				cs.sendMessage(Main.a +"§b§lVote"+ Main.b);
-			} else if (cmd.getName().equalsIgnoreCase("youtuber"))  {
-				cs.sendMessage(Main.a +"§d§lYouTuber"+ Main.b);
-				cs.sendMessage("§c»§7 Um Youtuber zu werden,, musst du §c«");
-				cs.sendMessage("§c»§7 1. Mindestens 200 Abbonenten haben!  §c«");
-				cs.sendMessage("§c»§7 2. Eine Gute Server-Vorstellung machen  §c«");
-				cs.sendMessage(Main.a +"§d§lYouTuber"+ Main.b);
-			} else if (cmd.getName().equalsIgnoreCase("obsidian")) {
-				cs.sendMessage(Main.a +"§0§lObsidian"+ Main.b);
-				cs.sendMessage("    §cRang | Kosten §8«");
-				cs.sendMessage("        §c 50 Euro       ");
-				cs.sendMessage("");
-				cs.sendMessage("    §cRang | Rechte §8«");
-				cs.sendMessage("");
-				cs.sendMessage("§c» §7/kit Obsidian §c«");
-				cs.sendMessage(Main.a +"§0§lObsidian"+ Main.b);
-			} else if (cmd.getName().equalsIgnoreCase("bewerben")) {
-				if(cs.hasPermission(Permission.bewerben)) {
-					cs.sendMessage(Main.a +"§4§lBewerben"+ Main.b);
-					cs.sendMessage("§c»§7 Du möchtest dich Bewerben? §c«");
-					cs.sendMessage("§c»§7 - Bewerben an die Owner unter /skype §c«");
-					cs.sendMessage("§c»§7 - Bewerbungen sind nur als Supporter möglich. §c«");
-					cs.sendMessage("§c»§7 - Die Bewerbung muss Professionell sein. §c«");
-					cs.sendMessage("§c»§7 - Keine Rechtschreibfehler §c«");
-					cs.sendMessage("§c»§7 - Etwas über dich und deine Karriere erzählen! §c«");
-					cs.sendMessage("§c»§7 - Kleinere Bewerbungen werden erst nicht gelesen. §c«");
-					cs.sendMessage("§c»§7 - Nicht hinterfragen, ob du angenommen wirst. §c«");
-					cs.sendMessage(Main.a +"§4§lBewerben"+ Main.b);
-				} else {
-					cs.sendMessage(Main.name +" §cEs werden momentan keine Bewerbungen angenommen!");
-				}
-					
-			} 
+		// System	
+		}else if (cmd.getName().equalsIgnoreCase("system"))  {
+			cs.sendMessage(Main.a +"System"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(""+ Main.text +"            Server-System by");
+			cs.sendMessage(""+ Main.text +"          TGM_Nick & razorblur ");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"System"+ Main.b);
+	
+		// Team	
+		} else if (cmd.getName().equalsIgnoreCase("team"))  {
+			cs.sendMessage(Main.a +"Team"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ» Â§4InhaberÂ§7: Â§7SphexPvP, SeroxPlays");
+			cs.sendMessage("Â§eÂ» Â§4DeveloperÂ§7: Â§7TGM_Nick, razorblur");
+			cs.sendMessage("Â§eÂ» Â§cAdmin'sÂ§7: SayZo");
+			cs.sendMessage("Â§eÂ» Â§5ModeratorenÂ§7:Â§7");
+			cs.sendMessage("Â§eÂ» Â§eSupporterÂ§7:Â§7 Manga, Sracher_");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ»"+ Main.text +" Du willst auch ins Team? Â§e/Bewerben Â§cÂ«");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Team"+ Main.b);
+			
+		// Vote	
+		} else if (cmd.getName().equalsIgnoreCase("vote"))  {
+			cs.sendMessage(Main.a +"Vote"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ»"+ Main.text +" Um zu Voten bitte auf den Link klicken Â§c");
+			cs.sendMessage("Â§eÂ»"+ Main.text +" http://serverliste.org/?s=server&id=6385 Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"Vote"+ Main.b);
+			
+		// YouTuber	
+		} else if (cmd.getName().equalsIgnoreCase("youtuber"))  {
+			cs.sendMessage(Main.a +"YouTuber"+ Main.b);
+			cs.sendMessage(Main.leer);
+			cs.sendMessage("Â§eÂ»"+ Main.text +" Um Youtuber zu werden,, musst du Â§c");
+			cs.sendMessage("Â§eÂ»"+ Main.text +" 1. Mindestens 200 Abbonenten haben!  Â§");
+			cs.sendMessage("Â§eÂ»"+ Main.text +" 2. Eine Gute Server-Vorstellung machen  Â§c");
+			cs.sendMessage(Main.leer);
+			cs.sendMessage(Main.a +"YouTuber"+ Main.b);
+			
+		// Bewerben	
+		} else if (cmd.getName().equalsIgnoreCase("bewerben")) {
+			if(cs.hasPermission(Permission.bewerben)) {
+				cs.sendMessage(Main.a +"Bewerben"+ Main.b);
+				cs.sendMessage(Main.leer);
+				cs.sendMessage("Â§eÂ»"+ Main.text +" Du mÃ¶chtest dich Bewerben? Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Bewerben an die Owner unter /skype Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Bewerbungen sind nur als Supporter mÃ¶glich. Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Die Bewerbung muss Professionell sein. Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Keine Rechtschreibfehler Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Etwas Ã¼ber dich und deine Karriere erzÃ¤hlen! Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Kleinere Bewerbungen werden erst nicht gelesen. Â§c");
+				cs.sendMessage("Â§eÂ»"+ Main.bt +" â¥ "+ Main.text +"Nicht hinterfragen, ob du angenommen wirst. Â§c ");
+				cs.sendMessage(Main.leer);
+				cs.sendMessage(Main.a +"Bewerben"+ Main.b);
+			} else {
+				cs.sendMessage(Main.name +" Â§cEs werden momentan keine Bewerbungen angenommen!");
+			}
+			
+		// etc.	
+		} 
 		
 			return true;
 		

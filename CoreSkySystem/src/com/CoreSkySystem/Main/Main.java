@@ -32,26 +32,39 @@ import com.CoreSkySystem.Commands.COMMAND_Report;
 import com.CoreSkySystem.Commands.COMMAND_Warn;
 import com.CoreSkySystem.Commands.Commands;
 import com.CoreSkySystem.Commands.Umfrage;
-import com.CoreSkySystem.Functions.DelayedSchedueler;
+//import com.CoreSkySystem.Functions.DelayedSchedueler;
 import com.CoreSkySystem.Listeners.AdventSign;
+import com.CoreSkySystem.Listeners.AnitAnvilBreak;
 import com.CoreSkySystem.Listeners.DisallowedWords;
 import com.CoreSkySystem.Listeners.DeathDrop;
 import com.CoreSkySystem.Listeners.DisableCommand;
 import com.CoreSkySystem.Listeners.JoinQuitListener;
 import com.CoreSkySystem.Listeners.JumpPad;
+import com.CoreSkySystem.Listeners.JumpPad2;
 import com.CoreSkySystem.Listeners.KostenlosSign;
 import com.CoreSkySystem.Listeners.PlayerListeners;
+import com.CoreSkySystem.Listeners.PortionEffectsByMove;
 import com.CoreSkySystem.Listeners.RepawnKit;
 import com.CoreSkySystem.Listeners.UnknownCommand;
 import com.CoreSkySystem.Listeners.broadcaster;
 
+
+/** 
+ * @author TGM_Nick, razorblur
+ */
+
 public class Main extends JavaPlugin {
 	
+	
+	/**		[]=====<<Strings>>=====[] */
+	public static String leer = "";
 	public static String name = "§8§l[§6§l!§8§l]"; //§8§l[§6§lCf§8§l]
 	public static String normal_name = "[SkyFight]";
+	public static String a = "§7§l[]>=======<<§6§l SkyFight§7§l - §6§l";
+	public static String b = "§7§l >>=======<[]";
+	public static String text = "§c";
+	public static String bt = "§e";
 	public static String path;
-	public static String a = "§7§l[]>==========<<§6§l";
-	public static String b = "§7§l>>==========<[]";
 	public static Main plugin;
 	
 
@@ -65,14 +78,16 @@ public class Main extends JavaPlugin {
 	public void onEnable()  {
 		path = this.getName();
 		PluginManager pm = this.getServer().getPluginManager();
-		// Create Files
+		// Config
 		loadConfig();
 		loadtFiles();
-		// Useless Info :D
+		// Info String
 		info();
+		// Broadcaster
 		new broadcaster(this);
-
+		
 		plugin = this;
+		/**		[]=====<<Commands>>=====[] */
 		this.getCommand("spenden").setExecutor(new COMMAND_Spenden());
 		this.getCommand("ranglist").setExecutor(new COMMAND_Ranglist());
 		this.getCommand("hilfe").setExecutor(new Commands());
@@ -103,7 +118,6 @@ public class Main extends JavaPlugin {
 		this.getCommand("obsidian").setExecutor(new Commands());
 		this.getCommand("youtuber").setExecutor(new Commands());
 		this.getCommand("bewerben").setExecutor(new Commands());
-		
 		this.getCommand("skyfight").setExecutor(new COMMAND_skyfight(this));
 		this.getCommand("clearchat").setExecutor(new ChatClear(this));
 		this.getCommand("gamemode").setExecutor(new COMMAND_gm());
@@ -116,7 +130,8 @@ public class Main extends JavaPlugin {
 		this.getCommand("hkick").setExecutor(new COMMAND_hkick());
 		this.getCommand("cvanish").setExecutor(new COMMAND_cvanish());
 		this.getCommand("armor").setExecutor(new COMMAND_armor());
-		// Listeners
+		
+		/**		[]=====<<Listeners>>=====[] */
 		pm.registerEvents(new KostenlosSign(), this);
 		pm.registerEvents(new DeathDrop(), this);
 		pm.registerEvents(new JoinQuitListener(this), this);
@@ -131,24 +146,28 @@ public class Main extends JavaPlugin {
 		pm.registerEvents(new JumpPad(), this);
 		pm.registerEvents(new DisableCommand(), this);
 		pm.registerEvents(new AdventSign(), this);
-		
-		// Chat SCheduler Aktivieren
-		DelayedSchedueler sch = new DelayedSchedueler(60 * 5);
-		sch.start();
+		pm.registerEvents(new PortionEffectsByMove(), this);
+		pm.registerEvents(new AnitAnvilBreak(), this);
+		pm.registerEvents(new JumpPad2(), this);
+
+		/**		[]=====<<Scheduler>>=====[] */
+		//Chat SCheduler Aktivieren
+//		DelayedSchedueler sch = new DelayedSchedueler(1);
+//		sch.start();*/
 	}
 
 	
 	private void info() {
 	    System.out.println("<======================================================>");
 	    System.out.println("|                                                     |");
-	    System.out.println("|SkyFightSystem 2.0 (c)2014 by TGM_Nick and razorblur |");
+	    System.out.println("|       SkyFightSystem 2.0 (c)2014 by TGM_Nick        |");
 	    System.out.println("|                                                     |");
-	    System.out.println("|        This program is not free software!           |");
-	    System.out.println("|    You are not allowed to use, modify or spread     |");
-	    System.out.println("|  it without the agreement of the copyright holder.  |");
+	    System.out.println("|         This program is not free software!          |");
+	    System.out.println("|     You are not allowed to use, modify or spread    |");
+	    System.out.println("|   it without the agreement of the copyright holder. |");
 	    System.out.println("|                                                     |");
-	    System.out.println("| Contact: nickdietrich.minecraft@gmail.com           |");
-	    System.out.println("| Skype: TGM_Nick / nicolai.helldorff                 |");
+	    System.out.println("|    Contact: nickdietrich.minecraft@gmail.com        |");
+	    System.out.println("|               Skype: TGM_Nick                       |");
 	    System.out.println("<======================================================>");
 	}
 	
@@ -156,6 +175,7 @@ public class Main extends JavaPlugin {
 		FileConfiguration cfg = this.getConfig();
 		cfg.addDefault(".Motd", "§6§lSkyFight §8<-> §7EUER SKYPVP SERVER!");
 		cfg.addDefault(".Slots", "72");
+		cfg.addDefault(".ccMSG", "§7hat den Chat geleert");
 		cfg.options().copyDefaults();
 		saveConfig();
 	}

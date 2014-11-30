@@ -15,8 +15,7 @@ public class Umfrage implements CommandExecutor {
 	public static int ja;
 	  public static int nein;
 	  public static String umfrage;
-	  @SuppressWarnings({ "unchecked", "rawtypes" })
-	public static ArrayList<String> uspieler = new ArrayList();
+	public static ArrayList<String> uspieler = new ArrayList<>();
 	  public static boolean umfragestart = false;
 	@SuppressWarnings("unused")
 	private Main plugin;
@@ -24,10 +23,7 @@ public class Umfrage implements CommandExecutor {
 	  public Umfrage(Main plugin) {
 		  this.plugin = plugin;
 	  }
-		/* Nick am Programmieren */
-	  //   Nick | Developer      //
-	 //    CombatSky.de         //
-		
+	  
 	public boolean onCommand(CommandSender p, Command cmd, String label, String[] args)
 	  {
 	    if (cmd.getName().equalsIgnoreCase("ja")) {
@@ -68,10 +64,14 @@ public class Umfrage implements CommandExecutor {
 	          if (args[0].equalsIgnoreCase("stop")) {
 	            if (umfragestart) {
 	              umfragestart = false;
-	              Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
+	              ChatClear.ChatClearPlayers(100, "");
+	              Bukkit.broadcastMessage(Main.a +"Umfrage"+ Main.b);
+	              Bukkit.broadcastMessage(Main.leer);
 	              Bukkit.broadcastMessage("§7Die Umfrage ist zuende!");
 	              Bukkit.broadcastMessage("§7Frage: §c§o" + umfrage);
-	              Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
+	              Bukkit.broadcastMessage(Main.leer);
+	              Bukkit.broadcastMessage(Main.a +"Umfrage"+ Main.b);
+	              Bukkit.broadcastMessage(Main.leer);
 	              if (ja > nein) {
 	                Bukkit.broadcastMessage("§7Gewinner: §a§lJA §7mit §c" + ja + " §7- §c" + nein + " §7Stimmen!");
 	              }
@@ -95,11 +95,14 @@ public class Umfrage implements CommandExecutor {
 	          nein = 0;
 	          ja = 0;
 	          uspieler.clear();
-	         Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
+	          ChatClear.ChatClearPlayers(100, "");
+	          Bukkit.broadcastMessage(Main.a +"Umfrage"+ Main.b);
+	          Bukkit.broadcastMessage(Main.leer);
 	          Bukkit.broadcastMessage("§7Eine Umfrage wurde von §c§o" + p.getName() +  " §7gestartet!");
 	          Bukkit.broadcastMessage("§7Frage: §c§o" + umfrage);
 	          Bukkit.broadcastMessage("§7Stimme mit §c/ja §7oder §c/nein §7ab.");
-	          Bukkit.broadcastMessage(Main.a +"SkyFight"+ Main.b);
+	          Bukkit.broadcastMessage(Main.leer);
+	          Bukkit.broadcastMessage(Main.a +"Umfrage"+ Main.b);
 	          return true;
 	        }
 	      }

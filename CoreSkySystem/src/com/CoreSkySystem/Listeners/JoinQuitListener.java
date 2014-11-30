@@ -17,7 +17,7 @@ import com.CoreSkySystem.Main.Main;
 
 public class JoinQuitListener implements Listener{
 	
-	private Main Plugin;
+	//private Main Plugin;
 	public JoinQuitListener(Main instance)  {
 		
 	}
@@ -28,9 +28,17 @@ public class JoinQuitListener implements Listener{
 		final Player p = e.getPlayer();
 		if (p.hasPermission(Permission.team_Join))  {
 			e.setJoinMessage(Main.name + " §bDas Team-Mitglied: §3"+ p.getName() + "§b, hat den Server betreten.");
-			} else  {  
-				e.setJoinMessage("");
-			} 
+			for (int i = 0; i != 150; i++) {
+				p.sendMessage("");
+			}
+			p.sendMessage("");
+		} else  {  
+			e.setJoinMessage("");
+			for (int i = 0; i != 150; i++) {
+				p.sendMessage("");
+			}
+			p.sendMessage("");
+		} 
 		// Vanish the PLayer
 		for(int i = 0; i < COMMAND_cvanish.vanished.size(); i++) {
 			Player player = Bukkit.getPlayer(COMMAND_cvanish.vanished.get(i));
